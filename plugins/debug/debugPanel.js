@@ -235,7 +235,7 @@
             this.isKinematic = false;
 
             // minimum melonJS version expected
-            this.version = "7.0.0";
+            this.version = "8.0.0";
 
             // to hold the debug options
             // clickable rect area
@@ -426,12 +426,23 @@
                         }
 
                         if (typeof this.body !== "undefined") {
+                            if (!this.currentTransform.isIdentity()) {
+                                // if any transform were applied to me.Sprite
+                                // we need to reset the context so that we
+                                // can draw the body shapes properly
+                                renderer.save();
+                                renderer.resetTransform();
+                                renderer.translate(-ax, -ay);
+                            }
                             renderer.translate(this.pos.x, this.pos.y);
                             // draw all defined shapes
                             renderer.setColor("red");
                             for (var i = this.body.shapes.length, shape; i--, (shape = this.body.shapes[i]);) {
                                 renderer.stroke(shape);
                                 _this.counters.inc("shapes");
+                            }
+                            if (!this.currentTransform.isIdentity()) {
+                                renderer.restore();
                             }
                         }
                     }
@@ -695,7 +706,7 @@
 
             renderer.translate(-x, -y);
 
-            this.drawQuadTreeNode(renderer, me.collision.quadTree);
+            this.drawQuadTreeNode(renderer, me.game.world.broadphase);
 
             renderer.translate(x, y);
         },
@@ -786,7 +797,7 @@
             this.font.draw(renderer, this.help_str, endX, 17 * this.mod);
 
             //fps counter
-            var fps_str = me.timer.fps + "/" + me.sys.fps + " fps";
+            var fps_str = me.timer.fps + "/" + me.timer.maxfps + " fps";
             this.font.draw(renderer, fps_str, endX, 2 * this.mod);
 
             renderer.restore();
@@ -803,7 +814,7 @@
     });
 
     // automatically register the debug panel
-    me.device.onReady(function () {
+    me.event.subscribe(me.event.VIDEO_INIT, function () {
         var toggleKey = me.utils.getUriFragment().debugToggleKey;
         me.utils.function.defer(me.plugin.register, this, me.DebugPanel, "debugPanel",
             toggleKey ? toggleKey.charCodeAt(0) - 32 : undefined
