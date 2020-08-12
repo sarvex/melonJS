@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Class: Pointer | melonJS API documentation</title>
+    <title>Class: Matrix3d | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -52,7 +52,7 @@
 <header>
     
         <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="me.html">me</a>.</span>Pointer<span class="signature">()</span><span class="type-signature"></span></h2>
+            <span class="ancestors"><a href="me.html">me</a>.</span>Matrix3d<span class="signature">(mat3d<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -65,9 +65,9 @@
 
 <dt>
     
-        <h4 class="name" id="Pointer">
+        <h4 class="name" id="Matrix3d">
             
-                new <span class="type-signature"></span>Pointer<span class="signature">()</span><span class="type-signature"></span>
+                new <span class="type-signature"></span>Matrix3d<span class="signature">(mat3d<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -79,7 +79,7 @@
 
     
     <div class="description">
-        <p>a pointer object, representing a single finger on a touch enabled device.</p>
+        <p>a 4x4 Matrix3d Object<br></p>
     </div>
     
 
@@ -89,6 +89,101 @@
 
     
 
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mat3d</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An instance of me.Matrix3d to copy from</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>arguments...</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Number></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Matrix elements. See <a href="me.Matrix3d.html#.setTransform"><code>me.Matrix3d.setTransform</code></a></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
     
 
     
@@ -155,7 +250,7 @@
 
 
     <ul>
-        <li><a href="me.Rect.html">me.Rect</a></li>
+        <li><a href="me.Object.html">me.Object</a></li>
     </ul>
 
 
@@ -178,8 +273,8 @@
             
 
 <dt>
-<h4 class="name" id=".button">
-    <span class="type-signature"><span class="icon green">static</span> </span>button<span class="type-signature"> :Number</span>
+<h4 class="name" id=".tx">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>tx<span class="type-signature"> :Number</span>
     
 </h4>
 
@@ -188,665 +283,7 @@
 <dd>
     
     <div class="description">
-        <p>the button property indicates which button was pressed on the mouse to trigger the event.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".clientX">
-    <span class="type-signature"><span class="icon green">static</span> </span>clientX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the horizontal coordinate within the application's client area at which the event occurred</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".clientY">
-    <span class="type-signature"><span class="icon green">static</span> </span>clientY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the vertical coordinate within the application's client area at which the event occurred</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaMode">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaMode<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>an unsigned long representing the unit of the delta values scroll amount</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaX">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the horizontal scroll amount in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaY">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the vertical scroll amount in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaZ">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaZ<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the scroll amount in the z-axis, in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".event">
-    <span class="type-signature"><span class="icon green">static</span> </span>event<span class="type-signature"> :PointerEvent|TouchEvent|MouseEvent</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the originating Event Object</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">PointerEvent</span>
-|
-
-<span class="param-type">TouchEvent</span>
-|
-
-<span class="param-type">MouseEvent</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent</a></li>
-        
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent</a></li>
-        
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameLocalX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameLocalX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event X coordinate relative to the holding container</p>
+        <p>tx component of the matrix</p>
     </div>
     
 
@@ -910,8 +347,8 @@
             
 
 <dt>
-<h4 class="name" id=".gameLocalY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameLocalY<span class="type-signature"> :Number</span>
+<h4 class="name" id=".ty">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>ty<span class="type-signature"> :Number</span>
     
 </h4>
 
@@ -920,7 +357,7 @@
 <dd>
     
     <div class="description">
-        <p>Event Y coordinate relative to the holding container</p>
+        <p>ty component of the matrix</p>
     </div>
     
 
@@ -984,8 +421,8 @@
             
 
 <dt>
-<h4 class="name" id=".gameScreenX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameScreenX<span class="type-signature"> :Number</span>
+<h4 class="name" id=".tz">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>tz<span class="type-signature"> :Number</span>
     
 </h4>
 
@@ -994,7 +431,7 @@
 <dd>
     
     <div class="description">
-        <p>Event X coordinate relative to the viewport</p>
+        <p>ty component of the matrix</p>
     </div>
     
 
@@ -1021,942 +458,6 @@
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameScreenY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameScreenY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event Y coordinate relative to the viewport</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameWorldX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameWorldX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event X coordinate relative to the map</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameWorldY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameWorldY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event Y coordinate relative to the map</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event normalized X coordinate within the game canvas itself<br>
-<img src="images/event_coord.png"/></p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event normalized Y coordinate within the game canvas itself<br>
-<img src="images/event_coord.png"/></p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".isPrimary">
-    <span class="type-signature"><span class="icon green">static</span> </span>isPrimary<span class="type-signature"> :Boolean</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>indicates whether or not the pointer device that created the event is the primary pointer.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pageX">
-    <span class="type-signature"><span class="icon green">static</span> </span>pageX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the horizontal coordinate at which the event occurred, relative to the left edge of the entire document.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pageY">
-    <span class="type-signature"><span class="icon green">static</span> </span>pageY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the vertical coordinate at which the event occurred, relative to the left edge of the entire document.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pointerId">
-    <span class="type-signature"><span class="icon green">static</span> </span>pointerId<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The unique identifier of the contact for a touch, mouse or pen</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".type">
-    <span class="type-signature"><span class="icon green">static</span> </span>type<span class="type-signature"> :String</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a string containing the event's type.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/type">https://developer.mozilla.org/en-US/docs/Web/API/Event/type</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id="points">
-    <span class="type-signature"></span>points<span class="type-signature"> :Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Array of points defining the Polygon <br>
-Note: If you manually change <code>points</code>, you <strong>must</strong> call <code>recalc</code>afterwards so that the changes get applied correctly.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#points">me.Polygon#points</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id="pos">
-    <span class="type-signature"></span>pos<span class="type-signature"> :<a href="me.Vector2d.html">me.Vector2d</a></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>origin point of the Polygon</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#pos">me.Polygon#pos</a>
-    </li></ul></dd>
     
 
     
@@ -2001,9 +502,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="clone">
+        <h4 class="name" id=".apply">
             
-                <span class="type-signature"></span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>apply<span class="signature">(vector)</span><span class="type-signature"> &rarr; {<a href="me.Vector3d.html">me.Vector3d</a>}</span>
                 
             
         </h4>
@@ -2015,117 +516,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>clone this rectangle</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>new rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#clone">me.Rect#clone</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="contains">
-            
-                <span class="type-signature"></span>contains<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle contains the specified one</p>
+        <p>apply the current transform to the given 3d vector</p>
     </div>
     
 
@@ -2161,13 +552,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>rect</code></td>
+                <td class="name"><code>vector</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
 
 
             
@@ -2177,7 +568,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>the vector object to be transformed</p></td>
         </tr>
 
     
@@ -2205,13 +596,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
 
 
 
 
 
-- <p>true if contains</p>
+- <p>result vector object.</p>
 
 
 
@@ -2229,11 +620,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#contains">me.Rect#contains</a>
-    </li></ul></dd>
     
 
     
@@ -2271,9 +657,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="containsPoint">
+        <h4 class="name" id=".applyInverse">
             
-                <span class="type-signature"></span>containsPoint<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>applyInverse<span class="signature">(vector)</span><span class="type-signature"> &rarr; {<a href="me.Vector3d.html">me.Vector3d</a>}</span>
                 
             
         </h4>
@@ -2285,7 +671,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>check if this rectangle contains the specified point</p>
+        <p>apply the inverted current transform to the given 3d vector</p>
     </div>
     
 
@@ -2321,7 +707,1046 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>x</code></td>
+                <td class="name"><code>vector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the vector object to be transformed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
+
+
+
+
+
+- <p>result vector object.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".clone">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Clone the Matrix</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".copy">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>copy<span class="signature">(m)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Copies over the values from another me.Matrix3d.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>m</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the matrix object to copy from</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".equals">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>equals<span class="signature">(b)</span><span class="type-signature"> &rarr; {Boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return true if the two matrices are identical</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the other matrix</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Boolean</span>
+
+
+
+
+
+- <p>true if both are equals</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".identity">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>identity<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>reset the transformation matrix to the identity matrix (no transformation).<br>
+the identity matrix and parameters position : <br>
+<img src="images/identity-matrix_2x.png"/></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".invert">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>invert<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>invert this matrix, causing it to apply the opposite transformation.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".isIdentity">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>isIdentity<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns true if the matrix is an identity matrix.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Boolean</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".multiply">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>multiply<span class="signature">(b)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>multiply both matrix</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Other matrix</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".ortho">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>ortho<span class="signature">(left, right, bottom, top, near, far)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>generate an orthogonal projection matrix, with the result replacing the current matrix
+<img src="images/glOrtho.gif"/><br></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>left</code></td>
             
 
             <td class="type">
@@ -2337,14 +1762,14 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>x coordinate</p></td>
+            <td class="description last"><p>farthest left on the x-axis</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>y</code></td>
+                <td class="name"><code>right</code></td>
             
 
             <td class="type">
@@ -2360,1171 +1785,14 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>y coordinate</p></td>
+            <td class="description last"><p>farthest right on the x-axis</p></td>
         </tr>
 
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if contains</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#containsPoint">me.Rect#containsPoint</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="containsPointV">
-            
-                <span class="type-signature"></span>containsPointV<span class="signature">(point)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this Polygon contains the specified point</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>point</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if contains</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#containsPointV">me.Polygon#containsPointV</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="copy">
-            
-                <span class="type-signature"></span>copy<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>copy the position and size of the given rectangle into this one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Source rectangle</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>new rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#copy">me.Rect#copy</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="equals">
-            
-                <span class="type-signature"></span>equals<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle is identical to the specified one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if equals</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#equals">me.Rect#equals</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getBounds">
-            
-                <span class="type-signature"></span>getBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the bounding box for this shape, the smallest rectangle object completely containing this shape.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this shape bounding box Rectangle object</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#getBounds">me.Rect#getBounds</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getIndices">
-            
-                <span class="type-signature"></span>getIndices<span class="signature">(a)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns a list of indices for all triangles defined in this polygon</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>a</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Vector2d></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>list of vector</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>this Polygon</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#getIndices">me.Polygon#getIndices</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="isFinite">
-            
-                <span class="type-signature"></span>isFinite<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>determines whether all coordinates of this rectangle are finite numbers.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>false if all coordinates are positive or negative Infinity or NaN; otherwise, true.</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#isFinite">me.Rect#isFinite</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="overlaps">
-            
-                <span class="type-signature"></span>overlaps<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle is intersecting with the specified one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if overlaps</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#overlaps">me.Rect#overlaps</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="resize">
-            
-                <span class="type-signature"></span>resize<span class="signature">(w, h)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>resize the rectangle</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>w</code></td>
+                <td class="name"><code>bottom</code></td>
             
 
             <td class="type">
@@ -3540,14 +1808,14 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>new width of the rectangle</p></td>
+            <td class="description last"><p>farthest down on the y-axis</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>h</code></td>
+                <td class="name"><code>top</code></td>
             
 
             <td class="type">
@@ -3563,7 +1831,53 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>new height of the rectangle</p></td>
+            <td class="description last"><p>farthest up on the y-axis</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>near</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>distance to the near clipping plane along the -Z axis</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>far</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>distance to the far clipping plane along the -Z axis</p></td>
         </tr>
 
     
@@ -3591,13 +1905,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
 
 
-- <p>this rectangle</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -3615,11 +1929,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#resize">me.Rect#resize</a>
-    </li></ul></dd>
     
 
     
@@ -3657,9 +1966,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="rotate">
+        <h4 class="name" id=".rotate">
             
-                <span class="type-signature"></span>rotate<span class="signature">(angle, v<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>rotate<span class="signature">(angle, axis)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
                 
             
         </h4>
@@ -3671,7 +1980,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>Rotate this Polygon (counter-clockwise) by the specified angle (in radians).</p>
+        <p>rotate this matrix (counter-clockwise) by the specified angle (in radians).</p>
     </div>
     
 
@@ -3694,8 +2003,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <th>Type</th>
 
-        
-        <th>Attributes</th>
         
 
         
@@ -3722,54 +2029,33 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>The angle to rotate (in radians)</p></td>
+            <td class="description last"><p>Rotation angle in radians.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>v</code></td>
+                <td class="name"><code>axis</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-|
-
-<span class="param-type"><a href="me.ObservableVector2d.html">me.ObservableVector2d</a></span>
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>an optional point to rotate around</p></td>
+            <td class="description last"><p>the axis to rotate around</p></td>
         </tr>
 
     
@@ -3797,7 +2083,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
@@ -3821,11 +2107,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#rotate">me.Polygon#rotate</a>
-    </li></ul></dd>
     
 
     
@@ -3863,9 +2144,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="scale">
+        <h4 class="name" id=".scale">
             
-                <span class="type-signature"></span>scale<span class="signature">(x, y<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>scale<span class="signature">(x, y<span class="signature-attributes">opt</span>, z<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
                 
             
         </h4>
@@ -3877,7 +2158,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>Scale this Polygon by the given scalar.</p>
+        <p>scale the matrix</p>
     </div>
     
 
@@ -3945,7 +2226,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
                 </td>
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>a number representing the abscissa of the scaling vector.</p></td>
         </tr>
 
     
@@ -3984,7 +2265,46 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
                 </td>
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>a number representing the ordinate of the scaling vector.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last"><p>a number representing the depth vector</p></td>
         </tr>
 
     
@@ -4012,7 +2332,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
@@ -4036,11 +2356,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#scale">me.Polygon#scale</a>
-    </li></ul></dd>
     
 
     
@@ -4078,9 +2393,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="scaleV">
+        <h4 class="name" id=".scaleV">
             
-                <span class="type-signature"></span>scaleV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>scaleV<span class="signature">(vector)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
                 
             
         </h4>
@@ -4092,7 +2407,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>Scale this Polygon by the given vector</p>
+        <p>adds a 2D scaling transformation.</p>
     </div>
     
 
@@ -4128,13 +2443,826 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>v</code></td>
+                <td class="name"><code>vector</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
+|
+
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>scaling vector</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".scaleX">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>scaleX<span class="signature">(x)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>specifies a 2D scale operation using the [sx, 1] scaling vector</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x scaling vector</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".scaleY">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>scaleY<span class="signature">(y)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>specifies a 2D scale operation using the [1,sy] scaling vector</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>y scaling vector</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setTransform">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setTransform<span class="signature">(m00, m01, m02, m03, m10, m11, m12, m13, m20, m21, m22, m23, m30, m31, m32, m33)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set the matrix to the specified value</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>m00</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m01</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m02</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m03</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m10</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m11</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m12</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m13</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m20</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m21</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m22</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m23</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m30</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m31</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m32</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m33</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
 
 
             
@@ -4172,7 +3300,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
@@ -4197,11 +3325,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#scaleV">me.Polygon#scaleV</a>
-    </li></ul></dd>
-    
 
     
 
@@ -4238,9 +3361,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="setPoints">
+        <h4 class="name" id=".toArray">
             
-                <span class="type-signature"></span>setPoints<span class="signature">(points)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>toArray<span class="signature">()</span><span class="type-signature"> &rarr; {Float32Array}</span>
                 
             
         </h4>
@@ -4252,7 +3375,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>resize the rectangle to contain all the given points coordinates.</p>
+        <p>return an array representation of this Matrix</p>
     </div>
     
 
@@ -4262,56 +3385,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>points</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>array of vector defining a shape</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
     
 
     
@@ -4332,13 +3405,11 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type">Float32Array</span>
 
 
 
 
-
-- <p>this shape bounding box Rectangle object</p>
 
 
 
@@ -4356,11 +3427,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#setPoints">me.Rect#setPoints</a>
-    </li></ul></dd>
     
 
     
@@ -4398,9 +3464,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="setShape">
+        <h4 class="name" id=".toString">
             
-                <span class="type-signature"></span>setShape<span class="signature">(x, y, w|points, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>toString<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span>
                 
             
         </h4>
@@ -4412,7 +3478,110 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>set new value to the rectangle shape</p>
+        <p>convert the object to a string representation</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">String</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".translate">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>translate<span class="signature">(x, y<span class="signature-attributes">opt</span>, z<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>translate the matrix position using the given vector</p>
     </div>
     
 
@@ -4440,6 +3609,8 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -4473,8 +3644,12 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>position of the Rectangle</p></td>
+            <td class="description last"><p>a number representing the abscissa of the vector.</p></td>
         </tr>
 
     
@@ -4482,71 +3657,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
         <tr>
             
                 <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>position of the Rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>w|points</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-|
-
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>width of the rectangle, or an array of vector defining the rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>h</code></td>
             
 
             <td class="type">
@@ -4571,642 +3681,21 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             
 
             
+                <td class="default">
+                
+                    x
+                
+                </td>
+            
 
-            <td class="description last"><p>height of the rectangle, if a numeral width parameter is specified</p></td>
+            <td class="description last"><p>a number representing the ordinate of the vector.</p></td>
         </tr>
 
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#setShape">me.Rect#setShape</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="to2d">
-            
-                <span class="type-signature"></span>to2d<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply a 2d projection to this shape</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#to2d">me.Polygon#to2d</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="toIso">
-            
-                <span class="type-signature"></span>toIso<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply an isometric projection to this shape</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#toIso">me.Polygon#toIso</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="toPolygon">
-            
-                <span class="type-signature"></span>toPolygon<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Returns a polygon whose edges are the same as this box.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>a new Polygon that represents this rectangle.</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#toPolygon">me.Rect#toPolygon</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="transform">
-            
-                <span class="type-signature"></span>transform<span class="signature">(matrix)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply the given transformation matrix to this Polygon</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>matrix</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Matrix2d.html">me.Matrix2d</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the transformation matrix</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#transform">me.Polygon#transform</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="translate">
-            
-                <span class="type-signature"></span>translate<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>translate the rect by the specified offset</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
+                <td class="name"><code>z</code></td>
             
 
             <td class="type">
@@ -5219,33 +3708,26 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             </td>
 
             
-
-            
-
-            <td class="description last"><p>x offset</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type">Number</span>
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
 
             
-            </td>
-
+                <td class="default">
+                
+                    0
+                
+                </td>
             
 
-            
-
-            <td class="description last"><p>y offset</p></td>
+            <td class="description last"><p>a number representing the depth of the vector</p></td>
         </tr>
 
     
@@ -5273,13 +3755,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
 
 
-- <p>this rectangle</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -5297,11 +3779,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#translate">me.Rect#translate</a>
-    </li></ul></dd>
     
 
     
@@ -5339,9 +3816,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="translateV">
+        <h4 class="name" id=".translateV">
             
-                <span class="type-signature"></span>translateV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>translateV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
                 
             
         </h4>
@@ -5353,7 +3830,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>translate the rect by the specified vector</p>
+        <p>translate the matrix by a vector on the horizontal and vertical axis</p>
     </div>
     
 
@@ -5396,6 +3873,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             
                 
 <span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
+|
+
+<span class="param-type"><a href="me.Vector3d.html">me.Vector3d</a></span>
 
 
             
@@ -5405,7 +3885,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>vector offset</p></td>
+            <td class="description last"><p>the vector to translate the matrix by</p></td>
         </tr>
 
     
@@ -5433,13 +3913,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
 
 
-- <p>this rectangle</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -5457,11 +3937,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#translateV">me.Rect#translateV</a>
-    </li></ul></dd>
     
 
     
@@ -5499,9 +3974,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="union">
+        <h4 class="name" id=".transpose">
             
-                <span class="type-signature"></span>union<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>transpose<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Matrix3d.html">me.Matrix3d</a>}</span>
                 
             
         </h4>
@@ -5513,167 +3988,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>merge this rectangle with another one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>other rectangle to union with</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>the union(ed) rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#union">me.Rect#union</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="updateBounds">
-            
-                <span class="type-signature"></span>updateBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>update the bounding box for this shape.</p>
+        <p>Transpose the value of this matrix.</p>
     </div>
     
 
@@ -5703,13 +4018,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 
 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type"><a href="me.Matrix3d.html">me.Matrix3d</a></span>
 
 
 
 
 
-- <p>this shape bounding box Rectangle object</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -5727,11 +4042,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#updateBounds">me.Rect#updateBounds</a>
-    </li></ul></dd>
     
 
     
@@ -5794,7 +4104,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'me.Pointer_sub'.replace(/"/g, '_');
+        var id = 'me.Matrix3d_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

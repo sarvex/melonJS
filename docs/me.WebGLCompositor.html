@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Class: Pointer | melonJS API documentation</title>
+    <title>Class: WebGLCompositor | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -52,7 +52,7 @@
 <header>
     
         <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="me.html">me</a>.</span>Pointer<span class="signature">()</span><span class="type-signature"></span></h2>
+            <span class="ancestors"><a href="me.html">me</a>.</span>WebGLCompositor<span class="signature">(renderer)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -65,9 +65,9 @@
 
 <dt>
     
-        <h4 class="name" id="Pointer">
+        <h4 class="name" id="WebGLCompositor">
             
-                new <span class="type-signature"></span>Pointer<span class="signature">()</span><span class="type-signature"></span>
+                new <span class="type-signature"></span>WebGLCompositor<span class="signature">(renderer)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -79,7 +79,8 @@
 
     
     <div class="description">
-        <p>a pointer object, representing a single finger on a touch enabled device.</p>
+        <p>A WebGL Compositor object. This class handles all of the WebGL state<br>
+Pushes texture regions or shape geometry into WebGL buffers, automatically flushes to GPU</p>
     </div>
     
 
@@ -89,6 +90,56 @@
 
     
 
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>renderer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="me.WebGLRenderer.html">me.WebGLRenderer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the current WebGL renderer session</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
     
 
     
@@ -155,7 +206,7 @@
 
 
     <ul>
-        <li><a href="me.Rect.html">me.Rect</a></li>
+        <li><a href="me.Object.html">me.Object</a></li>
     </ul>
 
 
@@ -178,8 +229,8 @@
             
 
 <dt>
-<h4 class="name" id=".button">
-    <span class="type-signature"><span class="icon green">static</span> </span>button<span class="type-signature"> :Number</span>
+<h4 class="name" id=".activeShader">
+    <span class="type-signature"><span class="icon green">static</span> </span>activeShader<span class="type-signature"> :<a href="me.GLShader.html">me.GLShader</a></span>
     
 </h4>
 
@@ -188,7 +239,7 @@
 <dd>
     
     <div class="description">
-        <p>the button property indicates which button was pressed on the mouse to trigger the event.</p>
+        <p>a reference to the active WebGL shader</p>
     </div>
     
 
@@ -198,11 +249,75 @@
         <ul>
             <li>
                 
-<span class="param-type">Number</span>
+<span class="param-type"><a href="me.GLShader.html">me.GLShader</a></span>
 
 
             </li>
         </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".attributes">
+    <span class="type-signature"><span class="icon green">static</span> </span>attributes<span class="type-signature"></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>an array of vertex attribute properties</p>
+    </div>
+    
+
+    <!--
     
     -->
 
@@ -241,7 +356,7 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button</a></li>
+            <li><a href="me.WebGLCompositor.html#.addAttribute">me.WebGLCompositor.addAttribute</a></li>
         </ul>
     </dd>
     
@@ -259,8 +374,8 @@
             
 
 <dt>
-<h4 class="name" id=".clientX">
-    <span class="type-signature"><span class="icon green">static</span> </span>clientX<span class="type-signature"> :Number</span>
+<h4 class="name" id=".length">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>length<span class="type-signature"> :Number</span>
     
 </h4>
 
@@ -269,7 +384,7 @@
 <dd>
     
     <div class="description">
-        <p>the horizontal coordinate within the application's client area at which the event occurred</p>
+        <p>The number of quads held in the batch</p>
     </div>
     
 
@@ -314,6 +429,75 @@
 
     
 
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".mode">
+    <span class="type-signature"><span class="icon green">static</span> </span>mode<span class="type-signature"></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>primitive type to render (gl.POINTS, gl.LINE_STRIP, gl.LINE_LOOP, gl.LINES, gl.TRIANGLE_STRIP, gl.TRIANGLE_FAN, gl.TRIANGLES)</p>
+    </div>
+    
+
+    <!--
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>gl.TRIANGLES</li>
+        </ul></dd>
     
 
     
@@ -322,1663 +506,9 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX</a></li>
+            <li><a href="me.WebGLCompositor.html">me.WebGLCompositor</a></li>
         </ul>
     </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".clientY">
-    <span class="type-signature"><span class="icon green">static</span> </span>clientY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the vertical coordinate within the application's client area at which the event occurred</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaMode">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaMode<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>an unsigned long representing the unit of the delta values scroll amount</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaX">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the horizontal scroll amount in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaY">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the vertical scroll amount in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".deltaZ">
-    <span class="type-signature"><span class="icon green">static</span> </span>deltaZ<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a double representing the scroll amount in the z-axis, in the Wheel Event deltaMode unit.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ">https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".event">
-    <span class="type-signature"><span class="icon green">static</span> </span>event<span class="type-signature"> :PointerEvent|TouchEvent|MouseEvent</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the originating Event Object</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">PointerEvent</span>
-|
-
-<span class="param-type">TouchEvent</span>
-|
-
-<span class="param-type">MouseEvent</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent</a></li>
-        
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent</a></li>
-        
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameLocalX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameLocalX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event X coordinate relative to the holding container</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameLocalY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameLocalY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event Y coordinate relative to the holding container</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameScreenX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameScreenX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event X coordinate relative to the viewport</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameScreenY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameScreenY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event Y coordinate relative to the viewport</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameWorldX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameWorldX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event X coordinate relative to the map</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameWorldY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameWorldY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event Y coordinate relative to the map</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameX">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event normalized X coordinate within the game canvas itself<br>
-<img src="images/event_coord.png"/></p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gameY">
-    <span class="type-signature"><span class="icon green">static</span> </span>gameY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Event normalized Y coordinate within the game canvas itself<br>
-<img src="images/event_coord.png"/></p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".isPrimary">
-    <span class="type-signature"><span class="icon green">static</span> </span>isPrimary<span class="type-signature"> :Boolean</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>indicates whether or not the pointer device that created the event is the primary pointer.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pageX">
-    <span class="type-signature"><span class="icon green">static</span> </span>pageX<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the horizontal coordinate at which the event occurred, relative to the left edge of the entire document.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pageY">
-    <span class="type-signature"><span class="icon green">static</span> </span>pageY<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the vertical coordinate at which the event occurred, relative to the left edge of the entire document.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".pointerId">
-    <span class="type-signature"><span class="icon green">static</span> </span>pointerId<span class="type-signature"> :Number</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The unique identifier of the contact for a touch, mouse or pen</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId">https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".type">
-    <span class="type-signature"><span class="icon green">static</span> </span>type<span class="type-signature"> :String</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>a string containing the event's type.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/type">https://developer.mozilla.org/en-US/docs/Web/API/Event/type</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id="points">
-    <span class="type-signature"></span>points<span class="type-signature"> :Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Array of points defining the Polygon <br>
-Note: If you manually change <code>points</code>, you <strong>must</strong> call <code>recalc</code>afterwards so that the changes get applied correctly.</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#points">me.Polygon#points</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id="pos">
-    <span class="type-signature"></span>pos<span class="type-signature"> :<a href="me.Vector2d.html">me.Vector2d</a></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>origin point of the Polygon</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#pos">me.Polygon#pos</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -2001,9 +531,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="clone">
+        <h4 class="name" id=".addAttribute">
             
-                <span class="type-signature"></span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>addAttribute<span class="signature">(name, size, type, normalized, offset)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -2015,117 +545,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>clone this rectangle</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>new rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#clone">me.Rect#clone</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="contains">
-            
-                <span class="type-signature"></span>contains<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle contains the specified one</p>
+        <p>add vertex attribute property definition to the compositor</p>
     </div>
     
 
@@ -2161,13 +581,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>rect</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
+<span class="param-type">String</span>
 
 
             
@@ -2177,7 +597,99 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>name of the attribute in the vertex shader</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>number of components per vertex attribute. Must be 1, 2, 3, or 4.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">GLenum</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>data type of each component in the array</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>normalized</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>whether integer data values should be normalized into a certain</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>offset in bytes of the first component in the vertex attribute array</p></td>
         </tr>
 
     
@@ -2198,27 +710,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if contains</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -2229,11 +720,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#contains">me.Rect#contains</a>
-    </li></ul></dd>
     
 
     
@@ -2271,9 +757,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="containsPoint">
+        <h4 class="name" id=".addQuad">
             
-                <span class="type-signature"></span>containsPoint<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>addQuad<span class="signature">(texture, key, x, y, w, h)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -2285,7 +771,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>check if this rectangle contains the specified point</p>
+        <p>Add a textured quad</p>
     </div>
     
 
@@ -2321,6 +807,52 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
+                <td class="name"><code>texture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">me.video.renderer.Texture</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Source texture</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Source texture region name</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>x</code></td>
             
 
@@ -2337,7 +869,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>x coordinate</p></td>
+            <td class="description last"><p>Destination x-coordinate</p></td>
         </tr>
 
     
@@ -2360,7 +892,53 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>y coordinate</p></td>
+            <td class="description last"><p>Destination y-coordinate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Destination width</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Destination height</p></td>
         </tr>
 
     
@@ -2381,27 +959,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if contains</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -2412,11 +969,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#containsPoint">me.Rect#containsPoint</a>
-    </li></ul></dd>
     
 
     
@@ -2454,9 +1006,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="containsPointV">
+        <h4 class="name" id=".clear">
             
-                <span class="type-signature"></span>containsPointV<span class="signature">(point)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>clear<span class="signature">()</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -2468,7 +1020,91 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>check if this Polygon contains the specified point</p>
+        <p>Clear the frame buffer</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".clearColor">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>clearColor<span class="signature">(r, g, b, a)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Specify the color values used when clearing color buffers. The values are clamped between 0 and 1.</p>
     </div>
     
 
@@ -2504,15 +1140,955 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>point</code></td>
+                <td class="name"><code>r</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
+<span class="param-type">Number</span>
 
 
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the red color value used when the color buffers are cleared</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>g</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the green color value used when the color buffers are cleared</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the blue color value used when the color buffers are cleared</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the alpha color value used when the color buffers are cleared</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".createTexture2D">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>createTexture2D<span class="signature">(unit, image, filter, repeat<span class="signature-attributes">opt</span>, w<span class="signature-attributes">opt</span>, h<span class="signature-attributes">opt</span>, b<span class="signature-attributes">opt</span>, b<span class="signature-attributes">opt</span>, premultipliedAlpha<span class="signature-attributes">opt</span>, mipmap<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {WebGLTexture}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Create a WebGL texture from an image</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>unit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Destination texture unit</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>image</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Image</span>
+|
+
+<span class="param-type">Canvas</span>
+|
+
+<span class="param-type">ImageData</span>
+|
+
+<span class="param-type">Array.&lt;UInt8Array></span>
+|
+
+<span class="param-type">Array.&lt;Float32Array></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Source image</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>filter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>gl.LINEAR or gl.NEAREST</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>repeat</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    "no-repeat"
+                
+                </td>
+            
+
+            <td class="description last"><p>Image repeat behavior (see <a href="me.ImageLayer.html#repeat"><code>me.ImageLayer#repeat</code></a>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Source image width (Only use with UInt8Array[] or Float32Array[] source image)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Source image height (Only use with UInt8Array[] or Float32Array[] source image)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Source image border (Only use with UInt8Array[] or Float32Array[] source image)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Source image border (Only use with UInt8Array[] or Float32Array[] source image)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>premultipliedAlpha</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>Multiplies the alpha channel into the other color channels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mipmap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>Whether mipmap levels should be generated for this texture</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">WebGLTexture</span>
+
+
+
+
+
+- <p>a WebGL texture</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".drawVertices">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>drawVertices<span class="signature">(mode<span class="signature-attributes">opt</span>, verts, vertexCount<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Draw an array of vertices</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">GLENUM</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    gl.TRIANGLES
+                
+                </td>
+            
+
+            <td class="description last"><p>primitive type to render (gl.POINTS, gl.LINE_STRIP, gl.LINE_LOOP, gl.LINES, gl.TRIANGLE_STRIP, gl.TRIANGLE_FAN, gl.TRIANGLES)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>verts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>vertices</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>vertexCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    verts.length
+                
+                </td>
+            
+
+            <td class="description last"><p>amount of points defined in the points array</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".flush">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>flush<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Flush batched texture operations to the GPU</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+
+            <td class="type">
             
             </td>
 
@@ -2541,27 +2117,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if contains</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -2572,11 +2127,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#containsPointV">me.Polygon#containsPointV</a>
-    </li></ul></dd>
     
 
     
@@ -2614,9 +2164,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="copy">
+        <h4 class="name" id=".setTexture2D">
             
-                <span class="type-signature"></span>copy<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>setTexture2D<span class="signature">(a, unit)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -2628,437 +2178,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>copy the position and size of the given rectangle into this one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Source rectangle</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>new rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#copy">me.Rect#copy</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="equals">
-            
-                <span class="type-signature"></span>equals<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle is identical to the specified one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if equals</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#equals">me.Rect#equals</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getBounds">
-            
-                <span class="type-signature"></span>getBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the bounding box for this shape, the smallest rectangle object completely containing this shape.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this shape bounding box Rectangle object</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#getBounds">me.Rect#getBounds</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getIndices">
-            
-                <span class="type-signature"></span>getIndices<span class="signature">(a)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns a list of indices for all triangles defined in this polygon</p>
+        <p>assign the given WebGL texture to the current batch</p>
     </div>
     
 
@@ -3100,7 +2220,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Vector2d></span>
+<span class="param-type">WebGLTexture</span>
 
 
             
@@ -3110,7 +2230,30 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>list of vector</p></td>
+            <td class="description last"><p>WebGL texture</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Texture unit to which the given texture is bound</p></td>
         </tr>
 
     
@@ -3131,27 +2274,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>this Polygon</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -3162,11 +2284,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#getIndices">me.Polygon#getIndices</a>
-    </li></ul></dd>
     
 
     
@@ -3204,9 +2321,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="isFinite">
+        <h4 class="name" id=".setViewport">
             
-                <span class="type-signature"></span>isFinite<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>setViewport<span class="signature">(x, y, width, height)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -3218,1959 +2335,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>determines whether all coordinates of this rectangle are finite numbers.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>false if all coordinates are positive or negative Infinity or NaN; otherwise, true.</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#isFinite">me.Rect#isFinite</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="overlaps">
-            
-                <span class="type-signature"></span>overlaps<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if this rectangle is intersecting with the specified one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if overlaps</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#overlaps">me.Rect#overlaps</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="resize">
-            
-                <span class="type-signature"></span>resize<span class="signature">(w, h)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>resize the rectangle</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>w</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>new width of the rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>h</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>new height of the rectangle</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#resize">me.Rect#resize</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="rotate">
-            
-                <span class="type-signature"></span>rotate<span class="signature">(angle, v<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Rotate this Polygon (counter-clockwise) by the specified angle (in radians).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>angle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The angle to rotate (in radians)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>v</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-|
-
-<span class="param-type"><a href="me.ObservableVector2d.html">me.ObservableVector2d</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>an optional point to rotate around</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#rotate">me.Polygon#rotate</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="scale">
-            
-                <span class="type-signature"></span>scale<span class="signature">(x, y<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Scale this Polygon by the given scalar.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    x
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#scale">me.Polygon#scale</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="scaleV">
-            
-                <span class="type-signature"></span>scaleV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Scale this Polygon by the given vector</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>v</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#scaleV">me.Polygon#scaleV</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="setPoints">
-            
-                <span class="type-signature"></span>setPoints<span class="signature">(points)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>resize the rectangle to contain all the given points coordinates.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>points</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;<a href="me.Vector2d.html">me.Vector2d</a>></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>array of vector defining a shape</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this shape bounding box Rectangle object</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#setPoints">me.Rect#setPoints</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="setShape">
-            
-                <span class="type-signature"></span>setShape<span class="signature">(x, y, w|points, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>set new value to the rectangle shape</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>position of the Rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>position of the Rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>w|points</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-|
-
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>width of the rectangle, or an array of vector defining the rectangle</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>h</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>height of the rectangle, if a numeral width parameter is specified</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#setShape">me.Rect#setShape</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="to2d">
-            
-                <span class="type-signature"></span>to2d<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply a 2d projection to this shape</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#to2d">me.Polygon#to2d</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="toIso">
-            
-                <span class="type-signature"></span>toIso<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply an isometric projection to this shape</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#toIso">me.Polygon#toIso</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="toPolygon">
-            
-                <span class="type-signature"></span>toPolygon<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Returns a polygon whose edges are the same as this box.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>a new Polygon that represents this rectangle.</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#toPolygon">me.Rect#toPolygon</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="transform">
-            
-                <span class="type-signature"></span>transform<span class="signature">(matrix)</span><span class="type-signature"> &rarr; {<a href="me.Polygon.html">me.Polygon</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>apply the given transformation matrix to this Polygon</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>matrix</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Matrix2d.html">me.Matrix2d</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the transformation matrix</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Polygon.html">me.Polygon</a></span>
-
-
-
-
-
-- <p>Reference to this object for method chaining</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Polygon.html#transform">me.Polygon#transform</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="translate">
-            
-                <span class="type-signature"></span>translate<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>translate the rect by the specified offset</p>
+        <p>Sets the viewport</p>
     </div>
     
 
@@ -5222,7 +2387,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>x offset</p></td>
+            <td class="description last"><p>x position of viewport</p></td>
         </tr>
 
     
@@ -5245,7 +2410,53 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>y offset</p></td>
+            <td class="description last"><p>y position of viewport</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>width of viewport</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>height of viewport</p></td>
         </tr>
 
     
@@ -5266,27 +2477,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this rectangle</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -5297,11 +2487,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
 
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#translate">me.Rect#translate</a>
-    </li></ul></dd>
     
 
     
@@ -5339,9 +2524,9 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
 <dt>
     
-        <h4 class="name" id="translateV">
+        <h4 class="name" id=".useShader">
             
-                <span class="type-signature"></span>translateV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
+                <span class="type-signature"><span class="icon green">static</span> </span>useShader<span class="signature">(shader)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -5353,7 +2538,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
     
     <div class="description">
-        <p>translate the rect by the specified vector</p>
+        <p>Select the shader to use for compositing</p>
     </div>
     
 
@@ -5389,13 +2574,13 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
         <tr>
             
-                <td class="name"><code>v</code></td>
+                <td class="name"><code>shader</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
+<span class="param-type"><a href="me.GLShader.html">me.GLShader</a></span>
 
 
             
@@ -5405,7 +2590,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 
             
 
-            <td class="description last"><p>vector offset</p></td>
+            <td class="description last"><p>a reference to a GLShader instance</p></td>
         </tr>
 
     
@@ -5426,27 +2611,6 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this rectangle</p>
-
-
-
-
-            
-    </div>
-    
 
     
 
@@ -5458,283 +2622,12 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#translateV">me.Rect#translateV</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="union">
-            
-                <span class="type-signature"></span>union<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>merge this rectangle with another one</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rect</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>other rectangle to union with</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>the union(ed) rectangle</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#union">me.Rect#union</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="updateBounds">
-            
-                <span class="type-signature"></span>updateBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>update the bounding box for this shape.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
 
-
-
-<span class="param-type"><a href="me.Rect.html">me.Rect</a></span>
-
-
-
-
-
-- <p>this shape bounding box Rectangle object</p>
-
-
-
-
-            
-    </div>
     
 
     
 
-
-<dl class="details">
-
-    
-
-    
-
     
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Rect.html#updateBounds">me.Rect#updateBounds</a>
-    </li></ul></dd>
-    
-
-    
 
     
 
@@ -5751,9 +2644,12 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
     
 
     
-
-    
-
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="me.GLShader.html">me.GLShader</a></li>
+        </ul>
+    </dd>
     
 
     
@@ -5794,7 +2690,7 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'me.Pointer_sub'.replace(/"/g, '_');
+        var id = 'me.WebGLCompositor_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
