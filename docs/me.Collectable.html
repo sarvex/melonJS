@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Class: World | melonJS API documentation</title>
+    <title>Class: Collectable | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -52,7 +52,7 @@
 <header>
     
         <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="me.html">me</a>.</span>World<span class="signature">(x<span class="signature-attributes">opt</span>, y<span class="signature-attributes">opt</span>, w<span class="signature-attributes">opt</span>, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+            <span class="ancestors"><a href="me.html">me</a>.</span>Collectable<span class="signature">(x, y, settings)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -65,9 +65,9 @@
 
 <dt>
     
-        <h4 class="name" id="World">
+        <h4 class="name" id="Collectable">
             
-                new <span class="type-signature"></span>World<span class="signature">(x<span class="signature-attributes">opt</span>, y<span class="signature-attributes">opt</span>, w<span class="signature-attributes">opt</span>, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                new <span class="type-signature"></span>Collectable<span class="signature">(x, y, settings)</span><span class="type-signature"></span>
                 
             
         </h4>
@@ -79,7 +79,7 @@
 
     
     <div class="description">
-        <p>an object representing the physic world, and responsible for managing and updating all childs and physics</p>
+        <p>a basic collectable helper class for immovable object (e.g. a coin)</p>
     </div>
     
 
@@ -103,11 +103,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -132,26 +128,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
 
-            <td class="description last"><p>position of the container (accessible via the inherited pos.x property)</p></td>
+            <td class="description last"><p>the x coordinates of the collectable</p></td>
         </tr>
 
     
@@ -171,104 +151,33 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
 
-            <td class="description last"><p>position of the container (accessible via the inherited pos.y property)</p></td>
+            <td class="description last"><p>the y coordinates of the collectable</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>w</code></td>
+                <td class="name"><code>settings</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Object</span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    me.game.viewport.width
-                
-                </td>
-            
 
-            <td class="description last"><p>width of the container</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>h</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    me.game.viewport.height
-                
-                </td>
-            
-
-            <td class="description last"><p>height of the container</p></td>
+            <td class="description last"><p>See <a href="me.Sprite.html"><code>me.Sprite</code></a></p></td>
         </tr>
 
     
@@ -342,7 +251,7 @@
 
 
     <ul>
-        <li><a href="me.Container.html">me.Container</a></li>
+        <li><a href="me.Sprite.html">me.Sprite</a></li>
     </ul>
 
 
@@ -362,331 +271,6 @@
         <h3 class="subsection-title">Members</h3>
 
         <dl>
-            
-
-<dt>
-<h4 class="name" id=".broadphase">
-    <span class="type-signature"><span class="icon green">static</span> </span>broadphase<span class="type-signature"> :<a href="me.QuadTree.html">me.QuadTree</a></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the instance of the game world quadtree used for broadphase</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="me.QuadTree.html">me.QuadTree</a></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".fps">
-    <span class="type-signature"><span class="icon green">static</span> </span>fps<span class="type-signature"> :<a href="me.Vector2d.html">me.Vector2d</a></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>the rate at which the game world is updated,
-may be greater than or lower than the display fps</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-default">Default Value:</dt>
-    <dd class="tag-default"><ul class="dummy">
-            <li>60</li>
-        </ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="me.timer.html#.maxfps">me.timer.maxfps</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".gravity">
-    <span class="type-signature"><span class="icon green">static</span> </span>gravity<span class="type-signature"> :<a href="me.Vector2d.html">me.Vector2d</a></span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>world gravity</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-default">Default Value:</dt>
-    <dd class="tag-default"><ul class="dummy">
-            <li><0,0.98></li>
-        </ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-
-<dt>
-<h4 class="name" id=".this.preRender">
-    <span class="type-signature"><span class="icon green">static</span> </span>this.preRender<span class="type-signature"> :Boolean</span>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Specify the rendering method for tile layers. <br>
-if false visible part of the layers are rendered dynamically,<br>
-if true the entire layers are first rendered into an offscreen canvas.<br>
-the &quot;best&quot; rendering method depends of your game
-(amount of layer, layer size, amount of tiles per layer, etc.)<br>
-note : rendering method is also configurable per layer by adding this
-property to your layer (in Tiled).</p>
-    </div>
-    
-
-    <!--
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-            </li>
-        </ul>
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-default">Default Value:</dt>
-    <dd class="tag-default"><ul class="dummy">
-            <li>false</li>
-        </ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
             
 
 <dt>
@@ -940,6 +524,174 @@ a Renderable's anchor point defaults to (0.5,0.5), which corresponds to the cent
     <dt class="tag-default">Default Value:</dt>
     <dd class="tag-default"><ul class="dummy">
             <li><0.5,0.5></li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="animationpause">
+    <span class="type-signature"></span>animationpause<span class="type-signature"> :Boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>pause and resume animation</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#animationpause">me.Sprite#animationpause</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="animationspeed">
+    <span class="type-signature"></span>animationspeed<span class="type-signature"> :Number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>animation cycling speed (delay between frame in ms)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#animationspeed">me.Sprite#animationspeed</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>100</li>
         </ul></dd>
     
 
@@ -1356,6 +1108,90 @@ myNPCSprite.mask = new me.Polygon(myNPCSprite.width / 2, 0, [
             
 
 <dt>
+<h4 class="name" id="offset">
+    <span class="type-signature"></span>offset<span class="type-signature"> :<a href="me.Vector2d.html">me.Vector2d</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>global offset for the position to draw from on the source image.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="me.Vector2d.html">me.Vector2d</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#offset">me.Sprite#offset</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li><0.0,0.0></li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
 <h4 class="name" id="onVisibilityChange">
     <span class="type-signature"></span>onVisibilityChange<span class="type-signature"> :function</span>
     
@@ -1608,6 +1444,85 @@ Note: If you manually change <code>points</code>, you <strong>must</strong> call
             
 
 <dt>
+<h4 class="name" id="source">
+    <span class="type-signature"></span>source<span class="type-signature"> :<a href="me.Renderer.Texture.html">me.Renderer.Texture</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The source texture object this sprite object is using</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="me.Renderer.Texture.html">me.Renderer.Texture</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#source">me.Sprite#source</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
 <h4 class="name" id="tint">
     <span class="type-signature"></span>tint<span class="type-signature"> :<a href="me.Color.html">me.Color</a></span>
     
@@ -1707,9 +1622,9 @@ this.tint.setColor(255, 255, 255);</code></pre>
 
 <dt>
     
-        <h4 class="name" id=".reset">
+        <h4 class="name" id="addAnimation">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>reset<span class="signature">()</span><span class="type-signature"></span>
+                <span class="type-signature"></span>addAnimation<span class="signature">(name, index, animationspeed<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Number}</span>
                 
             
         </h4>
@@ -1721,181 +1636,10 @@ this.tint.setColor(255, 255, 255);</code></pre>
 
     
     <div class="description">
-        <p>reset the game world</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".reset">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>reset<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>update the game world</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="addChild">
-            
-                <span class="type-signature"></span>addChild<span class="signature">(child, z<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Renderable.html">me.Renderable</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Add a child to the container <br>
-if auto-sort is disable, the object will be appended at the bottom of the list.
-Adding a child to the container will automatically remove it from its other container.
-Meaning a child can only have one parent.  This is important if you add a renderable
-to a container then add it to the me.game.world container it will move it out of the
-orginal container.  Then when the me.game.world.reset() is called the renderable
-will not be in any container.</p>
+        <p>add an animation <br>
+For fixed-sized cell sprite sheet, the index list must follow the
+logic as per the following example :<br>
+<img src="images/spritesheet_grid.png"/></p>
     </div>
     
 
@@ -1933,13 +1677,13 @@ will not be in any container.</p>
 
         <tr>
             
-                <td class="name"><code>child</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
+<span class="param-type">String</span>
 
 
             
@@ -1957,20 +1701,58 @@ will not be in any container.</p>
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>animation id</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>z</code></td>
+                <td class="name"><code>index</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">Array.&lt;Number></span>
+|
+
+<span class="param-type">Array.&lt;String></span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>list of sprite index or name
+defining the animation. Can also use objects to specify delay for each frame, see below</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>animationspeed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
 
 
             
@@ -1990,7 +1772,7 @@ will not be in any container.</p>
 
             
 
-            <td class="description last"><p>forces the z index of the child to the specified value</p></td>
+            <td class="description last"><p>cycling speed for animation in ms</p></td>
         </tr>
 
     
@@ -2018,197 +1800,13 @@ will not be in any container.</p>
 
 
 
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-
-
-
-- <p>the added child</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#addChild">me.Container#addChild</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="addChildAt">
-            
-                <span class="type-signature"></span>addChildAt<span class="signature">(child, index)</span><span class="type-signature"> &rarr; {<a href="me.Renderable.html">me.Renderable</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Add a child to the container at the specified index<br>
-(the list won't be sorted after insertion)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
-
-            <td class="type">
-            
-                
 <span class="param-type">Number</span>
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
 
 
 
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-
-
-
-- <p>the added child</p>
+- <p>frame amount of frame added to the animation (delay between each frame).</p>
 
 
 
@@ -2229,7 +1827,7 @@ will not be in any container.</p>
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#addChildAt">me.Container#addChildAt</a>
+        <a href="me.Sprite.html#addAnimation">me.Sprite#addAnimation</a>
     </li></ul></dd>
     
 
@@ -2254,10 +1852,39 @@ will not be in any container.</p>
     
 
     
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="me.Sprite.html#animationspeed">me.Sprite#animationspeed</a></li>
+        </ul>
+    </dd>
+    
 
     
 </dl>
 
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// walking animation
+this.addAnimation("walk", [ 0, 1, 2, 3, 4, 5 ]);
+// standing animation
+this.addAnimation("stand", [ 11, 12 ]);
+// eating animation
+this.addAnimation("eat", [ 6, 6 ]);
+// rolling animation
+this.addAnimation("roll", [ 7, 8, 9, 10 ]);
+// slower animation
+this.addAnimation("roll", [ 7, 8, 9, 10 ], 200);
+// or get more specific with delay for each frame. Good solution instead of repeating:
+this.addAnimation("turn", [{ name: 0, delay: 200 }, { name: 1, delay: 100 }])
+// can do this with atlas values as well:
+this.addAnimation("turn", [{ name: "turnone", delay: 200 }, { name: "turntwo", delay: 100 }])
+// define an dying animation that stop on the last frame
+this.addAnimation("die", [{ name: 3, delay: 200 }, { name: 4, delay: 100 }, { name: 5, delay: Infinity }])
+// set the standing animation as default
+this.setCurrentAnimation("stand");</code></pre>
 
     
 
@@ -3362,6 +2989,198 @@ automatically called by the game manager <a href="me.game.html"><code>me.game</c
 
 <dt>
     
+        <h4 class="name" id="flicker">
+            
+                <span class="type-signature"></span>flicker<span class="signature">(duration, callback)</span><span class="type-signature"> &rarr; {<a href="me.Sprite.html">me.Sprite</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>make the object flicker</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>expressed in milliseconds</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Function to call when flickering ends</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Sprite.html">me.Sprite</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#flicker">me.Sprite#flicker</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// make the object flicker for 1 second
+// and then remove it
+this.flicker(1000, function () {
+    me.game.world.removeChild(this);
+});</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
         <h4 class="name" id="flipX">
             
                 <span class="type-signature"></span>flipX<span class="signature">(flip<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Renderable.html">me.Renderable</a>}</span>
@@ -3736,206 +3555,6 @@ automatically called by the game manager <a href="me.game.html"><code>me.game</c
 
 <dt>
     
-        <h4 class="name" id="forEach">
-            
-                <span class="type-signature"></span>forEach<span class="signature">(callback, thisArg<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>The forEach() method executes a provided function once per child element. <br>
-the callback function is invoked with three arguments: <br></p>
-<ul>
-<li>The current element being processed in the array <br></li>
-<li>The index of element in the array. <br></li>
-<li>The array forEach() was called upon. <br></li>
-</ul>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>fnction to execute on each element</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>thisArg</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>value to use as this(i.e reference Object) when executing callback.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#forEach">me.Container#forEach</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// iterate through all children of the root container
-me.game.world.forEach((child) => {
-   // do something with the child
-   child.doSomething();
-});
-me.game.world.forEach((child, index) => { ... });
-me.game.world.forEach((child, index, array) => { ... });
-me.game.world.forEach((child, index, array) => { ... }, thisArg);</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
         <h4 class="name" id="getAbsolutePosition">
             
                 <span class="type-signature"></span>getAbsolutePosition<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="me.Vector2d.html">me.Vector2d</a>}</span>
@@ -4154,9 +3773,9 @@ me.game.world.forEach((child, index, array) => { ... }, thisArg);</code></pre>
 
 <dt>
     
-        <h4 class="name" id="getChildAt">
+        <h4 class="name" id="getCurrentAnimationFrame">
             
-                <span class="type-signature"></span>getChildAt<span class="signature">(index)</span><span class="type-signature"></span>
+                <span class="type-signature"></span>getCurrentAnimationFrame<span class="signature">()</span><span class="type-signature"> &rarr; {Number}</span>
                 
             
         </h4>
@@ -4168,7 +3787,7 @@ me.game.world.forEach((child, index, array) => { ... }, thisArg);</code></pre>
 
     
     <div class="description">
-        <p>Returns the Child at the specified index</p>
+        <p>return the current animation frame index.</p>
     </div>
     
 
@@ -4179,232 +3798,32 @@ me.game.world.forEach((child, index, array) => { ... }, thisArg);</code></pre>
     
 
     
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
 
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
 
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
+    
 
-            <td class="type">
-            
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
                 
+
+
+
 <span class="param-type">Number</span>
 
 
-            
-            </td>
 
-            
 
-            
 
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildAt">me.Container#getChildAt</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildByGUID">
-            
-                <span class="type-signature"></span>getChildByGUID<span class="signature">(GUID)</span><span class="type-signature"> &rarr; {<a href="me.Renderable.html">me.Renderable</a>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>return the child corresponding to the specified GUID<br>
-note : avoid calling this function every frame since
-it parses the whole object list each time</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>GUID</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-|
-
-<span class="param-type">RegExp</span>
-|
-
-<span class="param-type">Number</span>
-|
-
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>child GUID</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-
-
-
-- <p>corresponding child or null</p>
+- <p>current animation frame index</p>
 
 
 
@@ -4425,799 +3844,7 @@ it parses the whole object list each time</p>
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildByGUID">me.Container#getChildByGUID</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildByName">
-            
-                <span class="type-signature"></span>getChildByName<span class="signature">(name)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="me.Renderable.html">me.Renderable</a>>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the list of childs with the specified name<br>
-as defined in Tiled (Name field of the Object Properties)<br>
-note : avoid calling this function every frame since
-it parses the whole object list each time</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-|
-
-<span class="param-type">RegExp</span>
-|
-
-<span class="param-type">Number</span>
-|
-
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>child name</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">Array.&lt;<a href="me.Renderable.html">me.Renderable</a>></span>
-
-
-
-
-
-- <p>Array of children</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildByName">me.Container#getChildByName</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildByProp">
-            
-                <span class="type-signature"></span>getChildByProp<span class="signature">(prop, value)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="me.Renderable.html">me.Renderable</a>>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>return the child corresponding to the given property and value.<br>
-note : avoid calling this function every frame since
-it parses the whole object tree each time</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>prop</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Property name</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-|
-
-<span class="param-type">RegExp</span>
-|
-
-<span class="param-type">Number</span>
-|
-
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Value of the property</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">Array.&lt;<a href="me.Renderable.html">me.Renderable</a>></span>
-
-
-
-
-
-- <p>Array of childs</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildByProp">me.Container#getChildByProp</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// get the first child object called "mainPlayer" in a specific container :
-var ent = myContainer.getChildByProp("name", "mainPlayer");
-
-// or query the whole world :
-var ent = me.game.world.getChildByProp("name", "mainPlayer");
-
-// partial property matches are also allowed by using a RegExp.
-// the following matches "redCOIN", "bluecoin", "bagOfCoins", etc :
-var allCoins = me.game.world.getChildByProp("name", /coin/i);
-
-// searching for numbers or other data types :
-var zIndex10 = me.game.world.getChildByProp("z", 10);
-var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildByType">
-            
-                <span class="type-signature"></span>getChildByType<span class="signature">(class)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="me.Renderable.html">me.Renderable</a>>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the list of childs with the specified class type</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>class</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>type</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">Array.&lt;<a href="me.Renderable.html">me.Renderable</a>></span>
-
-
-
-
-
-- <p>Array of children</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildByType">me.Container#getChildByType</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildIndex">
-            
-                <span class="type-signature"></span>getChildIndex<span class="signature">(child)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Returns the index of the given Child</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildIndex">me.Container#getChildIndex</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="getChildren">
-            
-                <span class="type-signature"></span>getChildren<span class="signature">()</span><span class="type-signature"> &rarr; {Array.&lt;<a href="me.Renderable.html">me.Renderable</a>>}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>return all child in this container</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">Array.&lt;<a href="me.Renderable.html">me.Renderable</a>></span>
-
-
-
-
-
-- <p>an array of renderable object</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#getChildren">me.Container#getChildren</a>
+        <a href="me.Sprite.html#getCurrentAnimationFrame">me.Sprite#getCurrentAnimationFrame</a>
     </li></ul></dd>
     
 
@@ -5526,9 +4153,9 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
 
 <dt>
     
-        <h4 class="name" id="hasChild">
+        <h4 class="name" id="isCurrentAnimation">
             
-                <span class="type-signature"></span>hasChild<span class="signature">(child)</span><span class="type-signature"> &rarr; {Boolean}</span>
+                <span class="type-signature"></span>isCurrentAnimation<span class="signature">(name)</span><span class="type-signature"> &rarr; {Boolean}</span>
                 
             
         </h4>
@@ -5540,7 +4167,7 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
 
     
     <div class="description">
-        <p>Returns true if contains the specified Child</p>
+        <p>return true if the specified animation is the current one.</p>
     </div>
     
 
@@ -5576,13 +4203,13 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
 
         <tr>
             
-                <td class="name"><code>child</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
+<span class="param-type">String</span>
 
 
             
@@ -5592,7 +4219,7 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>animation id</p></td>
         </tr>
 
     
@@ -5645,7 +4272,7 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#hasChild">me.Container#hasChild</a>
+        <a href="me.Sprite.html#isCurrentAnimation">me.Sprite#isCurrentAnimation</a>
     </li></ul></dd>
     
 
@@ -5674,6 +4301,13 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
     
 </dl>
 
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>if (!this.isCurrentAnimation("walk")) {
+    // do something funny...
+}</code></pre>
 
     
 
@@ -5756,6 +4390,114 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="me.Rect.html#isFinite">me.Rect#isFinite</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="isFlickering">
+            
+                <span class="type-signature"></span>isFlickering<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the flickering state of the object</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Boolean</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#isFlickering">me.Sprite#isFlickering</a>
     </li></ul></dd>
     
 
@@ -5922,701 +4664,6 @@ var inViewport = me.game.world.getChildByProp("inViewport", true);</code></pre>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="me.Renderable.html#lookAt">me.Renderable#lookAt</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="moveDown">
-            
-                <span class="type-signature"></span>moveDown<span class="signature">(child)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Move the child in the group one step backward (z depth).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#moveDown">me.Container#moveDown</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="moveToBottom">
-            
-                <span class="type-signature"></span>moveToBottom<span class="signature">(child)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Move the specified child the bottom (z depth).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#moveToBottom">me.Container#moveToBottom</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="moveToTop">
-            
-                <span class="type-signature"></span>moveToTop<span class="signature">(child)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Move the specified child to the top(z depth).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#moveToTop">me.Container#moveToTop</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="moveUp">
-            
-                <span class="type-signature"></span>moveUp<span class="signature">(child)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Move the child in the group one step forward (z depth).</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#moveUp">me.Container#moveUp</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="onChildChange">
-            
-                <span class="type-signature"></span>onChildChange<span class="signature">(index)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>a callback to be extended, triggered after a child has been added or removed</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>added or removed child index</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#onChildChange">me.Container#onChildChange</a>
     </li></ul></dd>
     
 
@@ -7213,396 +5260,6 @@ This <strong>must</strong> be called if the <code>points</code> array, <code>ang
 
 <dt>
     
-        <h4 class="name" id="removeChild">
-            
-                <span class="type-signature"></span>removeChild<span class="signature">(child, keepalive<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Invokes the removeChildNow in a defer, to ensure the child is removed safely after the update &amp; draw stack has completed</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>keepalive</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    False
-                
-                </td>
-            
-
-            <td class="description last"><p>True to prevent calling child.destroy()</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#removeChild">me.Container#removeChild</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="removeChildNow">
-            
-                <span class="type-signature"></span>removeChildNow<span class="signature">(child, keepalive<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Removes (and optionally destroys) a child from the container.<br>
-(removal is immediate and unconditional)<br>
-Never use keepalive=true with objects from <a href="me.pool.html"><code>me.pool</code></a>. Doing so will create a memory leak.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>keepalive</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    False
-                
-                </td>
-            
-
-            <td class="description last"><p>True to prevent calling child.destroy()</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#removeChildNow">me.Container#removeChildNow</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
         <h4 class="name" id="resize">
             
                 <span class="type-signature"></span>resize<span class="signature">(w, h)</span><span class="type-signature"> &rarr; {<a href="me.Rect.html">me.Rect</a>}</span>
@@ -7771,6 +5428,185 @@ Never use keepalive=true with objects from <a href="me.pool.html"><code>me.pool<
 
     
 
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="reverseAnimation">
+            
+                <span class="type-signature"></span>reverseAnimation<span class="signature">(name<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Sprite.html">me.Sprite</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>reverse the given or current animation if none is specified</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>animation id</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Sprite.html">me.Sprite</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#reverseAnimation">me.Sprite#reverseAnimation</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="me.Sprite.html#animationspeed">me.Sprite#animationspeed</a></li>
+        </ul>
+    </dd>
     
 
     
@@ -8371,9 +6207,9 @@ member will be changed.</p>
 
 <dt>
     
-        <h4 class="name" id="setChildsProperty">
+        <h4 class="name" id="setAnimationFrame">
             
-                <span class="type-signature"></span>setChildsProperty<span class="signature">(property, value, recursive<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                <span class="type-signature"></span>setAnimationFrame<span class="signature">(index<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Sprite.html">me.Sprite</a>}</span>
                 
             
         </h4>
@@ -8385,7 +6221,7 @@ member will be changed.</p>
 
     
     <div class="description">
-        <p>Automatically set the specified property of all childs to the given value</p>
+        <p>force the current animation frame index.</p>
     </div>
     
 
@@ -8425,83 +6261,13 @@ member will be changed.</p>
 
         <tr>
             
-                <td class="name"><code>property</code></td>
+                <td class="name"><code>index</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>property name</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>property value</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>recursive</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
+<span class="param-type">Number</span>
 
 
             
@@ -8522,12 +6288,12 @@ member will be changed.</p>
             
                 <td class="default">
                 
-                    false
+                    0
                 
                 </td>
             
 
-            <td class="description last"><p>recursively apply the value to child containers if true</p></td>
+            <td class="description last"><p>animation frame index</p></td>
         </tr>
 
     
@@ -8548,6 +6314,27 @@ member will be changed.</p>
     
 
     
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Sprite.html">me.Sprite</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
 
     
 
@@ -8561,7 +6348,7 @@ member will be changed.</p>
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#setChildsProperty">me.Container#setChildsProperty</a>
+        <a href="me.Sprite.html#setAnimationFrame">me.Sprite#setAnimationFrame</a>
     </li></ul></dd>
     
 
@@ -8590,6 +6377,251 @@ member will be changed.</p>
     
 </dl>
 
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// reset the current animation to the first frame
+this.setAnimationFrame();</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setCurrentAnimation">
+            
+                <span class="type-signature"></span>setCurrentAnimation<span class="signature">(name, onComplete<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="me.Sprite.html">me.Sprite</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set the current animation
+this will always change the animation &amp; set the frame to zero</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>animation id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onComplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>animation id to switch to when complete, or callback</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Sprite.html">me.Sprite</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#setCurrentAnimation">me.Sprite#setCurrentAnimation</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// set "walk" animation
+this.setCurrentAnimation("walk");
+
+// set "walk" animation if it is not the current animation
+if (this.isCurrentAnimation("walk")) {
+    this.setCurrentAnimation("walk");
+}
+
+// set "eat" animation, and switch to "walk" when complete
+this.setCurrentAnimation("eat", "walk");
+
+// set "die" animation, and remove the object when finished
+this.setCurrentAnimation("die", (function () {
+   me.game.world.removeChild(this);
+   return false; // do not reset to first frame
+}).bind(this));
+
+// set "attack" animation, and pause for a short duration
+this.setCurrentAnimation("die", (function () {
+   this.animationpause = true;
+
+   // back to "standing" animation after 1 second
+   setTimeout(function () {
+       this.setCurrentAnimation("standing");
+   }, 1000);
+
+   return false; // do not reset to first frame
+}).bind(this));</code></pre>
 
     
 
@@ -8729,6 +6761,179 @@ member will be changed.</p>
     
 </dl>
 
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setRegion">
+            
+                <span class="type-signature"></span>setRegion<span class="signature">(region)</span><span class="type-signature"> &rarr; {<a href="me.Sprite.html">me.Sprite</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>change the current texture atlas region for this sprite</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>typically returned through me.Texture.getRegion()</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="me.Sprite.html">me.Sprite</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="me.Sprite.html#setRegion">me.Sprite#setRegion</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>me.Texture.getRegion</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// change the sprite to "shadedDark13.png";
+mySprite.setRegion(game.texture.getRegion("shadedDark13.png"));</code></pre>
 
     
 
@@ -9108,327 +7313,6 @@ member will be changed.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="me.Polygon.html#setVertices">me.Polygon#setVertices</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="sort">
-            
-                <span class="type-signature"></span>sort<span class="signature">(recursive<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Manually trigger the sort of all the childs in the container</p></p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>recursive</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>recursively sort all containers if true</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#sort">me.Container#sort</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id="swapChildren">
-            
-                <span class="type-signature"></span>swapChildren<span class="signature">(child, child2)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Swaps the position (z-index) of 2 children</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>child</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>child2</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="me.Renderable.html">me.Renderable</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="me.Container.html#swapChildren">me.Container#swapChildren</a>
     </li></ul></dd>
     
 
@@ -10632,7 +8516,7 @@ automatically called by the game manager <a href="me.game.html"><code>me.game</c
             <div class="footer">
                 Copyright &copy; 2011 - 2021 Olivier Biot
                 <br>
-                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Sep 24 2021 15:14:47 GMT+0800 (Singapore Standard Time)
+                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Sep 24 2021 15:14:45 GMT+0800 (Singapore Standard Time)
             </div>
         </center>
     </footer>
@@ -10643,7 +8527,7 @@ automatically called by the game manager <a href="me.game.html"><code>me.game</c
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'me.World_sub'.replace(/"/g, '_');
+        var id = 'me.Collectable_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
