@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home | melonJS API documentation</title>
+    <title>Class: TMXTileset | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -46,252 +46,949 @@
 
 
 
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>TMXTileset<span class="signature">(tileset)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>a TMX Tile Set Object</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dt>
+    
+        <h4 class="name" id="TMXTileset">
+            
+                new <span class="type-signature"></span>TMXTileset<span class="signature">(tileset)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
     
 
-
-
-
-
-
-
-
+    
 
     
 
+    
 
-    <section>
-        <article class="readme"><h1>melonJS 2</h1>
-<p><a href="https://travis-ci.org/melonjs/melonJS"><img src="https://travis-ci.org/melonjs/melonJS.svg" alt="Build Status"></a>
-<a href="https://lgtm.com/projects/g/melonjs/melonJS/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/melonjs/melonJS.svg?logo=lgtm&amp;logoWidth=18" alt="Language grade: JavaScript"></a>
-<a href="https://bundlephobia.com/result?p=melonjs"><img src="https://badgen.net/bundlephobia/min/melonjs" alt="Build Size"></a>
-<a href="https://www.npmjs.com/package/melonjs"><img src="https://img.shields.io/npm/v/melonjs" alt="NPM Package"></a>
-<a href="https://www.jsdelivr.com/package/npm/melonjs"><img src="https://data.jsdelivr.com/v1/package/npm/melonjs/badge?style=rounded" alt="jsDeliver"></a>
-<a href="https://www.boss.dev/issues/repo/melonjs/melonJS"><img src="https://img.shields.io/endpoint.svg?url=https://api.boss.dev/badge/enabled/melonjs/melonJS" alt="Boss Bounty Badge"></a></p>
-<h2>A fresh, <em>modern</em> &amp; lightweight HTML5 game engine</h2>
-<p><img src="http://melonjs.org/media/alex4-github.png" alt="melonJS"></p>
-<p>melonJS 2 is a modern version of the melonJS game engine. It has been rebuilt almost entirely using ES6 class, inheritance and semantic, and is bundled using Rollup to provide modern features such as transpiling and tree-shaking.</p>
-<blockquote>
-<p>Note: migrating an existing project to melonJS 2 (version 10.0 and higher) will definitely break your game (ES6 semantic, no more Jay inheritance, nodeJS event emitter, and no backward compatibility with deprecated legacy APIs), and you might want to read first this small step by step guide on <a href="https://github.com/melonjs/melonJS/wiki/Upgrading-to-melonJS-2">upgrading to melonJS 2</a>. If you are looking at the legacy version (9.x and lower) of melonJS, you can find it <a href="https://github.com/melonjs/melonJS/tree/legacy">here</a> under the <em>legacy</em> branch.</p>
-</blockquote>
-<p><a href="http://melonjs.org/">melonJS</a> is open-source, licensed under the <a href="LICENSE.md">MIT License</a>, and actively developed and maintained with the help of a small team of enthusiasts at AltByte in Singapore.</p>
-<h2>About melonJS</h2>
-<p><a href="http://melonjs.org/">melonJS</a> is a fully featured game engine :</p>
-<p>Compatibility</p>
-<ul>
-<li>Standalone library (does not rely on anything else, except a HTML5 capable browser)</li>
-<li>Compatible with all major browsers (Chrome, Safari, Firefox, Opera, Edge) and mobile devices</li>
-</ul>
-<p>Graphics</p>
-<ul>
-<li>2D sprite-based graphic engine</li>
-<li>Fast WebGL 1 &amp; 2 renderer for desktop and mobile devices with fallback to Canvas rendering</li>
-<li>High DPI resolution &amp; Canvas advanced auto scaling</li>
-<li>Sprite with 9-slice scaling option, and animation management</li>
-<li>built-in effects such as tinting and masking</li>
-<li>Standard spritesheet, single and multiple Packed Textures support</li>
-<li>System &amp; Bitmap Text</li>
-</ul>
-<p>Sound</p>
-<ul>
-<li>Web Audio support with spatial audio or stereo panning based on <a href="https://howlerjs.com">Howler</a></li>
-<li>fallback to Multi-channel HTML5 audio for legacy browsers</li>
-</ul>
-<p>Physic</p>
-<ul>
-<li>Polygon (SAT) based collision algorithm for accurate detection and response</li>
-<li>Fast Broad-phase collision detection using spatial partitioning</li>
-<li>Collision filtering for optimized automatic collision detection</li>
-</ul>
-<p>Input</p>
-<ul>
-<li>Mouse and Touch device support (with mouse emulation)</li>
-<li>Device motion &amp; accelerometer support</li>
-</ul>
-<p>Level Editor</p>
-<ul>
-<li>Tiled map format version +1.0 integration for easy level design
-<ul>
-<li>Uncompressed Plain, Base64, CSV and JSON encoded XML tilemap loading</li>
-<li>Orthogonal, Isometric and Hexagonal maps (both normal and staggered)</li>
-<li>Multiple layers (multiple background/foreground, collision and Image layers)</li>
-<li>Animated and multiple Tileset support</li>
-<li>Tileset transparency settings</li>
-<li>Layers alpha and tinting settings</li>
-<li>Rectangle, Ellipse, Polygon and Polyline objects support</li>
-<li>Tiled Objects</li>
-<li>Flipped &amp; rotated Tiles</li>
-<li>Dynamic Layer and Object/Group ordering</li>
-<li>Dynamic Entity loading</li>
-<li>Shape based Tile collision support</li>
-</ul>
-</li>
-</ul>
-<p>Assets</p>
-<ul>
-<li>Asynchronous asset loading</li>
-<li>A fully customizable preloader</li>
-</ul>
-<p>And Also</p>
-<ul>
-<li>A state manager (to easily manage loading, menu, options, in-game state)</li>
-<li>Tween Effects, Transition effects</li>
-<li>Pooling support for object recycling</li>
-<li>Basic Particle System</li>
-<li>nodeJS EventEmitter based event system</li>
-</ul>
-<h2>Tools integration</h2>
-<p><a href="http://free-tex-packer.com"><img src="https://user-images.githubusercontent.com/4033090/136762061-1d3a0dfe-dbe0-4d3d-808d-47a49ecf5309.png" alt="Free Texture Packer" title="Free Texture Packer"></a>
-<a href="https://www.codeandweb.com/texturepacker"><img src="https://user-images.githubusercontent.com/4033090/136762472-bc55a638-c69b-4ff5-9d03-c684c8bea0ea.png" alt="TexturePacker" title="TexturePacker"></a>
-<a href="https://www.codeandweb.com/physicseditor"><img src="https://user-images.githubusercontent.com/4033090/136762890-b1010c7f-cb19-4d35-a3f1-f5048db07835.png" alt="PhysicsEditor" title="PhysicsEditor"></a>
-<a href="https://renderhjs.net/shoebox/"><img src="https://user-images.githubusercontent.com/4033090/136762705-92027d94-d87c-4a95-b051-26647410248d.png" alt="ShoeBox" title="ShoeBox"></a>
-<a href="https://www.mapeditor.org"><img src="https://user-images.githubusercontent.com/4033090/136762999-5a7f377b-4136-4205-9fe0-83728c90cb9b.png" alt="Tiled" title="Tiled"></a>
-<a href="https://cordova.apache.org"><img src="https://user-images.githubusercontent.com/4033090/136763147-6d157ce6-6921-437e-bb8f-0287b86109da.png" alt="Cordova" title="Cordova"></a></p>
-<p>Tools integration and usage with melonJS is documented in our <a href="https://github.com/melonjs/melonJS/wiki#third-party-tools-usage">Wiki</a>.</p>
-<h2>Using melonJS</h2>
-<p>Basic <a href="https://jsfiddle.net/obiot/4o9f02tc/">Hello World</a> Example</p>
-<pre class="prettyprint source lang-JavaScript"><code>import * as me from &quot;https://esm.run/melonjs&quot;;
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
 
-me.device.onReady(function () {
-    // initialize the display canvas once the device/browser is ready
-    if (!me.video.init(1218, 562, {parent : &quot;screen&quot;, scale : &quot;auto&quot;})) {
-        alert(&quot;Your browser does not support HTML5 canvas.&quot;);
-        return;
-    }
+        <th>Type</th>
 
-    // add a gray background to the default Stage
-    me.game.world.addChild(new me.ColorLayer(&quot;background&quot;, &quot;#202020&quot;));
+        
 
-    // add a font text display object
-    me.game.world.addChild(new me.Text(609, 281, {
-        font: &quot;Arial&quot;,
-        size: 160,
-        fillStyle: &quot;#FFFFFF&quot;,
-        textBaseline : &quot;middle&quot;,
-        textAlign : &quot;center&quot;,
-        text : &quot;Hello World !&quot;
-    }));
-});
-</code></pre>
-<blockquote>
-<p>Simple hello world using melonJS 9.x or higher</p>
-</blockquote>
-<p>Documentation :</p>
-<ul>
-<li><a href="http://melonjs.github.io/melonJS/docs/">Online API</a> (<a href="https://github.com/melonjs/melonJS/archive/gh-pages.zip">offline</a> version under the <code>docs</code> directory)</li>
-</ul>
-<p>For your first time using melonJS, follow these tutorials :</p>
-<ul>
-<li><a href="http://melonjs.github.io/tutorial-platformer/">Platformer</a> Step by Step Tutorial.</li>
-<li><a href="http://melonjs.github.io/tutorial-space-invaders/">Space Invaders</a> Step by Step Tutorial.</li>
-</ul>
-<p>You may find it useful to skim the overview found at the wiki <a href="https://github.com/melonjs/melonJS/wiki#details--usage">Details &amp; Usage</a></p>
-<p>When starting your own projects, checkout our <a href="https://github.com/melonjs/es6-boilerplate">es6 boilerplate</a></p>
-<h2>Demos</h2>
-<p>A few demos of melonJS capabilities :</p>
-<ul>
-<li><a href="https://melonjs.github.io/examples/platformer/">Platformer Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/isometric_rpg/">Isometric Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/sprite/">Sprite Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/masking/">Masking Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/graphics/">Primitive Drawing Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/UI/">UI Demo</a></li>
-</ul>
-<p>More examples are available <a href="https://melonjs.github.io/examples/">here</a></p>
-<h2>Download melonJS</h2>
-<p>The latest builds with corresponding release note are available for direct download <a href="https://github.com/melonjs/melonJS/releases">here</a>.</p>
-<p>Since version 10.0.0 melonJS provides different build options :</p>
-<table>
-<thead>
-<tr>
-<th>build</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>melonjs.module.js</code></td>
-<td>the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.module.d.ts</code></td>
-<td>typescript declaration file for the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.js</code></td>
-<td>a ES5 UMD Bundle (directly transpiled from the ES6 version)</td>
-</tr>
-<tr>
-<td><code>melonjs.min.js</code></td>
-<td>a minified version of the ES5 UMD bundle</td>
-</tr>
-</tbody>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tileset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>tileset data in JSON format (<a href="http://docs.mapeditor.org/en/stable/reference/tmx-map-format/#tileset">http://docs.mapeditor.org/en/stable/reference/tmx-map-format/#tileset</a>)</p></td>
+        </tr>
+
+    
+    </tbody>
 </table>
-<p>Alternatively, the latest version of melonJS can be installed through <a href="https://www.npmjs.com/package/melonjs">NPM</a> :</p>
-<pre><code>$ npm install melonjs
-</code></pre>
-<p>If you need to import the ES6 module of melonjs (e.g. for Webpack):</p>
-<pre><code>$ import * as me from 'melonjs/dist/melonjs.module.js';
-</code></pre>
-<p>Or can simply be added to your html, using <a href="https://www.jsdelivr.com/package/npm/melonjs">jsDeliver</a> content delivery network (CDN) :</p>
-<pre class="prettyprint source lang-html"><code>&lt;!-- load the ES6 module bundle of melonJS v10.0 -->
-&lt;script src=&quot;https://esm.run/melonjs@10.0&quot;>&lt;/script>
-&lt;!-- omit the version completely to get the latest one -->
-&lt;!-- you should NOT use this in production -->
-&lt;script src=&quot;https://esm.run/melonjs&quot;>&lt;/script>
-</code></pre>
-<blockquote>
-<p>Note: starting from the 10.0.0 version, the debug plugin is no longer provided as part of the melonJS library release, and has been moved to the official <a href="https://github.com/melonjs/es6-boilerplate">boilerplate</a></p>
-</blockquote>
-<h2>Building melonJS</h2>
-<p>For most users, all you probably want is to use melonJS, and all you need then is just to download the latest built <a href="https://github.com/melonjs/melonJS#download-melonjs">release</a> to get started. The only time you should need to build melonJS is if you want to contribute to the project and start developing on it.</p>
-<p>To build your own version of melonJS you will need to install :</p>
-<ul>
-<li>The <a href="http://nodejs.org/">Node.js</a> JavaScript runtime and the <a href="https://npmjs.org/">NPM</a> package manager</li>
-</ul>
-<p>Once Node.js and NPM have been installed, you need to install build dependencies,
-by executing the following in the folder where you cloned the repository :</p>
-<pre><code>$ [sudo] npm install
-</code></pre>
-<p>Then build the melonJS source by running:</p>
-<pre><code>$ npm run build
-</code></pre>
-<p>The generated library will be available under the <code>build</code> directory :</p>
-<ul>
-<li><code>melonjs.js</code> : plain ES5 UMD bundle</li>
-<li><code>melonjs.min.js</code> : minified ES5 UMD bundle</li>
-<li><code>melonjs.module.js</code> : plain ES6 module</li>
-</ul>
-<p>To run the melonJS test suite simply use the following:</p>
-<pre><code>$ npm run test
-</code></pre>
-<p>This will run the jasmine spec tests with the output displayed on the shell. Do
-note that the latest Chrome version is required, as the test unit will run the
-Browser in a headless mode (in case of failed tests, upgrade your browser).</p>
-<h2>Building the documentation</h2>
-<p>Similarly, you can build your own copy of the docs locally by running :</p>
-<pre><code>$ npm run doc
-</code></pre>
-<p>The generated documentation will be available in the <code>docs</code> directory</p>
-<h2>WIP Builds</h2>
-<p>melonJS uses Travis-CI for automated testing and build uploads. The latest build
-artifacts can be downloaded from the <a href="https://melonjs-builds.s3.amazonaws.com/index.html?prefix=artifacts/">melonjs-builds</a>
-bucket.</p>
-<h2>Questions, need help ?</h2>
-<p>If you need technical support, you can contact us through the following channels :</p>
-<ul>
-<li><a href="http://www.html5gamedevs.com/forum/32-melonjs/">melonJS developer forum</a></li>
-<li><a href="https://gitter.im/melonjs/public">gitter web chat</a></li>
-<li><a href="https://github.com/melonjs/melonJS/wiki">melonJS wikipage</a></li>
-<li><a href="https://discord.gg/aur7JMk">Discord</a></li>
-</ul>
-<p>For any other non technical related questions, feel free to also send us an <a href="mailto:contact@melonjs.org">email</a></p>
-<h2>Sponsors</h2>
-<p>Support the development of melonJS by <a href="https://github.com/sponsors/melonjs">becoming a sponsor</a>. Get your logo in our README with a link to your site or become a backer and get your name in the <a href="BACKERS.md">BACKERS</a> list. Any level of support is really appreciated and goes a long way !</p>
-<p><a href="https://www.melongaming.com"><img src="https://user-images.githubusercontent.com/4033090/136695857-d098c27d-f4b2-4c71-8574-b5f4291779cb.png" alt="Melon Gaming" title="Melon Gaming"></a></p>
-<p><a href=""><img src="https://user-images.githubusercontent.com/4033090/136692693-35dca8aa-5012-4a37-9ea2-51640d2e6d73.png" alt="Altbyte Pte Ltd" title="AltByte"></a></p></article>
-    </section>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
 
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id="isAnimated">
+    <span class="type-signature"></span>isAnimated<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Tileset contains animated tiles</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="isCollection">
+    <span class="type-signature"></span>isCollection<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>true if the tileset is a &quot;Collection of Image&quot; Tileset</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id="contains">
+            
+                <span class="type-signature"></span>contains<span class="signature">(gid)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return true if the gid belongs to the tileset</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getTileImage">
+            
+                <span class="type-signature"></span>getTileImage<span class="signature">(gid)</span><span class="type-signature"> &rarr; {Image}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the tile image from a &quot;Collection of Image&quot; tileset</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Image</span>
+
+
+
+
+
+- <p>corresponding image or undefined</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getTileProperties">
+            
+                <span class="type-signature"></span>getTileProperties<span class="signature">(tileId)</span><span class="type-signature"> &rarr; {object}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the properties of the specified tile</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tileId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">object</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getViewTileId">
+            
+                <span class="type-signature"></span>getViewTileId<span class="signature">(gid)</span><span class="type-signature"> &rarr; {number}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the view (local) tile ID from a GID, with animations applied</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Global tile ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">number</span>
+
+
+
+
+
+- <p>View tile ID</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -302,7 +999,7 @@ bucket.</p>
             <div class="footer">
                 Copyright &copy; 2011 - 2021 Olivier Biot
                 <br>
-                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Mar 15 2022 15:29:51 GMT+0800 (Singapore Standard Time)
+                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Mar 15 2022 15:29:52 GMT+0800 (Singapore Standard Time)
             </div>
         </center>
     </footer>
@@ -313,7 +1010,7 @@ bucket.</p>
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'package:undefined_sub'.replace(/"/g, '_');
+        var id = 'TMXTileset_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

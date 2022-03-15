@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home | melonJS API documentation</title>
+    <title>Class: Renderable | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -46,252 +46,7574 @@
 
 
 
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Renderable<span class="signature">(x, y, width, height)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>A base class for renderable objects.</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dt>
+    
+        <h4 class="name" id="Renderable">
+            
+                new <span class="type-signature"></span>Renderable<span class="signature">(x, y, width, height)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
     
 
-
-
-
-
-
-
-
+    
 
     
 
+    
 
-    <section>
-        <article class="readme"><h1>melonJS 2</h1>
-<p><a href="https://travis-ci.org/melonjs/melonJS"><img src="https://travis-ci.org/melonjs/melonJS.svg" alt="Build Status"></a>
-<a href="https://lgtm.com/projects/g/melonjs/melonJS/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/melonjs/melonJS.svg?logo=lgtm&amp;logoWidth=18" alt="Language grade: JavaScript"></a>
-<a href="https://bundlephobia.com/result?p=melonjs"><img src="https://badgen.net/bundlephobia/min/melonjs" alt="Build Size"></a>
-<a href="https://www.npmjs.com/package/melonjs"><img src="https://img.shields.io/npm/v/melonjs" alt="NPM Package"></a>
-<a href="https://www.jsdelivr.com/package/npm/melonjs"><img src="https://data.jsdelivr.com/v1/package/npm/melonjs/badge?style=rounded" alt="jsDeliver"></a>
-<a href="https://www.boss.dev/issues/repo/melonjs/melonJS"><img src="https://img.shields.io/endpoint.svg?url=https://api.boss.dev/badge/enabled/melonjs/melonJS" alt="Boss Bounty Badge"></a></p>
-<h2>A fresh, <em>modern</em> &amp; lightweight HTML5 game engine</h2>
-<p><img src="http://melonjs.org/media/alex4-github.png" alt="melonJS"></p>
-<p>melonJS 2 is a modern version of the melonJS game engine. It has been rebuilt almost entirely using ES6 class, inheritance and semantic, and is bundled using Rollup to provide modern features such as transpiling and tree-shaking.</p>
-<blockquote>
-<p>Note: migrating an existing project to melonJS 2 (version 10.0 and higher) will definitely break your game (ES6 semantic, no more Jay inheritance, nodeJS event emitter, and no backward compatibility with deprecated legacy APIs), and you might want to read first this small step by step guide on <a href="https://github.com/melonjs/melonJS/wiki/Upgrading-to-melonJS-2">upgrading to melonJS 2</a>. If you are looking at the legacy version (9.x and lower) of melonJS, you can find it <a href="https://github.com/melonjs/melonJS/tree/legacy">here</a> under the <em>legacy</em> branch.</p>
-</blockquote>
-<p><a href="http://melonjs.org/">melonJS</a> is open-source, licensed under the <a href="LICENSE.md">MIT License</a>, and actively developed and maintained with the help of a small team of enthusiasts at AltByte in Singapore.</p>
-<h2>About melonJS</h2>
-<p><a href="http://melonjs.org/">melonJS</a> is a fully featured game engine :</p>
-<p>Compatibility</p>
-<ul>
-<li>Standalone library (does not rely on anything else, except a HTML5 capable browser)</li>
-<li>Compatible with all major browsers (Chrome, Safari, Firefox, Opera, Edge) and mobile devices</li>
-</ul>
-<p>Graphics</p>
-<ul>
-<li>2D sprite-based graphic engine</li>
-<li>Fast WebGL 1 &amp; 2 renderer for desktop and mobile devices with fallback to Canvas rendering</li>
-<li>High DPI resolution &amp; Canvas advanced auto scaling</li>
-<li>Sprite with 9-slice scaling option, and animation management</li>
-<li>built-in effects such as tinting and masking</li>
-<li>Standard spritesheet, single and multiple Packed Textures support</li>
-<li>System &amp; Bitmap Text</li>
-</ul>
-<p>Sound</p>
-<ul>
-<li>Web Audio support with spatial audio or stereo panning based on <a href="https://howlerjs.com">Howler</a></li>
-<li>fallback to Multi-channel HTML5 audio for legacy browsers</li>
-</ul>
-<p>Physic</p>
-<ul>
-<li>Polygon (SAT) based collision algorithm for accurate detection and response</li>
-<li>Fast Broad-phase collision detection using spatial partitioning</li>
-<li>Collision filtering for optimized automatic collision detection</li>
-</ul>
-<p>Input</p>
-<ul>
-<li>Mouse and Touch device support (with mouse emulation)</li>
-<li>Device motion &amp; accelerometer support</li>
-</ul>
-<p>Level Editor</p>
-<ul>
-<li>Tiled map format version +1.0 integration for easy level design
-<ul>
-<li>Uncompressed Plain, Base64, CSV and JSON encoded XML tilemap loading</li>
-<li>Orthogonal, Isometric and Hexagonal maps (both normal and staggered)</li>
-<li>Multiple layers (multiple background/foreground, collision and Image layers)</li>
-<li>Animated and multiple Tileset support</li>
-<li>Tileset transparency settings</li>
-<li>Layers alpha and tinting settings</li>
-<li>Rectangle, Ellipse, Polygon and Polyline objects support</li>
-<li>Tiled Objects</li>
-<li>Flipped &amp; rotated Tiles</li>
-<li>Dynamic Layer and Object/Group ordering</li>
-<li>Dynamic Entity loading</li>
-<li>Shape based Tile collision support</li>
-</ul>
-</li>
-</ul>
-<p>Assets</p>
-<ul>
-<li>Asynchronous asset loading</li>
-<li>A fully customizable preloader</li>
-</ul>
-<p>And Also</p>
-<ul>
-<li>A state manager (to easily manage loading, menu, options, in-game state)</li>
-<li>Tween Effects, Transition effects</li>
-<li>Pooling support for object recycling</li>
-<li>Basic Particle System</li>
-<li>nodeJS EventEmitter based event system</li>
-</ul>
-<h2>Tools integration</h2>
-<p><a href="http://free-tex-packer.com"><img src="https://user-images.githubusercontent.com/4033090/136762061-1d3a0dfe-dbe0-4d3d-808d-47a49ecf5309.png" alt="Free Texture Packer" title="Free Texture Packer"></a>
-<a href="https://www.codeandweb.com/texturepacker"><img src="https://user-images.githubusercontent.com/4033090/136762472-bc55a638-c69b-4ff5-9d03-c684c8bea0ea.png" alt="TexturePacker" title="TexturePacker"></a>
-<a href="https://www.codeandweb.com/physicseditor"><img src="https://user-images.githubusercontent.com/4033090/136762890-b1010c7f-cb19-4d35-a3f1-f5048db07835.png" alt="PhysicsEditor" title="PhysicsEditor"></a>
-<a href="https://renderhjs.net/shoebox/"><img src="https://user-images.githubusercontent.com/4033090/136762705-92027d94-d87c-4a95-b051-26647410248d.png" alt="ShoeBox" title="ShoeBox"></a>
-<a href="https://www.mapeditor.org"><img src="https://user-images.githubusercontent.com/4033090/136762999-5a7f377b-4136-4205-9fe0-83728c90cb9b.png" alt="Tiled" title="Tiled"></a>
-<a href="https://cordova.apache.org"><img src="https://user-images.githubusercontent.com/4033090/136763147-6d157ce6-6921-437e-bb8f-0287b86109da.png" alt="Cordova" title="Cordova"></a></p>
-<p>Tools integration and usage with melonJS is documented in our <a href="https://github.com/melonjs/melonJS/wiki#third-party-tools-usage">Wiki</a>.</p>
-<h2>Using melonJS</h2>
-<p>Basic <a href="https://jsfiddle.net/obiot/4o9f02tc/">Hello World</a> Example</p>
-<pre class="prettyprint source lang-JavaScript"><code>import * as me from &quot;https://esm.run/melonjs&quot;;
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
 
-me.device.onReady(function () {
-    // initialize the display canvas once the device/browser is ready
-    if (!me.video.init(1218, 562, {parent : &quot;screen&quot;, scale : &quot;auto&quot;})) {
-        alert(&quot;Your browser does not support HTML5 canvas.&quot;);
-        return;
-    }
+        <th>Type</th>
 
-    // add a gray background to the default Stage
-    me.game.world.addChild(new me.ColorLayer(&quot;background&quot;, &quot;#202020&quot;));
+        
 
-    // add a font text display object
-    me.game.world.addChild(new me.Text(609, 281, {
-        font: &quot;Arial&quot;,
-        size: 160,
-        fillStyle: &quot;#FFFFFF&quot;,
-        textBaseline : &quot;middle&quot;,
-        textAlign : &quot;center&quot;,
-        text : &quot;Hello World !&quot;
-    }));
-});
-</code></pre>
-<blockquote>
-<p>Simple hello world using melonJS 9.x or higher</p>
-</blockquote>
-<p>Documentation :</p>
-<ul>
-<li><a href="http://melonjs.github.io/melonJS/docs/">Online API</a> (<a href="https://github.com/melonjs/melonJS/archive/gh-pages.zip">offline</a> version under the <code>docs</code> directory)</li>
-</ul>
-<p>For your first time using melonJS, follow these tutorials :</p>
-<ul>
-<li><a href="http://melonjs.github.io/tutorial-platformer/">Platformer</a> Step by Step Tutorial.</li>
-<li><a href="http://melonjs.github.io/tutorial-space-invaders/">Space Invaders</a> Step by Step Tutorial.</li>
-</ul>
-<p>You may find it useful to skim the overview found at the wiki <a href="https://github.com/melonjs/melonJS/wiki#details--usage">Details &amp; Usage</a></p>
-<p>When starting your own projects, checkout our <a href="https://github.com/melonjs/es6-boilerplate">es6 boilerplate</a></p>
-<h2>Demos</h2>
-<p>A few demos of melonJS capabilities :</p>
-<ul>
-<li><a href="https://melonjs.github.io/examples/platformer/">Platformer Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/isometric_rpg/">Isometric Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/sprite/">Sprite Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/masking/">Masking Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/graphics/">Primitive Drawing Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/UI/">UI Demo</a></li>
-</ul>
-<p>More examples are available <a href="https://melonjs.github.io/examples/">here</a></p>
-<h2>Download melonJS</h2>
-<p>The latest builds with corresponding release note are available for direct download <a href="https://github.com/melonjs/melonJS/releases">here</a>.</p>
-<p>Since version 10.0.0 melonJS provides different build options :</p>
-<table>
-<thead>
-<tr>
-<th>build</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>melonjs.module.js</code></td>
-<td>the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.module.d.ts</code></td>
-<td>typescript declaration file for the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.js</code></td>
-<td>a ES5 UMD Bundle (directly transpiled from the ES6 version)</td>
-</tr>
-<tr>
-<td><code>melonjs.min.js</code></td>
-<td>a minified version of the ES5 UMD bundle</td>
-</tr>
-</tbody>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>position of the renderable object (accessible through inherited pos.x property)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>position of the renderable object (accessible through inherited pos.y property)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>object width</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>object height</p></td>
+        </tr>
+
+    
+    </tbody>
 </table>
-<p>Alternatively, the latest version of melonJS can be installed through <a href="https://www.npmjs.com/package/melonjs">NPM</a> :</p>
-<pre><code>$ npm install melonjs
-</code></pre>
-<p>If you need to import the ES6 module of melonjs (e.g. for Webpack):</p>
-<pre><code>$ import * as me from 'melonjs/dist/melonjs.module.js';
-</code></pre>
-<p>Or can simply be added to your html, using <a href="https://www.jsdelivr.com/package/npm/melonjs">jsDeliver</a> content delivery network (CDN) :</p>
-<pre class="prettyprint source lang-html"><code>&lt;!-- load the ES6 module bundle of melonJS v10.0 -->
-&lt;script src=&quot;https://esm.run/melonjs@10.0&quot;>&lt;/script>
-&lt;!-- omit the version completely to get the latest one -->
-&lt;!-- you should NOT use this in production -->
-&lt;script src=&quot;https://esm.run/melonjs&quot;>&lt;/script>
-</code></pre>
-<blockquote>
-<p>Note: starting from the 10.0.0 version, the debug plugin is no longer provided as part of the melonJS library release, and has been moved to the official <a href="https://github.com/melonjs/es6-boilerplate">boilerplate</a></p>
-</blockquote>
-<h2>Building melonJS</h2>
-<p>For most users, all you probably want is to use melonJS, and all you need then is just to download the latest built <a href="https://github.com/melonjs/melonJS#download-melonjs">release</a> to get started. The only time you should need to build melonJS is if you want to contribute to the project and start developing on it.</p>
-<p>To build your own version of melonJS you will need to install :</p>
-<ul>
-<li>The <a href="http://nodejs.org/">Node.js</a> JavaScript runtime and the <a href="https://npmjs.org/">NPM</a> package manager</li>
-</ul>
-<p>Once Node.js and NPM have been installed, you need to install build dependencies,
-by executing the following in the folder where you cloned the repository :</p>
-<pre><code>$ [sudo] npm install
-</code></pre>
-<p>Then build the melonJS source by running:</p>
-<pre><code>$ npm run build
-</code></pre>
-<p>The generated library will be available under the <code>build</code> directory :</p>
-<ul>
-<li><code>melonjs.js</code> : plain ES5 UMD bundle</li>
-<li><code>melonjs.min.js</code> : minified ES5 UMD bundle</li>
-<li><code>melonjs.module.js</code> : plain ES6 module</li>
-</ul>
-<p>To run the melonJS test suite simply use the following:</p>
-<pre><code>$ npm run test
-</code></pre>
-<p>This will run the jasmine spec tests with the output displayed on the shell. Do
-note that the latest Chrome version is required, as the test unit will run the
-Browser in a headless mode (in case of failed tests, upgrade your browser).</p>
-<h2>Building the documentation</h2>
-<p>Similarly, you can build your own copy of the docs locally by running :</p>
-<pre><code>$ npm run doc
-</code></pre>
-<p>The generated documentation will be available in the <code>docs</code> directory</p>
-<h2>WIP Builds</h2>
-<p>melonJS uses Travis-CI for automated testing and build uploads. The latest build
-artifacts can be downloaded from the <a href="https://melonjs-builds.s3.amazonaws.com/index.html?prefix=artifacts/">melonjs-builds</a>
-bucket.</p>
-<h2>Questions, need help ?</h2>
-<p>If you need technical support, you can contact us through the following channels :</p>
-<ul>
-<li><a href="http://www.html5gamedevs.com/forum/32-melonjs/">melonJS developer forum</a></li>
-<li><a href="https://gitter.im/melonjs/public">gitter web chat</a></li>
-<li><a href="https://github.com/melonjs/melonJS/wiki">melonJS wikipage</a></li>
-<li><a href="https://discord.gg/aur7JMk">Discord</a></li>
-</ul>
-<p>For any other non technical related questions, feel free to also send us an <a href="mailto:contact@melonjs.org">email</a></p>
-<h2>Sponsors</h2>
-<p>Support the development of melonJS by <a href="https://github.com/sponsors/melonjs">becoming a sponsor</a>. Get your logo in our README with a link to your site or become a backer and get your name in the <a href="BACKERS.md">BACKERS</a> list. Any level of support is really appreciated and goes a long way !</p>
-<p><a href="https://www.melongaming.com"><img src="https://user-images.githubusercontent.com/4033090/136695857-d098c27d-f4b2-4c71-8574-b5f4291779cb.png" alt="Melon Gaming" title="Melon Gaming"></a></p>
-<p><a href=""><img src="https://user-images.githubusercontent.com/4033090/136692693-35dca8aa-5012-4a37-9ea2-51640d2e6d73.png" alt="Altbyte Pte Ltd" title="AltByte"></a></p></article>
-    </section>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
 
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+        
+        </div>
+    
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Rect.html">Rect</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id=".alwaysUpdate">
+    <span class="type-signature"><span class="icon green">static</span> </span>alwaysUpdate<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether the renderable object will always update, even when outside of the viewport<br></p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".autoTransform">
+    <span class="type-signature"><span class="icon green">static</span> </span>autoTransform<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>When enabled, an object container will automatically apply
+any defined transformation before calling the child draw method.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// enable "automatic" transformation when the object is activated
+onActivateEvent: function () {
+    // reset the transformation matrix
+    this.currentTransform.identity();
+    // ensure the anchor point is the renderable center
+    this.anchorPoint.set(0.5, 0.5);
+    // enable auto transform
+    this.autoTransform = true;
+    ....
+}</code></pre>
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".floating">
+    <span class="type-signature"><span class="icon green">static</span> </span>floating<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>If true, this renderable will be rendered using screen coordinates,
+as opposed to world coordinates. Use this, for example, to define UI elements.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".GUID">
+    <span class="type-signature"><span class="icon green">static</span> </span>GUID<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>(G)ame (U)nique (Id)entifier&quot; <br>
+a GUID will be allocated for any renderable object added <br>
+to an object container (including the <code>me.game.world</code> container)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".inViewport">
+    <span class="type-signature"><span class="icon green">static</span> </span>inViewport<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether the renderable object is visible and within the viewport</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isFlippedX">
+    <span class="type-signature"><span class="icon green">static</span> </span>isFlippedX<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>returns true if this renderable is flipped on the horizontal axis</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Renderable.html#flipX">Renderable#flipX</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isFlippedY">
+    <span class="type-signature"><span class="icon green">static</span> </span>isFlippedY<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>returns true if this renderable is flipped on the vertical axis</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Renderable.html#flipY">Renderable#flipY</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isFloating">
+    <span class="type-signature"><span class="icon green">static</span> </span>isFloating<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether the renderable object is floating, or contained in a floating container</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>Renderable#floating</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isKinematic">
+    <span class="type-signature"><span class="icon green">static</span> </span>isKinematic<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>If true then physic collision and input events will not impact this renderable</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isPersistent">
+    <span class="type-signature"><span class="icon green">static</span> </span>isPersistent<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>make the renderable object persistent over level changes<br></p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".name">
+    <span class="type-signature"><span class="icon green">static</span> </span>name<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The name of the renderable</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>""</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".updateWhenPaused">
+    <span class="type-signature"><span class="icon green">static</span> </span>updateWhenPaused<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to update this object when the game is paused.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="alpha">
+    <span class="type-signature"></span>alpha<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Define the renderable opacity<br>
+Set to zero if you do not wish an object to be drawn</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1.0</li>
+        </ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Renderable.html#setOpacity">Renderable#setOpacity</a></li>
+        
+            <li><a href="Renderable.html#getOpacity">Renderable#getOpacity</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="ancestor">
+    <span class="type-signature"></span>ancestor<span class="type-signature"> :<a href="Container.html">Container</a>|<a href="Entity.html">Entity</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>a reference to the parent object that contains this renderable</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Container.html">Container</a></span>
+|
+
+<span class="param-type"><a href="Entity.html">Entity</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>undefined</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="anchorPoint">
+    <span class="type-signature"></span>anchorPoint<span class="type-signature"> :<a href="ObservableVector2d.html">ObservableVector2d</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The anchor point is used for attachment behavior, and/or when applying transformations.<br>
+The coordinate system places the origin at the top left corner of the frame (0, 0) and (1, 1) means the bottom-right corner<br>
+<img src="images/anchor_point.png"/><br>
+a Renderable's anchor point defaults to (0.5,0.5), which corresponds to the center position.<br>
+<br>
+<i><b>Note:</b> Object created through Tiled will have their anchorPoint set to (0, 0) to match Tiled Level editor implementation.
+To specify a value through Tiled, use a json expression like <code>json:{&quot;x&quot;:0.5,&quot;y&quot;:0.5}</code>. </i></p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="ObservableVector2d.html">ObservableVector2d</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li><0.5,0.5></li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="body">
+    <span class="type-signature"></span>body<span class="type-signature"> :<a href="Body.html">Body</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>the renderable physic body</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Body.html">Body</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// define a new Player Class
+ class PlayerEntity extends me.Sprite {
+     // constructor
+     constructor(x, y, settings) {
+         // call the parent constructor
+         super(x, y , settings);
+
+         // define a basic walking animation
+         this.addAnimation("walk",  [...]);
+         // define a standing animation (using the first frame)
+         this.addAnimation("stand",  [...]);
+         // set the standing animation as default
+         this.setCurrentAnimation("stand");
+
+         // add a physic body
+         this.body = new me.Body(this);
+         // add a default collision shape
+         this.body.addShape(new me.Rect(0, 0, this.width, this.height));
+         // configure max speed, friction, and initial force to be applied
+         this.body.setMaxVelocity(3, 15);
+         this.body.setFriction(0.4, 0);
+         this.body.force.set(3, 0);
+
+         // set the display to follow our position on both axis
+         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+     }
+
+     ...
+
+}</code></pre>
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="currentTransform">
+    <span class="type-signature"></span>currentTransform<span class="type-signature"> :<a href="Matrix2d.html">Matrix2d</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>the renderable default transformation matrix</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Matrix2d.html">Matrix2d</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="isDirty">
+    <span class="type-signature"></span>isDirty<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>when true the renderable will be redrawn during the next update cycle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="mask">
+    <span class="type-signature"></span>mask<span class="type-signature"> :<a href="Rect.html">Rect</a>|<a href="Polygon.html">Polygon</a>|<a href="Line.html">Line</a>|<a href="Ellipse.html">Ellipse</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A mask limits rendering elements to the shape and position of the given mask object.
+So, if the renderable is larger than the mask, only the intersecting part of the renderable will be visible.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+|
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+|
+
+<span class="param-type"><a href="Line.html">Line</a></span>
+|
+
+<span class="param-type"><a href="Ellipse.html">Ellipse</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>undefined</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// apply a mask in the shape of a Star
+myNPCSprite.mask = new me.Polygon(myNPCSprite.width / 2, 0, [
+   // draw a star
+   {x: 0, y: 0},
+   {x: 14, y: 30},
+   {x: 47, y: 35},
+   {x: 23, y: 57},
+   {x: 44, y: 90},
+   {x: 0, y: 62},
+   {x: -44, y: 90},
+   {x: -23, y: 57},
+   {x: -47, y: 35},
+   {x: -14, y: 30}
+]);</code></pre>
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="onVisibilityChange">
+    <span class="type-signature"></span>onVisibilityChange<span class="type-signature"> :function</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>an event handler that is called when the renderable leave or enter a camera viewport</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">function</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>undefined</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>this.onVisibilityChange = function(inViewport) {
+    if (inViewport === true) {
+        console.log("object has entered the in a camera viewport!");
+    }
+};</code></pre>
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="points">
+    <span class="type-signature"></span>points<span class="type-signature"> :Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Array of points defining the Polygon <br>
+Note: If you manually change <code>points</code>, you <strong>must</strong> call <code>recalc</code>afterwards so that the changes get applied correctly.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#points">Rect#points</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="pos">
+    <span class="type-signature"></span>pos<span class="type-signature"> :<a href="ObservableVector3d.html">ObservableVector3d</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Position of the Renderable relative to its parent container</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="ObservableVector3d.html">ObservableVector3d</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#pos">Rect#pos</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="tint">
+    <span class="type-signature"></span>tint<span class="type-signature"> :<a href="Color.html">Color</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>define a tint for this renderable. a (255, 255, 255) r, g, b value will remove the tint effect.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Color.html">Color</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>(255, 255, 255)</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// add a red tint to this renderable
+this.tint.setColor(255, 128, 128);
+// remove the tint
+this.tint.setColor(255, 255, 255);</code></pre>
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id=".angleTo">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>angleTo<span class="signature">(target)</span><span class="type-signature"> &rarr; {number}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the angle to the specified target</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>target</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+|
+
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+|
+
+<span class="param-type"><a href="Vector3d.html">Vector3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">number</span>
+
+
+
+
+
+- <p>angle in radians</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".distanceTo">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>distanceTo<span class="signature">(target)</span><span class="type-signature"> &rarr; {number}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the distance to the specified target</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>target</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+|
+
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+|
+
+<span class="param-type"><a href="Vector3d.html">Vector3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">number</span>
+
+
+
+
+
+- <p>distance</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".onDestroyEvent">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>onDestroyEvent<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>OnDestroy Notification function<br>
+Called by engine before deleting the object</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="clone">
+            
+                <span class="type-signature"></span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>clone this rectangle</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>new rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#clone">Rect#clone</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="contains">
+            
+                <span class="type-signature"></span>contains<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns true if the rectangle contains the given rectangle</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if contains</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#contains">Rect#contains</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="copy">
+            
+                <span class="type-signature"></span>copy<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>copy the position and size of the given rectangle into this one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Source rectangle</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>new rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#copy">Rect#copy</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="draw">
+            
+                <span class="type-signature"><span class="icon green">protected</span> </span>draw<span class="signature">(renderer)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>object draw. <br>
+automatically called by the game manager <a href="game.html"><code>game</code></a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>renderer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CanvasRenderer.html">CanvasRenderer</a></span>
+|
+
+<span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a renderer object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="equals">
+            
+                <span class="type-signature"></span>equals<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>check if this rectangle is identical to the specified one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if equals</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#equals">Rect#equals</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="flipX">
+            
+                <span class="type-signature"></span>flipX<span class="signature">(flip<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>flip the renderable on the horizontal axis (around the center of the renderable)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>flip</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> to flip this renderable.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>Matrix2d#scaleX</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="flipY">
+            
+                <span class="type-signature"></span>flipY<span class="signature">(flip<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>flip the renderable on the vertical axis (around the center of the renderable)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>flip</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> to flip this renderable.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>Matrix2d#scaleY</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getAbsolutePosition">
+            
+                <span class="type-signature"></span>getAbsolutePosition<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Vector2d.html">Vector2d</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the renderable absolute position in the game world</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getBounds">
+            
+                <span class="type-signature"></span>getBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Bounds.html">Bounds</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns the bounding box for this renderable</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Bounds.html">Bounds</a></span>
+
+
+
+
+
+- <p>bounding box Rectangle object</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#getBounds">Rect#getBounds</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getIndices">
+            
+                <span class="type-signature"></span>getIndices<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns a list of indices for all triangles defined in this polygon</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Array</span>
+
+
+
+
+
+- <p>an array of vertex indices for all triangles forming this polygon.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#getIndices">Rect#getIndices</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getOpacity">
+            
+                <span class="type-signature"></span>getOpacity<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>get the renderable alpha channel value<br></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">number</span>
+
+
+
+
+
+- <p>current opacity value between 0 and 1</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="isConvex">
+            
+                <span class="type-signature"></span>isConvex<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns true if the vertices composing this polygon form a convex shape (vertices must be in clockwise order).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the vertices are convex, false if not, null if not computable</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#isConvex">Rect#isConvex</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="isFinite">
+            
+                <span class="type-signature"></span>isFinite<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>determines whether all coordinates of this rectangle are finite numbers.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>false if all coordinates are positive or negative Infinity or NaN; otherwise, true.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#isFinite">Rect#isFinite</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="lookAt">
+            
+                <span class="type-signature"></span>lookAt<span class="signature">(target)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Rotate this renderable towards the given target.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>target</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+|
+
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+|
+
+<span class="param-type"><a href="Vector3d.html">Vector3d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the renderable or position to look at</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="onCollision">
+            
+                <span class="type-signature"></span>onCollision<span class="signature">(response, other)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>onCollision callback, triggered in case of collision,
+when this renderable body is colliding with another one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>response</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="collision.html#.ResponseObject">collision.ResponseObject</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the collision response object</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the other renderable touching this one (a reference to response.a or response.b)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the object should respond to the collision (its position and velocity will be corrected)</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// colision handler
+onCollision(response) {
+    if (response.b.body.collisionType === me.collision.types.ENEMY_OBJECT) {
+        // makes the other object solid, by substracting the overlap vector to the current position
+        this.pos.sub(response.overlapV);
+        this.hurt();
+        // not solid
+        return false;
+    }
+    // Make the object solid
+    return true;
+},</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="overlaps">
+            
+                <span class="type-signature"></span>overlaps<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>check if this rectangle is intersecting with the specified one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if overlaps</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#overlaps">Rect#overlaps</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="postDraw">
+            
+                <span class="type-signature"><span class="icon green">protected</span> </span>postDraw<span class="signature">(renderer)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>restore the rendering context after drawing. <br>
+automatically called by the game manager <a href="game.html"><code>game</code></a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>renderer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CanvasRenderer.html">CanvasRenderer</a></span>
+|
+
+<span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a renderer object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="preDraw">
+            
+                <span class="type-signature"><span class="icon green">protected</span> </span>preDraw<span class="signature">(renderer)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>prepare the rendering context before drawing
+(apply defined transforms, anchor point). <br>
+automatically called by the game manager <a href="game.html"><code>game</code></a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>renderer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CanvasRenderer.html">CanvasRenderer</a></span>
+|
+
+<span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a renderer object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="recalc">
+            
+                <span class="type-signature"></span>recalc<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Computes the calculated collision polygon.
+This <strong>must</strong> be called if the <code>points</code> array, <code>angle</code>, or <code>offset</code> is modified manually.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#recalc">Rect#recalc</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="resize">
+            
+                <span class="type-signature"></span>resize<span class="signature">(w, h)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>resize the rectangle</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new width of the rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new height of the rectangle</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>this rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#resize">Rect#resize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="rotate">
+            
+                <span class="type-signature"></span>rotate<span class="signature">(angle, v<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Rotate this renderable by the specified angle (in radians).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>angle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The angle to rotate (in radians)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+|
+
+<span class="param-type"><a href="ObservableVector2d.html">ObservableVector2d</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an optional point to rotate around</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#rotate">Rect#rotate</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="scale">
+            
+                <span class="type-signature"></span>scale<span class="signature">(x, y<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>scale the renderable around his anchor point.  Scaling actually applies changes
+to the currentTransform member wich is used by the renderer to scale the object
+when rendering.  It does not scale the object itself.  For example if the renderable
+is an image, the image.width and image.height properties are unaltered but the currentTransform
+member will be changed.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>a number representing the abscissa of the scaling vector.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    x
+                
+                </td>
+            
+
+            <td class="description last"><p>a number representing the ordinate of the scaling vector.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#scale">Rect#scale</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="scaleV">
+            
+                <span class="type-signature"></span>scaleV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>scale the renderable around his anchor point</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>scaling vector</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#scaleV">Rect#scaleV</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setOpacity">
+            
+                <span class="type-signature"></span>setOpacity<span class="signature">(alpha)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set the renderable alpha channel value<br></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alpha</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>opacity value between 0.0 and 1.0</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setShape">
+            
+                <span class="type-signature"></span>setShape<span class="signature">(x, y, w, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set new value to the rectangle shape</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>position of the Rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>position of the Rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>width of the rectangle, or an array of vector defining the rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>height of the rectangle, if a numeral width parameter is specified</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>this rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#setShape">Rect#setShape</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setVertices">
+            
+                <span class="type-signature"></span>setVertices<span class="signature">(vertices)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set the vertices defining this Polygon</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>vertices</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>array of vector or vertice defining the Polygon</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>this instance for objecf chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#setVertices">Rect#setVertices</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="to2d">
+            
+                <span class="type-signature"></span>to2d<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>apply a 2d projection to this shape</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#to2d">Rect#to2d</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="toIso">
+            
+                <span class="type-signature"></span>toIso<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>apply an isometric projection to this shape</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#toIso">Rect#toIso</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="toPolygon">
+            
+                <span class="type-signature"></span>toPolygon<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a polygon whose edges are the same as this box.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>a new Polygon that represents this rectangle.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#toPolygon">Rect#toPolygon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="transform">
+            
+                <span class="type-signature"></span>transform<span class="signature">(m)</span><span class="type-signature"> &rarr; {<a href="Renderable.html">Renderable</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>multiply the renderable currentTransform with the given matrix</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>m</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Matrix2d.html">Matrix2d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the transformation matrix</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#transform">Rect#transform</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Renderable.html#currentTransform">Renderable#currentTransform</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="translate">
+            
+                <span class="type-signature"></span>translate<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>translate the Polygon by the specified offset</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x offset</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>y offset</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>this Polygon</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#translate">Rect#translate</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="union">
+            
+                <span class="type-signature"></span>union<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>merge this rectangle with another one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>other rectangle to union with</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>the union(ed) rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#union">Rect#union</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="update">
+            
+                <span class="type-signature"><span class="icon green">protected</span> </span>update<span class="signature">(dt)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>update function. <br>
+automatically called by the game manager <a href="game.html"><code>game</code></a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>time since the last update in milliseconds.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the renderable is dirty</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -302,7 +7624,7 @@ bucket.</p>
             <div class="footer">
                 Copyright &copy; 2011 - 2021 Olivier Biot
                 <br>
-                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Mar 15 2022 15:29:51 GMT+0800 (Singapore Standard Time)
+                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Mar 15 2022 15:29:52 GMT+0800 (Singapore Standard Time)
             </div>
         </center>
     </footer>
@@ -313,7 +7635,7 @@ bucket.</p>
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'package:undefined_sub'.replace(/"/g, '_');
+        var id = 'Renderable_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

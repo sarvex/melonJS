@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home | melonJS API documentation</title>
+    <title>Namespace: device | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -46,252 +46,6233 @@
 
 
 
+
+<section>
+
+<header>
+    
+        <h2>device</h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description"><p>The device capabilities and specific events</p></div>
+            
+
+            
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id=".accelerationX">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>accelerationX<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>contains the g-force acceleration along the x-axis.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
     
 
 
+<dl class="details">
 
+    
 
+    
 
+    
 
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchAccelerometer">device.watchAccelerometer</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
 
 
     
 
+    
+</dd>
 
-    <section>
-        <article class="readme"><h1>melonJS 2</h1>
-<p><a href="https://travis-ci.org/melonjs/melonJS"><img src="https://travis-ci.org/melonjs/melonJS.svg" alt="Build Status"></a>
-<a href="https://lgtm.com/projects/g/melonjs/melonJS/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/melonjs/melonJS.svg?logo=lgtm&amp;logoWidth=18" alt="Language grade: JavaScript"></a>
-<a href="https://bundlephobia.com/result?p=melonjs"><img src="https://badgen.net/bundlephobia/min/melonjs" alt="Build Size"></a>
-<a href="https://www.npmjs.com/package/melonjs"><img src="https://img.shields.io/npm/v/melonjs" alt="NPM Package"></a>
-<a href="https://www.jsdelivr.com/package/npm/melonjs"><img src="https://data.jsdelivr.com/v1/package/npm/melonjs/badge?style=rounded" alt="jsDeliver"></a>
-<a href="https://www.boss.dev/issues/repo/melonjs/melonJS"><img src="https://img.shields.io/endpoint.svg?url=https://api.boss.dev/badge/enabled/melonjs/melonJS" alt="Boss Bounty Badge"></a></p>
-<h2>A fresh, <em>modern</em> &amp; lightweight HTML5 game engine</h2>
-<p><img src="http://melonjs.org/media/alex4-github.png" alt="melonJS"></p>
-<p>melonJS 2 is a modern version of the melonJS game engine. It has been rebuilt almost entirely using ES6 class, inheritance and semantic, and is bundled using Rollup to provide modern features such as transpiling and tree-shaking.</p>
-<blockquote>
-<p>Note: migrating an existing project to melonJS 2 (version 10.0 and higher) will definitely break your game (ES6 semantic, no more Jay inheritance, nodeJS event emitter, and no backward compatibility with deprecated legacy APIs), and you might want to read first this small step by step guide on <a href="https://github.com/melonjs/melonJS/wiki/Upgrading-to-melonJS-2">upgrading to melonJS 2</a>. If you are looking at the legacy version (9.x and lower) of melonJS, you can find it <a href="https://github.com/melonjs/melonJS/tree/legacy">here</a> under the <em>legacy</em> branch.</p>
-</blockquote>
-<p><a href="http://melonjs.org/">melonJS</a> is open-source, licensed under the <a href="LICENSE.md">MIT License</a>, and actively developed and maintained with the help of a small team of enthusiasts at AltByte in Singapore.</p>
-<h2>About melonJS</h2>
-<p><a href="http://melonjs.org/">melonJS</a> is a fully featured game engine :</p>
-<p>Compatibility</p>
-<ul>
-<li>Standalone library (does not rely on anything else, except a HTML5 capable browser)</li>
-<li>Compatible with all major browsers (Chrome, Safari, Firefox, Opera, Edge) and mobile devices</li>
-</ul>
-<p>Graphics</p>
-<ul>
-<li>2D sprite-based graphic engine</li>
-<li>Fast WebGL 1 &amp; 2 renderer for desktop and mobile devices with fallback to Canvas rendering</li>
-<li>High DPI resolution &amp; Canvas advanced auto scaling</li>
-<li>Sprite with 9-slice scaling option, and animation management</li>
-<li>built-in effects such as tinting and masking</li>
-<li>Standard spritesheet, single and multiple Packed Textures support</li>
-<li>System &amp; Bitmap Text</li>
-</ul>
-<p>Sound</p>
-<ul>
-<li>Web Audio support with spatial audio or stereo panning based on <a href="https://howlerjs.com">Howler</a></li>
-<li>fallback to Multi-channel HTML5 audio for legacy browsers</li>
-</ul>
-<p>Physic</p>
-<ul>
-<li>Polygon (SAT) based collision algorithm for accurate detection and response</li>
-<li>Fast Broad-phase collision detection using spatial partitioning</li>
-<li>Collision filtering for optimized automatic collision detection</li>
-</ul>
-<p>Input</p>
-<ul>
-<li>Mouse and Touch device support (with mouse emulation)</li>
-<li>Device motion &amp; accelerometer support</li>
-</ul>
-<p>Level Editor</p>
-<ul>
-<li>Tiled map format version +1.0 integration for easy level design
-<ul>
-<li>Uncompressed Plain, Base64, CSV and JSON encoded XML tilemap loading</li>
-<li>Orthogonal, Isometric and Hexagonal maps (both normal and staggered)</li>
-<li>Multiple layers (multiple background/foreground, collision and Image layers)</li>
-<li>Animated and multiple Tileset support</li>
-<li>Tileset transparency settings</li>
-<li>Layers alpha and tinting settings</li>
-<li>Rectangle, Ellipse, Polygon and Polyline objects support</li>
-<li>Tiled Objects</li>
-<li>Flipped &amp; rotated Tiles</li>
-<li>Dynamic Layer and Object/Group ordering</li>
-<li>Dynamic Entity loading</li>
-<li>Shape based Tile collision support</li>
-</ul>
-</li>
-</ul>
-<p>Assets</p>
-<ul>
-<li>Asynchronous asset loading</li>
-<li>A fully customizable preloader</li>
-</ul>
-<p>And Also</p>
-<ul>
-<li>A state manager (to easily manage loading, menu, options, in-game state)</li>
-<li>Tween Effects, Transition effects</li>
-<li>Pooling support for object recycling</li>
-<li>Basic Particle System</li>
-<li>nodeJS EventEmitter based event system</li>
-</ul>
-<h2>Tools integration</h2>
-<p><a href="http://free-tex-packer.com"><img src="https://user-images.githubusercontent.com/4033090/136762061-1d3a0dfe-dbe0-4d3d-808d-47a49ecf5309.png" alt="Free Texture Packer" title="Free Texture Packer"></a>
-<a href="https://www.codeandweb.com/texturepacker"><img src="https://user-images.githubusercontent.com/4033090/136762472-bc55a638-c69b-4ff5-9d03-c684c8bea0ea.png" alt="TexturePacker" title="TexturePacker"></a>
-<a href="https://www.codeandweb.com/physicseditor"><img src="https://user-images.githubusercontent.com/4033090/136762890-b1010c7f-cb19-4d35-a3f1-f5048db07835.png" alt="PhysicsEditor" title="PhysicsEditor"></a>
-<a href="https://renderhjs.net/shoebox/"><img src="https://user-images.githubusercontent.com/4033090/136762705-92027d94-d87c-4a95-b051-26647410248d.png" alt="ShoeBox" title="ShoeBox"></a>
-<a href="https://www.mapeditor.org"><img src="https://user-images.githubusercontent.com/4033090/136762999-5a7f377b-4136-4205-9fe0-83728c90cb9b.png" alt="Tiled" title="Tiled"></a>
-<a href="https://cordova.apache.org"><img src="https://user-images.githubusercontent.com/4033090/136763147-6d157ce6-6921-437e-bb8f-0287b86109da.png" alt="Cordova" title="Cordova"></a></p>
-<p>Tools integration and usage with melonJS is documented in our <a href="https://github.com/melonjs/melonJS/wiki#third-party-tools-usage">Wiki</a>.</p>
-<h2>Using melonJS</h2>
-<p>Basic <a href="https://jsfiddle.net/obiot/4o9f02tc/">Hello World</a> Example</p>
-<pre class="prettyprint source lang-JavaScript"><code>import * as me from &quot;https://esm.run/melonjs&quot;;
+        
+            
 
-me.device.onReady(function () {
-    // initialize the display canvas once the device/browser is ready
-    if (!me.video.init(1218, 562, {parent : &quot;screen&quot;, scale : &quot;auto&quot;})) {
-        alert(&quot;Your browser does not support HTML5 canvas.&quot;);
-        return;
-    }
+<dt>
+<h4 class="name" id=".accelerationY">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>accelerationY<span class="type-signature"> :number</span>
+    
+</h4>
 
-    // add a gray background to the default Stage
-    me.game.world.addChild(new me.ColorLayer(&quot;background&quot;, &quot;#202020&quot;));
 
-    // add a font text display object
-    me.game.world.addChild(new me.Text(609, 281, {
-        font: &quot;Arial&quot;,
-        size: 160,
-        fillStyle: &quot;#FFFFFF&quot;,
-        textBaseline : &quot;middle&quot;,
-        textAlign : &quot;center&quot;,
-        text : &quot;Hello World !&quot;
-    }));
-});
-</code></pre>
-<blockquote>
-<p>Simple hello world using melonJS 9.x or higher</p>
-</blockquote>
-<p>Documentation :</p>
-<ul>
-<li><a href="http://melonjs.github.io/melonJS/docs/">Online API</a> (<a href="https://github.com/melonjs/melonJS/archive/gh-pages.zip">offline</a> version under the <code>docs</code> directory)</li>
-</ul>
-<p>For your first time using melonJS, follow these tutorials :</p>
-<ul>
-<li><a href="http://melonjs.github.io/tutorial-platformer/">Platformer</a> Step by Step Tutorial.</li>
-<li><a href="http://melonjs.github.io/tutorial-space-invaders/">Space Invaders</a> Step by Step Tutorial.</li>
-</ul>
-<p>You may find it useful to skim the overview found at the wiki <a href="https://github.com/melonjs/melonJS/wiki#details--usage">Details &amp; Usage</a></p>
-<p>When starting your own projects, checkout our <a href="https://github.com/melonjs/es6-boilerplate">es6 boilerplate</a></p>
-<h2>Demos</h2>
-<p>A few demos of melonJS capabilities :</p>
-<ul>
-<li><a href="https://melonjs.github.io/examples/platformer/">Platformer Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/isometric_rpg/">Isometric Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/sprite/">Sprite Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/masking/">Masking Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/graphics/">Primitive Drawing Demo</a></li>
-<li><a href="https://melonjs.github.io/examples/UI/">UI Demo</a></li>
-</ul>
-<p>More examples are available <a href="https://melonjs.github.io/examples/">here</a></p>
-<h2>Download melonJS</h2>
-<p>The latest builds with corresponding release note are available for direct download <a href="https://github.com/melonjs/melonJS/releases">here</a>.</p>
-<p>Since version 10.0.0 melonJS provides different build options :</p>
-<table>
-<thead>
-<tr>
-<th>build</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>melonjs.module.js</code></td>
-<td>the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.module.d.ts</code></td>
-<td>typescript declaration file for the ES6 Module (ESM) Bundle</td>
-</tr>
-<tr>
-<td><code>melonjs.js</code></td>
-<td>a ES5 UMD Bundle (directly transpiled from the ES6 version)</td>
-</tr>
-<tr>
-<td><code>melonjs.min.js</code></td>
-<td>a minified version of the ES5 UMD bundle</td>
-</tr>
-</tbody>
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>contains the g-force acceleration along the y-axis.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchAccelerometer">device.watchAccelerometer</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".accelerationZ">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>accelerationZ<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>contains the g-force acceleration along the z-axis.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchAccelerometer">device.watchAccelerometer</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".alpha">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>alpha<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Device orientation Alpha property. Gives angle based on the rotation of the phone around its z axis.
+The z-axis is perpendicular to the phone, facing out from the center of the screen.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchDeviceOrientation">device.watchDeviceOrientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".android">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>android<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is an Android platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".android2">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>android2<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is an Android 2.x platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".autoFocus">
+    <span class="type-signature"><span class="icon green">static</span> </span>autoFocus<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Specify whether to automatically bring the window to the front</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".beta">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>beta<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Device orientation Beta property. Gives angle on tilting a portrait held phone forward or backward</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchDeviceOrientation">device.watchDeviceOrientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".BlackBerry">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>BlackBerry<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is a BlackBerry platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".chromeOS">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>chromeOS<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is running on ChromeOS.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".devicePixelRatio">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>devicePixelRatio<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".ejecta">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>ejecta<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the game is running under Ejecta.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://impactjs.com/ejecta">http://impactjs.com/ejecta</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".gamma">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>gamma<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Device orientation Gamma property. Gives angle on tilting a portrait held phone left or right</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.watchDeviceOrientation">device.watchDeviceOrientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".hasAccelerometer">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>hasAccelerometer<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser accelerometer capabilities</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".hasDeviceOrientation">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>hasDeviceOrientation<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser device orientation</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".hasFullscreenSupport">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>hasFullscreenSupport<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser full screen support</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".hasPointerLockSupport">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>hasPointerLockSupport<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser pointerlock api support</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".hasWebAudio">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>hasWebAudio<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Device WebAudio Support</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".iOS">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>iOS<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is an iOS platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isFullscreen">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>isFullscreen<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Returns true if the browser/device is in full screen mode.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isMobile">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>isMobile<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if a mobile device <br>
+(Android | iPhone | iPad | iPod | BlackBerry | Windows Phone | Kindle)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".isWeixin">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>isWeixin<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the game is running under Wechat.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".Kindle">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>Kindle<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is a Kindle platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".language">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>language<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>a string representing the preferred language of the user, usually the language of the browser UI.
+(will default to &quot;en&quot; if the information is not available)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://www.w3schools.com/tags/ref_language_codes.asp">http://www.w3schools.com/tags/ref_language_codes.asp</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".linux">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>linux<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is a Linux platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".localStorage">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>localStorage<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser Local Storage capabilities <br>
+(this flag will be set to false if cookies are blocked)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".maxTouchPoints">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>maxTouchPoints<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return the maximum number of simultaneous touch contact points are supported by the current device.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>if (me.device.maxTouchPoints > 1) {
+    // device supports multi-touch
+}</code></pre>
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".nativeBase64">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>nativeBase64<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Browser Base64 decoding capability</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".OffScreenCanvas">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>OffScreenCanvas<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device browser supports OffScreenCanvas.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".pauseOnBlur">
+    <span class="type-signature"><span class="icon green">static</span> </span>pauseOnBlur<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Specify whether to pause the game when losing focus</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".resumeOnFocus">
+    <span class="type-signature"><span class="icon green">static</span> </span>resumeOnFocus<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Specify whether to unpause the game when gaining focus</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".ScreenOrientation">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>ScreenOrientation<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Supports the ScreenOrientation API</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/onchange">https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/onchange</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".sound">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>sound<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Returns true if the browser/device has audio capabilities.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".stopOnBlur">
+    <span class="type-signature"><span class="icon green">static</span> </span>stopOnBlur<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Specify whether to stop the game when losing focus or not.
+The engine restarts on focus if this is enabled.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".touch">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>touch<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Touch capabilities</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".turnOffPointerLock">
+    <span class="type-signature"><span class="icon green">static</span> </span>turnOffPointerLock<span class="type-signature"> :function</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">function</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>since 10.3.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="input.html#.exitPointerLock">input.exitPointerLock</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".turnOnPointerLock">
+    <span class="type-signature"><span class="icon green">static</span> </span>turnOnPointerLock<span class="type-signature"> :function</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">function</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>since 10.3.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="input.html#.requestPointerLock">input.requestPointerLock</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".ua">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>ua<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>the <code>ua</code> read-only property returns the user agent string for the current browser.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".wheel">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>wheel<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>W3C standard wheel events</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".wp">
+    <span class="type-signature"><span class="icon green">static</span>, <span class="icon green">readonly</span> </span>wp<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>equals to true if the device is a Windows Phone platform.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id=".enableSwipe">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>enableSwipe<span class="signature">(enable<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>enable/disable swipe on WebView.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>enable or disable swipe.</p></td>
+        </tr>
+
+    
+    </tbody>
 </table>
-<p>Alternatively, the latest version of melonJS can be installed through <a href="https://www.npmjs.com/package/melonjs">NPM</a> :</p>
-<pre><code>$ npm install melonjs
-</code></pre>
-<p>If you need to import the ES6 module of melonjs (e.g. for Webpack):</p>
-<pre><code>$ import * as me from 'melonjs/dist/melonjs.module.js';
-</code></pre>
-<p>Or can simply be added to your html, using <a href="https://www.jsdelivr.com/package/npm/melonjs">jsDeliver</a> content delivery network (CDN) :</p>
-<pre class="prettyprint source lang-html"><code>&lt;!-- load the ES6 module bundle of melonJS v10.0 -->
-&lt;script src=&quot;https://esm.run/melonjs@10.0&quot;>&lt;/script>
-&lt;!-- omit the version completely to get the latest one -->
-&lt;!-- you should NOT use this in production -->
-&lt;script src=&quot;https://esm.run/melonjs&quot;>&lt;/script>
-</code></pre>
-<blockquote>
-<p>Note: starting from the 10.0.0 version, the debug plugin is no longer provided as part of the melonJS library release, and has been moved to the official <a href="https://github.com/melonjs/es6-boilerplate">boilerplate</a></p>
-</blockquote>
-<h2>Building melonJS</h2>
-<p>For most users, all you probably want is to use melonJS, and all you need then is just to download the latest built <a href="https://github.com/melonjs/melonJS#download-melonjs">release</a> to get started. The only time you should need to build melonJS is if you want to contribute to the project and start developing on it.</p>
-<p>To build your own version of melonJS you will need to install :</p>
-<ul>
-<li>The <a href="http://nodejs.org/">Node.js</a> JavaScript runtime and the <a href="https://npmjs.org/">NPM</a> package manager</li>
-</ul>
-<p>Once Node.js and NPM have been installed, you need to install build dependencies,
-by executing the following in the folder where you cloned the repository :</p>
-<pre><code>$ [sudo] npm install
-</code></pre>
-<p>Then build the melonJS source by running:</p>
-<pre><code>$ npm run build
-</code></pre>
-<p>The generated library will be available under the <code>build</code> directory :</p>
-<ul>
-<li><code>melonjs.js</code> : plain ES5 UMD bundle</li>
-<li><code>melonjs.min.js</code> : minified ES5 UMD bundle</li>
-<li><code>melonjs.module.js</code> : plain ES6 module</li>
-</ul>
-<p>To run the melonJS test suite simply use the following:</p>
-<pre><code>$ npm run test
-</code></pre>
-<p>This will run the jasmine spec tests with the output displayed on the shell. Do
-note that the latest Chrome version is required, as the test unit will run the
-Browser in a headless mode (in case of failed tests, upgrade your browser).</p>
-<h2>Building the documentation</h2>
-<p>Similarly, you can build your own copy of the docs locally by running :</p>
-<pre><code>$ npm run doc
-</code></pre>
-<p>The generated documentation will be available in the <code>docs</code> directory</p>
-<h2>WIP Builds</h2>
-<p>melonJS uses Travis-CI for automated testing and build uploads. The latest build
-artifacts can be downloaded from the <a href="https://melonjs-builds.s3.amazonaws.com/index.html?prefix=artifacts/">melonjs-builds</a>
-bucket.</p>
-<h2>Questions, need help ?</h2>
-<p>If you need technical support, you can contact us through the following channels :</p>
-<ul>
-<li><a href="http://www.html5gamedevs.com/forum/32-melonjs/">melonJS developer forum</a></li>
-<li><a href="https://gitter.im/melonjs/public">gitter web chat</a></li>
-<li><a href="https://github.com/melonjs/melonJS/wiki">melonJS wikipage</a></li>
-<li><a href="https://discord.gg/aur7JMk">Discord</a></li>
-</ul>
-<p>For any other non technical related questions, feel free to also send us an <a href="mailto:contact@melonjs.org">email</a></p>
-<h2>Sponsors</h2>
-<p>Support the development of melonJS by <a href="https://github.com/sponsors/melonjs">becoming a sponsor</a>. Get your logo in our README with a link to your site or become a backer and get your name in the <a href="BACKERS.md">BACKERS</a> list. Any level of support is really appreciated and goes a long way !</p>
-<p><a href="https://www.melongaming.com"><img src="https://user-images.githubusercontent.com/4033090/136695857-d098c27d-f4b2-4c71-8574-b5f4291779cb.png" alt="Melon Gaming" title="Melon Gaming"></a></p>
-<p><a href=""><img src="https://user-images.githubusercontent.com/4033090/136692693-35dca8aa-5012-4a37-9ea2-51640d2e6d73.png" alt="Altbyte Pte Ltd" title="AltByte"></a></p></article>
-    </section>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
 
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".exitFullscreen">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>exitFullscreen<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Exit fullscreen mode. Requires fullscreen support from the browser/device.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".focus">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>focus<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Makes a request to bring this device window to the front.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>if (clicked) {
+   me.device.focus();
+ }</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getElement">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getElement<span class="signature">(element)</span><span class="type-signature"> &rarr; {HTMLElement}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the DOM element for the given element name or HTMLElement object</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the parent element name or a HTMLElement object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">HTMLElement</span>
+
+
+
+
+
+- <p>the corresponding DOM Element or null if not existing</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getElementBounds">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getElementBounds<span class="signature">(element)</span><span class="type-signature"> &rarr; {DOMRect}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns the size of the given HTMLElement and its position relative to the viewport
+<br><img src="images/element-box-diagram.png"/></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an HTMLElement object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">DOMRect</span>
+
+
+
+
+
+- <p>the size and position of the element relatively to the viewport</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect">https://developer.mozilla.org/en-US/docs/Web/API/DOMRect</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getMaxShaderPrecision">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getMaxShaderPrecision<span class="signature">(gl)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the highest precision format supported by this device for GL Shaders</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">WebGLRenderingContext</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>&quot;lowp&quot;, &quot;mediump&quot;, or &quot;highp&quot;</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getParentBounds">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getParentBounds<span class="signature">(element)</span><span class="type-signature"> &rarr; {DOMRect}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns the size of the given HTMLElement Parent and its position relative to the viewport
+<br><img src="images/element-box-diagram.png"/></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an HTMLElement object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">DOMRect</span>
+
+
+
+
+
+- <p>the size and position of the given element parent relative to the viewport</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect">https://developer.mozilla.org/en-US/docs/Web/API/DOMRect</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getParentElement">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getParentElement<span class="signature">(element)</span><span class="type-signature"> &rarr; {HTMLElement}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the parent DOM element for the given parent name or HTMLElement object</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the parent element name or a HTMLElement object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">HTMLElement</span>
+
+
+
+
+
+- <p>the parent Element</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getScreenOrientation">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getScreenOrientation<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Return a string representing the orientation of the device screen.
+It can be &quot;any&quot;, &quot;natural&quot;, &quot;landscape&quot;, &quot;portrait&quot;, &quot;portrait-primary&quot;, &quot;portrait-secondary&quot;, &quot;landscape-primary&quot;, &quot;landscape-secondary&quot;</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">string</span>
+
+
+
+
+
+- <p>the screen orientation</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation">https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getStorage">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getStorage<span class="signature">(type<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {object}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return the device storage</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    "local"
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">object</span>
+
+
+
+
+
+- <p>a reference to the device storage</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="save.html">save</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".isLandscape">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>isLandscape<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return true if the device screen orientation is in Portrait mode</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".isPortrait">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>isPortrait<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>return true if the device screen orientation is in Portrait mode</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".isWebGLSupported">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>isWebGLSupported<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns true if the device supports WebGL</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>context creation options</p>
+                <h6>Properties</h6>
+                
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>failIfMajorPerformanceCaveat</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>If true, the renderer will switch to CANVAS mode if the performances of a WebGL context would be dramatically lower than that of a native application making equivalent OpenGL calls.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if WebGL is supported</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".lockOrientation">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>lockOrientation<span class="signature">(orientation)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>locks the device screen into the specified orientation.<br>
+This method only works for installed Web apps or for Web pages in full-screen mode.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>orientation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The orientation into which to lock the screen.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the orientation was unsuccessfully locked</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation">https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".onReady">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>onReady<span class="signature">(fn)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>specify a function to execute when the Device is fully loaded and ready</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the function to be executed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// small game skeleton
+var game = {
+   // called by the me.device.onReady function
+   onload : function () {
+      // init video
+      if (!me.video.init('screen', 640, 480, true)) {
+         alert("Sorry but your browser does not support html 5 canvas.");
+         return;
+      }
+
+      // initialize the "audio"
+      me.audio.init("mp3,ogg");
+
+      // set callback for ressources loaded event
+      me.loader.onload = this.loaded.bind(this);
+
+      // set all ressources to be loaded
+      me.loader.preload(game.assets);
+
+      // load everything &amp; display a loading screen
+      me.state.change(me.state.LOADING);
+   },
+
+   // callback when everything is loaded
+   loaded : function () {
+      // define stuff
+      // ....
+
+      // change to the menu screen
+      me.state.change(me.state.PLAY);
+   }
+}, // game
+
+// "bootstrap"
+me.device.onReady(function () {
+   game.onload();
+});</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".requestFullscreen">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>requestFullscreen<span class="signature">(element<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Triggers a fullscreen request. Requires fullscreen support from the browser/device.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    default canvas object
+                
+                </td>
+            
+
+            <td class="description last"><p>the element to be set in full-screen mode.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// add a keyboard shortcut to toggle Fullscreen mode on/off
+me.input.bindKey(me.input.KEY.F, "toggleFullscreen");
+me.event.on(me.event.KEYDOWN, function (action, keyCode, edge) {
+   // toggle fullscreen on/off
+   if (action === "toggleFullscreen") {
+      if (!me.device.isFullscreen) {
+         me.device.requestFullscreen();
+      } else {
+         me.device.exitFullscreen();
+      }
+   }
+});</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".unlockOrientation">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>unlockOrientation<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>unlocks the device screen into the specified orientation.<br>
+This method only works for installed Web apps or for Web pages in full-screen mode.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the orientation was unsuccessfully unlocked</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation">https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".unwatchAccelerometer">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>unwatchAccelerometer<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>unwatch Accelerometor event</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".unwatchDeviceOrientation">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>unwatchDeviceOrientation<span class="signature">()</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>unwatch Device orientation event</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".vibrate">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>vibrate<span class="signature">(pattern)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>the vibrate method pulses the vibration hardware on the device, <br>
+If the device doesn't support vibration, this method has no effect. <br>
+If a vibration pattern is already in progress when this method is called,
+the previous pattern is halted and the new one begins instead.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>pattern of vibration and pause intervals</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// vibrate for 1000 ms
+me.device.vibrate(1000);
+// or alternatively
+me.device.vibrate([1000]);
+// vibrate for 50 ms, be still for 100 ms, and then vibrate for 150 ms:
+me.device.vibrate([50, 100, 150]);
+// cancel any existing vibrations
+me.device.vibrate(0);</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".watchAccelerometer">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>watchAccelerometer<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Enable monitor of the device accelerator to detect the amount of physical force of acceleration the device is receiving.
+(one some device a first user gesture will be required before calling this function)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>false if not supported or permission not granted by the user</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.accelerationX">device.accelerationX</a></li>
+        
+            <li><a href="device.html#.accelerationY">device.accelerationY</a></li>
+        
+            <li><a href="device.html#.accelerationZ">device.accelerationZ</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// try to enable device accelerometer event on user gesture
+me.input.registerPointerEvent("pointerleave", me.game.viewport, function() {
+    if (me.device.watchAccelerometer() === true) {
+        // Success
+        me.input.releasePointerEvent("pointerleave", me.game.viewport);
+    } else {
+        // ... fail at enabling the device accelerometer event
+    }
+});</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".watchDeviceOrientation">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>watchDeviceOrientation<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Enable monitor of the device orientation to detect the current orientation of the device as compared to the Earth coordinate frame.
+(one some device a first user gesture will be required before calling this function)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>false if not supported or permission not granted by the user</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="device.html#.alpha">device.alpha</a></li>
+        
+            <li><a href="device.html#.beta">device.beta</a></li>
+        
+            <li><a href="device.html#.gamma">device.gamma</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// try to enable device orientation event on user gesture
+me.input.registerPointerEvent("pointerleave", me.game.viewport, function() {
+    if (me.device.watchDeviceOrientation() === true) {
+        // Success
+        me.input.releasePointerEvent("pointerleave", me.game.viewport);
+    } else {
+        // ... fail at enabling the device orientation event
+    }
+});</code></pre>
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -313,7 +6294,7 @@ bucket.</p>
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'package:undefined_sub'.replace(/"/g, '_');
+        var id = 'device_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
