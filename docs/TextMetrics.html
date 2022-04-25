@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Namespace: string | melonJS API documentation</title>
+    <title>Class: TextMetrics | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -51,8 +51,9 @@
 
 <header>
     
-        <h2>
-            <span class="ancestors"><a href="utils.html">utils</a>.</span>string</h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>TextMetrics<span class="signature">(ancestor)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>a Text Metrics object that contains helper for text manipulation</p></div>
         
     
 </header>
@@ -62,10 +63,97 @@
         <div class="container-overview">
         
             
-                <div class="description"><p>a collection of string utility functions</p></div>
+
+<dt>
+    
+        <h4 class="name" id="TextMetrics">
+            
+                new <span class="type-signature"></span>TextMetrics<span class="signature">(ancestor)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ancestor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Text.html">Text</a></span>
+|
+
+<span class="param-type"><a href="BitmapText.html">BitmapText</a></span>
+
+
+            
+            </td>
+
             
 
             
+
+            <td class="description last"><p>the parent object that contains this TextMetrics object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
 
 <dl class="details">
@@ -102,12 +190,24 @@
 </dl>
 
 
-            
+    
+
+</dd>
+
         
         </div>
     
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Bounds.html">Bounds</a></li>
+    </ul>
+
 
     
 
@@ -119,6 +219,91 @@
 
     
 
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id="ancestor">
+    <span class="type-signature"></span>ancestor<span class="type-signature"> :<a href="Renderable.html">Renderable</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>a reference to the parent object that contains this TextMetrics object</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Renderable.html">Renderable</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>undefined</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -129,9 +314,9 @@
 
 <dt>
     
-        <h4 class="name" id=".capitalize">
+        <h4 class="name" id="lineHeight">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>capitalize<span class="signature">(str)</span><span class="type-signature"> &rarr; {string}</span>
+                <span class="type-signature"></span>lineHeight<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span>
                 
             
         </h4>
@@ -143,7 +328,7 @@
 
     
     <div class="description">
-        <p>converts the first character of the given string to uppercase</p>
+        <p>Returns the height of a segment of inline text in CSS pixels.</p>
     </div>
     
 
@@ -153,56 +338,6 @@
 
     
 
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the string to be capitalized</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
     
 
     
@@ -223,13 +358,13 @@
 
 
 
-<span class="param-type">string</span>
+<span class="param-type">number</span>
 
 
 
 
 
-- <p>the capitalized string</p>
+- <p>the height of a segment of inline text in CSS pixels.</p>
 
 
 
@@ -284,9 +419,9 @@
 
 <dt>
     
-        <h4 class="name" id=".isBoolean">
+        <h4 class="name" id="lineWidth">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>isBoolean<span class="signature">(str)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"></span>lineWidth<span class="signature">(text, context<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
                 
             
         </h4>
@@ -298,7 +433,7 @@
 
     
     <div class="description">
-        <p>returns true if the given string contains a true or false</p>
+        <p>Returns the width of the given segment of inline text in CSS pixels.</p>
     </div>
     
 
@@ -322,6 +457,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -334,7 +471,7 @@
 
         <tr>
             
-                <td class="name"><code>str</code></td>
+                <td class="name"><code>text</code></td>
             
 
             <td class="type">
@@ -347,10 +484,51 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the string to be tested</p></td>
+            <td class="description last"><p>the text to be measured</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">CanvasRenderingContext2D</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>reference to an active 2d context for canvas rendering</p></td>
         </tr>
 
     
@@ -378,13 +556,13 @@
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type">number</span>
 
 
 
 
 
-- <p>true if the string is either true or false</p>
+- <p>the width of the given segment of inline text in CSS pixels.</p>
 
 
 
@@ -439,9 +617,9 @@
 
 <dt>
     
-        <h4 class="name" id=".isNumeric">
+        <h4 class="name" id="measureText">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>isNumeric<span class="signature">(str)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"></span>measureText<span class="signature">(text, context<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="TextMetrics.html">TextMetrics</a>}</span>
                 
             
         </h4>
@@ -453,7 +631,7 @@
 
     
     <div class="description">
-        <p>returns true if the given string contains a numeric integer or float value</p>
+        <p>measure the given text size in CSS pixels</p>
     </div>
     
 
@@ -477,6 +655,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -489,7 +669,7 @@
 
         <tr>
             
-                <td class="name"><code>str</code></td>
+                <td class="name"><code>text</code></td>
             
 
             <td class="type">
@@ -502,10 +682,51 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the string to be tested</p></td>
+            <td class="description last"><p>the text to be measured</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">CanvasRenderingContext2D</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>reference to an active 2d context for canvas rendering</p></td>
         </tr>
 
     
@@ -533,13 +754,13 @@
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type"><a href="TextMetrics.html">TextMetrics</a></span>
 
 
 
 
 
-- <p>true if string contains only digits</p>
+- <p>this</p>
 
 
 
@@ -594,9 +815,9 @@
 
 <dt>
     
-        <h4 class="name" id=".toHex">
+        <h4 class="name" id="wordWrap">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>toHex<span class="signature">(str)</span><span class="type-signature"> &rarr; {string}</span>
+                <span class="type-signature"></span>wordWrap<span class="signature">(text, width, context<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array.&lt;string>}</span>
                 
             
         </h4>
@@ -608,7 +829,7 @@
 
     
     <div class="description">
-        <p>convert a string to the corresponding hexadecimal value</p>
+        <p>wrap the given text based on the given width</p>
     </div>
     
 
@@ -632,6 +853,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -644,23 +867,98 @@
 
         <tr>
             
-                <td class="name"><code>str</code></td>
+                <td class="name"><code>text</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the string to be converted</p></td>
+            <td class="description last"><p>the text to be wrapped</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>maximum width of one segment of text in css pixel</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">CanvasRenderingContext2D</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>reference to an active 2d context for canvas rendering</p></td>
         </tr>
 
     
@@ -688,323 +986,13 @@
 
 
 
-<span class="param-type">string</span>
+<span class="param-type">Array.&lt;string></span>
 
 
 
 
 
-- <p>the converted hexadecimal value</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".trimLeft">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>trimLeft<span class="signature">(str)</span><span class="type-signature"> &rarr; {string}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the string stripped of whitespace from the left.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the string to be trimmed</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">string</span>
-
-
-
-
-
-- <p>trimmed string</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".trimRight">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>trimRight<span class="signature">(str)</span><span class="type-signature"> &rarr; {string}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the string stripped of whitespace from the right.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the string to be trimmed</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">string</span>
-
-
-
-
-
-- <p>trimmed string</p>
+- <p>an array of string representing wrapped text</p>
 
 
 
@@ -1073,7 +1061,7 @@
             <div class="footer">
                 Copyright &copy; 2011 - 2021 Olivier Biot
                 <br>
-                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Apr 19 2022 11:50:35 GMT+0800 (Singapore Standard Time)
+                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Apr 19 2022 11:50:34 GMT+0800 (Singapore Standard Time)
             </div>
         </center>
     </footer>
@@ -1084,7 +1072,7 @@
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'utils.string_sub'.replace(/"/g, '_');
+        var id = 'TextMetrics_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
