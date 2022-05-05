@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Namespace: utils | melonJS API documentation</title>
+    <title>Namespace: ParticleEmitterSettings | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -51,7 +51,7 @@
 
 <header>
     
-        <h2>utils</h2>
+        <h2>ParticleEmitterSettings</h2>
         
     
 </header>
@@ -61,7 +61,7 @@
         <div class="container-overview">
         
             
-                <div class="description"><p>a collection of utility functions</p></div>
+                <div class="description"><p>ParticleEmitterSettings contains the default settings for ParticleEmitter</p></div>
             
 
             
@@ -95,6 +95,13 @@
 
     
 
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ParticleEmitter.html">ParticleEmitter</a></li>
+        </ul>
+    </dd>
     
 
     
@@ -117,240 +124,41 @@
     
 
     
-        <h3 class="subsection-title">Namespaces</h3>
-        
-
-<dl>
-    
-        <dt>
-            <h4 class="name">
-                <a href="utils.agent.html">agent</a>
-                <div class="container-source members">
-                    <code><a href="utils.agent.html">utils.agent</a></code>
-                </div>
-            </h4>
-        </dt>
-        
-    
-        <dt>
-            <h4 class="name">
-                <a href="utils.array.html">array</a>
-                <div class="container-source members">
-                    <code><a href="utils.array.html">utils.array</a></code>
-                </div>
-            </h4>
-        </dt>
-        
-    
-        <dt>
-            <h4 class="name">
-                <a href="utils.file.html">file</a>
-                <div class="container-source members">
-                    <code><a href="utils.file.html">utils.file</a></code>
-                </div>
-            </h4>
-        </dt>
-        
-    
-        <dt>
-            <h4 class="name">
-                <a href="utils.function.html">function</a>
-                <div class="container-source members">
-                    <code><a href="utils.function.html">utils.function</a></code>
-                </div>
-            </h4>
-        </dt>
-        
-    
-        <dt>
-            <h4 class="name">
-                <a href="utils.string.html">string</a>
-                <div class="container-source members">
-                    <code><a href="utils.string.html">utils.string</a></code>
-                </div>
-            </h4>
-        </dt>
-        
-    
-</dl>
 
     
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
+        <h3 class="subsection-title">Members</h3>
 
         <dl>
-                
+            
 
 <dt>
+<h4 class="name" id=".angle">
+    <span class="type-signature"><span class="icon green">static</span> </span>angle<span class="type-signature"> :number</span>
     
-        <h4 class="name" id=".checkVersion">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>checkVersion<span class="signature">(first, second<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
-                
-            
-        </h4>
+</h4>
 
-        
-    
+
 </dt>
 <dd>
-
     
     <div class="description">
-        <p>Compare two version strings</p>
+        <p>Start angle for particle launch in Radians</p>
     </div>
     
 
+    <!--
     
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>first</code></td>
-            
-
-            <td class="type">
-            
+        <h5>Type:</h5>
+        <ul>
+            <li>
                 
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>First version string to compare</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>second</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    version
-                
-                </td>
-            
-
-            <td class="description last"><p>Second version string to compare</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
 <span class="param-type">number</span>
 
 
-
-
-
-- <p>comparison result <br>&lt; 0 : first &lt; second<br>
-0 : first == second<br>
-&gt; 0 : first &gt; second</p>
-
-
-
-
-            
-    </div>
+            </li>
+        </ul>
     
+    -->
 
     
 
@@ -380,6 +188,11 @@
     
 
     
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>Math.PI / 2</li>
+        </ul></dd>
+    
 
     
 
@@ -390,134 +203,774 @@
 
 
     
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>if (me.utils.checkVersion("7.0.0") > 0) {
-    console.error(
-        "melonJS is too old. Expected: 7.0.0, Got: 6.3.0"
-    );
-}</code></pre>
 
     
-
 </dd>
 
+        
             
-                
 
 <dt>
+<h4 class="name" id=".angleVariation">
+    <span class="type-signature"><span class="icon green">static</span> </span>angleVariation<span class="type-signature"> :number</span>
     
-        <h4 class="name" id=".getPixels">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>getPixels<span class="signature">(image)</span><span class="type-signature"> &rarr; {ImageData}</span>
-                
-            
-        </h4>
+</h4>
 
-        
-    
+
 </dt>
 <dd>
-
     
     <div class="description">
-        <p>Get image pixels</p>
+        <p>Variation in the start angle for particle launch in Radians.</p>
     </div>
     
 
+    <!--
     
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>image</code></td>
-            
-
-            <td class="type">
-            
+        <h5>Type:</h5>
+        <ul>
+            <li>
                 
-<span class="param-type">HTMLImageElement</span>
-|
+<span class="param-type">number</span>
 
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".blendMode">
+    <span class="type-signature"><span class="icon green">static</span> </span>blendMode<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>the blend mode to be applied when rendering particles.
+(note: this will superseed the <code>textureAdditive</code> setting if different than &quot;normal&quot;)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>normal</li>
+        </ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="CanvasRenderer.html#setBlendMode">CanvasRenderer#setBlendMode</a></li>
+        
+            <li><a href="WebGLRenderer.html#setBlendMode">WebGLRenderer#setBlendMode</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".duration">
+    <span class="type-signature"><span class="icon green">static</span> </span>duration<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Duration that the emitter releases particles in ms (used only if emitter is Stream).
+After this period, the emitter stop the launch of particles.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>Infinity</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".floating">
+    <span class="type-signature"><span class="icon green">static</span> </span>floating<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Render particles in screen space.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".followTrajectory">
+    <span class="type-signature"><span class="icon green">static</span> </span>followTrajectory<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Update the rotation of particle in accordance the particle trajectory.<br>
+The particle sprite should aim at zero angle (draw from left to right).<br>
+Override the particle minRotation and maxRotation.<br></p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".framesToSkip">
+    <span class="type-signature"><span class="icon green">static</span> </span>framesToSkip<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Skip n frames after updating the particle system once.
+This can be used to reduce the performance impact of emitters with many particles.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".frequency">
+    <span class="type-signature"><span class="icon green">static</span> </span>frequency<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>How often a particle is emitted in ms (used only if emitter is a Stream).</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>100</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".gravity">
+    <span class="type-signature"><span class="icon green">static</span> </span>gravity<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Vertical force (Gravity) for each particle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>game.world.gravity</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".height">
+    <span class="type-signature"><span class="icon green">static</span> </span>height<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Height of the particle spawn area</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".image">
+    <span class="type-signature"><span class="icon green">static</span> </span>image<span class="type-signature"> :HTMLCanvasElement</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>image used for particles texture
+(by default melonJS will create an white 8x8 texture image)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">HTMLCanvasElement</span>
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Image to read</p></td>
-        </tr>
-
+            </li>
+        </ul>
     
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">ImageData</span>
-
-
-
-
-
-- <p>ImageData object</p>
-
-
-
-
-            
-    </div>
-    
+    -->
 
     
 
@@ -547,9 +1000,21 @@
     
 
     
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>undefined</li>
+        </ul></dd>
+    
 
     
 
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ParticleEmitterSettings.html#.textureSize">ParticleEmitterSettings.textureSize</a></li>
+        </ul>
+    </dd>
     
 
     
@@ -558,398 +1023,42 @@
 
     
 
+    
 </dd>
 
+        
             
-                
 
 <dt>
+<h4 class="name" id=".maxEndScale">
+    <span class="type-signature"><span class="icon green">static</span> </span>maxEndScale<span class="type-signature"> :number</span>
     
-        <h4 class="name" id=".getUriFragment">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>getUriFragment<span class="signature">(url<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {object}</span>
-                
-            
-        </h4>
+</h4>
 
-        
-    
+
 </dt>
 <dd>
-
     
     <div class="description">
-        <p>parse the fragment (hash) from a URL and returns them into</p>
+        <p>Maximum end scale ratio for particles</p>
     </div>
     
 
+    <!--
     
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
 
+
+            </li>
+        </ul>
     
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>url</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    document.location
-                
-                </td>
-            
-
-            <td class="description last"><p>an optional params string or URL containing fragment (hash) params to be parsed</p></td>
-        </tr>
+    -->
 
     
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">object</span>
-
-
-
-
-
-- <p>an object representing the deserialized params string.</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>hitbox</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>draw the hitbox in the debug panel (if enabled)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>velocity</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>draw the entities velocity in the debug panel (if enabled)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>quadtree</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>draw the quadtree in the debug panel (if enabled)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>webgl</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>force the renderer to WebGL</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>debug</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>display the debug panel (if preloaded)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>debugToggleKey</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    "s"
-                
-                </td>
-            
-
-            <td class="description last"><p>show/hide the debug panel (if preloaded)</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
 
 
 <dl class="details">
@@ -977,6 +1086,11 @@
     
 
     
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
 
     
 
@@ -987,17 +1101,1371 @@
 
 
     
-        <h5>Example</h5>
+
+    
+</dd>
+
         
-    <pre class="prettyprint"><code>// http://www.example.com/index.html#debug&amp;hitbox=true&amp;mytag=value
-var UriFragment = me.utils.getUriFragment();
-console.log(UriFragment["mytag"]); //> "value"</code></pre>
+            
+
+<dt>
+<h4 class="name" id=".maxLife">
+    <span class="type-signature"><span class="icon green">static</span> </span>maxLife<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Maximum time each particle lives once it is emitted in ms.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
 
     
 
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>3000</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
 </dd>
 
-            </dl>
+        
+            
+
+<dt>
+<h4 class="name" id=".maxParticles">
+    <span class="type-signature"><span class="icon green">static</span> </span>maxParticles<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Maximum number of particles launched each time in this emitter (used only if emitter is Stream).</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>10</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".maxRotation">
+    <span class="type-signature"><span class="icon green">static</span> </span>maxRotation<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Maximum start rotation for particles sprites in Radians</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".maxStartScale">
+    <span class="type-signature"><span class="icon green">static</span> </span>maxStartScale<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Maximum start scale ratio for particles (1 = no scaling)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".minEndScale">
+    <span class="type-signature"><span class="icon green">static</span> </span>minEndScale<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Minimum end scale ratio for particles</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".minLife">
+    <span class="type-signature"><span class="icon green">static</span> </span>minLife<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Minimum time each particle lives once it is emitted in ms.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1000</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".minRotation">
+    <span class="type-signature"><span class="icon green">static</span> </span>minRotation<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Minimum start rotation for particles sprites in Radians</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".minStartScale">
+    <span class="type-signature"><span class="icon green">static</span> </span>minStartScale<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Minimum start scale ratio for particles (1 = no scaling)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".onlyInViewport">
+    <span class="type-signature"><span class="icon green">static</span> </span>onlyInViewport<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Update particles only in the viewport, remove it when out of viewport.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".speed">
+    <span class="type-signature"><span class="icon green">static</span> </span>speed<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Start speed of particles.<br></p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>2</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".speedVariation">
+    <span class="type-signature"><span class="icon green">static</span> </span>speedVariation<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Variation in the start speed of particles</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".textureAdditive">
+    <span class="type-signature"><span class="icon green">static</span> </span>textureAdditive<span class="type-signature"> :boolean</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Enable the Texture Additive by composite operation (&quot;additive&quot; blendMode)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ParticleEmitterSettings.html#.blendMode">ParticleEmitterSettings.blendMode</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".textureSize">
+    <span class="type-signature"><span class="icon green">static</span> </span>textureSize<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>default texture size used for particles if no image is specified
+(by default melonJS will create an white 8x8 texture image)</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>8</li>
+        </ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ParticleEmitterSettings.html#.image">ParticleEmitterSettings.image</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".tint">
+    <span class="type-signature"><span class="icon green">static</span> </span>tint<span class="type-signature"> :string</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>tint to be applied to particles</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>"#fff"</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".totalParticles">
+    <span class="type-signature"><span class="icon green">static</span> </span>totalParticles<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Total number of particles in the emitter</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>50</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".width">
+    <span class="type-signature"><span class="icon green">static</span> </span>width<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Width of the particle spawn area.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>1</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".wind">
+    <span class="type-signature"><span class="icon green">static</span> </span>wind<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Horizontal force (like a Wind) for each particle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>0</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
     
 
     
@@ -1027,7 +2495,7 @@ console.log(UriFragment["mytag"]); //> "value"</code></pre>
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'utils_sub'.replace(/"/g, '_');
+        var id = 'ParticleEmitterSettings_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
