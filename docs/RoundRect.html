@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Namespace: audio | melonJS API documentation</title>
+    <title>Class: RoundRect | melonJS API documentation</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     
@@ -51,7 +51,9 @@
 
 <header>
     
-        <h2>audio</h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>RoundRect<span class="signature">(x, y, width, height, radius<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>a rectangle object with rounded corners</p></div>
         
     
 </header>
@@ -62,7 +64,253 @@
         
             
 
+<dt>
+    
+        <h4 class="name" id="RoundRect">
             
+                new <span class="type-signature"></span>RoundRect<span class="signature">(x, y, width, height, radius<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>position of the rounded rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>position of the rounded rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>the rectangle width</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>the rectangle height</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>radius</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    20
+                
+                </td>
+            
+
+            <td class="description last"><p>the radius of the rounded corner</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
 
 <dl class="details">
@@ -99,10 +347,24 @@
 </dl>
 
 
-            
+    
+
+</dd>
+
         
         </div>
     
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Rect.html">Rect</a></li>
+    </ul>
+
 
     
 
@@ -123,8 +385,8 @@
             
 
 <dt>
-<h4 class="name" id=".stopOnAudioError">
-    <span class="type-signature"><span class="icon green">static</span> </span>stopOnAudioError<span class="type-signature"> :boolean</span>
+<h4 class="name" id="bottom">
+    <span class="type-signature"></span>bottom<span class="type-signature"> :number</span>
     
 </h4>
 
@@ -133,10 +395,7 @@
 <dd>
     
     <div class="description">
-        <p>Specify either to stop on audio loading error or not<br>
-if true, melonJS will throw an exception and stop loading<br>
-if false, melonJS will disable sounds and output a warning message
-in the console<br></p>
+        <p>bottom coordinate of the Rectangle</p>
     </div>
     
 
@@ -146,7 +405,561 @@ in the console<br></p>
         <ul>
             <li>
                 
-<span class="param-type">boolean</span>
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#bottom">Rect#bottom</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="centerX">
+    <span class="type-signature"></span>centerX<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>absolute center of this rectangle on the horizontal axis</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#centerX">Rect#centerX</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="centerY">
+    <span class="type-signature"></span>centerY<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>absolute center of this rectangle on the vertical axis</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#centerY">Rect#centerY</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="height">
+    <span class="type-signature"></span>height<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>height of the Rectangle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#height">Rect#height</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="left">
+    <span class="type-signature"></span>left<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>left coordinate of the Rectangle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#left">Rect#left</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="points">
+    <span class="type-signature"></span>points<span class="type-signature"> :Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Array of points defining the Polygon <br>
+Note: If you manually change <code>points</code>, you <strong>must</strong> call <code>recalc</code>afterwards so that the changes get applied correctly.</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#points">Rect#points</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="pos">
+    <span class="type-signature"></span>pos<span class="type-signature"> :<a href="Vector2d.html">Vector2d</a></span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>origin point of the Polygon</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#pos">Rect#pos</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="radius">
+    <span class="type-signature"></span>radius<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>the radius of the rounded corner</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
 
 
             </li>
@@ -184,8 +997,245 @@ in the console<br></p>
     
     <dt class="tag-default">Default Value:</dt>
     <dd class="tag-default"><ul class="dummy">
-            <li>true</li>
+            <li>20</li>
         </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="right">
+    <span class="type-signature"></span>right<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>right coordinate of the Rectangle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#right">Rect#right</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="top">
+    <span class="type-signature"></span>top<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>top coordinate of the Rectangle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#top">Rect#top</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id="width">
+    <span class="type-signature"></span>width<span class="type-signature"> :number</span>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>width of the Rectangle</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#width">Rect#width</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -212,9 +1262,9 @@ in the console<br></p>
 
 <dt>
     
-        <h4 class="name" id=".disable">
+        <h4 class="name" id="centerOn">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>disable<span class="signature">()</span><span class="type-signature"></span>
+                <span class="type-signature"></span>centerOn<span class="signature">(x, x)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
                 
             
         </h4>
@@ -226,7 +1276,88 @@ in the console<br></p>
 
     
     <div class="description">
-        <p>disable audio output</p>
+        <p>center the rectangle position around the given coordinates</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the x coordinate around which to center this rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the y coordinate around which to center this rectangle</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     </div>
     
 
@@ -241,13 +1372,26 @@ in the console<br></p>
     
 
     
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
 
-    
 
-    
 
-    
+<span class="param-type"><a href="Rect.html">Rect</a></span>
 
+
+
+
+
+- <p>this rectangle</p>
+
+
+
+
+            
+    </div>
     
 
     
@@ -261,6 +1405,11 @@ in the console<br></p>
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#centerOn">Rect#centerOn</a>
+    </li></ul></dd>
     
 
     
@@ -296,9 +1445,9 @@ in the console<br></p>
 
 <dt>
     
-        <h4 class="name" id=".enable">
+        <h4 class="name" id="clone">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>enable<span class="signature">()</span><span class="type-signature"></span>
+                <span class="type-signature"></span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="RoundRect.html">RoundRect</a>}</span>
                 
             
         </h4>
@@ -310,8 +1459,7 @@ in the console<br></p>
 
     
     <div class="description">
-        <p>enable audio output <br>
-only useful if audio supported and previously disabled through</p>
+        <p>clone this RoundRect</p>
     </div>
     
 
@@ -334,6 +1482,27 @@ only useful if audio supported and previously disabled through</p>
     
 
     
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="RoundRect.html">RoundRect</a></span>
+
+
+
+
+
+- <p>new RoundRect</p>
+
+
+
+
+            
+    </div>
+    
 
     
 
@@ -347,7 +1516,10 @@ only useful if audio supported and previously disabled through</p>
     
 
     
-
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#clone">Rect#clone</a>
+    </li></ul></dd>
     
 
     
@@ -367,12 +1539,7 @@ only useful if audio supported and previously disabled through</p>
     
 
     
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li>audio#disable</li>
-        </ul>
-    </dd>
+
     
 
     
@@ -388,9 +1555,9 @@ only useful if audio supported and previously disabled through</p>
 
 <dt>
     
-        <h4 class="name" id=".fade">
+        <h4 class="name" id="contains">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>fade<span class="signature">(sound_name, from, to, duration, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                <span class="type-signature"></span>contains<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
                 
             
         </h4>
@@ -402,7 +1569,1381 @@ only useful if audio supported and previously disabled through</p>
 
     
     <div class="description">
-        <p>Fade a currently playing sound between two volumee.</p>
+        <p>Returns true if the rectangle contains the given rectangle</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if contains</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#contains">Rect#contains</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="copy">
+            
+                <span class="type-signature"></span>copy<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>copy the position and size of the given rectangle into this one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Source rectangle</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>new rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#copy">Rect#copy</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="equals">
+            
+                <span class="type-signature"></span>equals<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>check if this rectangle is identical to the specified one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if equals</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#equals">Rect#equals</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getBounds">
+            
+                <span class="type-signature"></span>getBounds<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Bounds.html">Bounds</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns the bounding box for this shape, the smallest Rectangle object completely containing this shape.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Bounds.html">Bounds</a></span>
+
+
+
+
+
+- <p>this shape bounding box Rectangle object</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#getBounds">Rect#getBounds</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="getIndices">
+            
+                <span class="type-signature"></span>getIndices<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns a list of indices for all triangles defined in this polygon</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Array</span>
+
+
+
+
+
+- <p>an array of vertex indices for all triangles forming this polygon.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#getIndices">Rect#getIndices</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="isConvex">
+            
+                <span class="type-signature"></span>isConvex<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns true if the vertices composing this polygon form a convex shape (vertices must be in clockwise order).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if the vertices are convex, false if not, null if not computable</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#isConvex">Rect#isConvex</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="isFinite">
+            
+                <span class="type-signature"></span>isFinite<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>determines whether all coordinates of this rectangle are finite numbers.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>false if all coordinates are positive or negative Infinity or NaN; otherwise, true.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#isFinite">Rect#isFinite</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="overlaps">
+            
+                <span class="type-signature"></span>overlaps<span class="signature">(rect)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>check if this rectangle is intersecting with the specified one</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>true if overlaps</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#overlaps">Rect#overlaps</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="recalc">
+            
+                <span class="type-signature"></span>recalc<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Computes the calculated collision polygon.
+This <strong>must</strong> be called if the <code>points</code> array, <code>angle</code>, or <code>offset</code> is modified manually.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#recalc">Rect#recalc</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="resize">
+            
+                <span class="type-signature"></span>resize<span class="signature">(w, h)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>resize the rectangle</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new width of the rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new height of the rectangle</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>this rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#resize">Rect#resize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="rotate">
+            
+                <span class="type-signature"></span>rotate<span class="signature">(angle, v<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Rotate this Polygon (counter-clockwise) by the specified angle (in radians).</p>
     </div>
     
 
@@ -440,38 +2981,7 @@ only useful if audio supported and previously disabled through</p>
 
         <tr>
             
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>from</code></td>
+                <td class="name"><code>angle</code></td>
             
 
             <td class="type">
@@ -495,82 +3005,23 @@ only useful if audio supported and previously disabled through</p>
 
             
 
-            <td class="description last"><p>Volume to fade from (0.0 to 1.0).</p></td>
+            <td class="description last"><p>The angle to rotate (in radians)</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>to</code></td>
+                <td class="name"><code>v</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+|
 
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Volume to fade to (0.0 to 1.0).</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>duration</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Time in milliseconds to fade.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
+<span class="param-type"><a href="ObservableVector2d.html">ObservableVector2d</a></span>
 
 
             
@@ -590,456 +3041,7 @@ only useful if audio supported and previously disabled through</p>
 
             
 
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will fade.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".getCurrentTrack">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>getCurrentTrack<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>returns the current track Id</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">string</span>
-
-
-
-
-
-- <p>audio track name</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".getVolume">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>getVolume<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>get the default global volume</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">number</span>
-
-
-
-
-
-- <p>current volume value in Float [0.0 - 1.0] .</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".hasAudio">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>hasAudio<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if audio (HTML5 or WebAudio) is supported</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>return true if audio (HTML5 or WebAudio) is supported</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".hasFormat">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>hasFormat<span class="signature">(codec)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>check if the given audio format is supported</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>codec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>audio format : &quot;mp3&quot;, &quot;mpeg&quot;, opus&quot;, &quot;ogg&quot;, &quot;oga&quot;, &quot;wav&quot;, &quot;aac&quot;, &quot;caf&quot;, &quot;m4a&quot;, &quot;m4b&quot;, &quot;mp4&quot;, &quot;weba&quot;, &quot;webm&quot;, &quot;dolby&quot;, &quot;flac&quot;</p></td>
+            <td class="description last"><p>an optional point to rotate around</p></td>
         </tr>
 
     
@@ -1067,13 +3069,13 @@ only useful if audio supported and previously disabled through</p>
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
 
 
 
 
 
-- <p>return true if the given audio format is supported</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -1093,6 +3095,11 @@ only useful if audio supported and previously disabled through</p>
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#rotate">Rect#rotate</a>
+    </li></ul></dd>
     
 
     
@@ -1128,9 +3135,9 @@ only useful if audio supported and previously disabled through</p>
 
 <dt>
     
-        <h4 class="name" id=".init">
+        <h4 class="name" id="scale">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>init<span class="signature">(format<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"></span>scale<span class="signature">(x, y<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
                 
             
         </h4>
@@ -1142,14 +3149,7 @@ only useful if audio supported and previously disabled through</p>
 
     
     <div class="description">
-        <p>Initialize and configure the audio support.<br>
-melonJS supports a wide array of audio codecs that have varying browser support :
-<i> (&quot;mp3&quot;, &quot;mpeg&quot;, opus&quot;, &quot;ogg&quot;, &quot;oga&quot;, &quot;wav&quot;, &quot;aac&quot;, &quot;caf&quot;, &quot;m4a&quot;, &quot;m4b&quot;, &quot;mp4&quot;, &quot;weba&quot;, &quot;webm&quot;, &quot;dolby&quot;, &quot;flac&quot;)</i>.<br>
-For a maximum browser coverage the recommendation is to use at least two of them,
-typically default to webm and then fallback to mp3 for the best balance of small filesize and high quality,
-webm has nearly full browser coverage with a great combination of compression and quality, and mp3 will fallback gracefully for other browsers.
-It is important to remember that melonJS selects the first compatible sound based on the list of extensions and given order passed here.
-So if you want webm to be used before mp3, you need to put the audio format in that order.</p>
+        <p>scale the rectangle</p>
     </div>
     
 
@@ -1189,13 +3189,48 @@ So if you want webm to be used before mp3, you need to put the audio format in t
 
         <tr>
             
-                <td class="name"><code>format</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>a number representing the abscissa of the scaling vector.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
 
 
             
@@ -1216,12 +3251,12 @@ So if you want webm to be used before mp3, you need to put the audio format in t
             
                 <td class="default">
                 
-                    "mp3"
+                    x
                 
                 </td>
             
 
-            <td class="description last"><p>audio format to prioritize</p></td>
+            <td class="description last"><p>a number representing the ordinate of the scaling vector.</p></td>
         </tr>
 
     
@@ -1249,13 +3284,13 @@ So if you want webm to be used before mp3, you need to put the audio format in t
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type"><a href="Rect.html">Rect</a></span>
 
 
 
 
 
-- <p>Indicates whether audio initialization was successful</p>
+- <p>this rectangle</p>
 
 
 
@@ -1275,6 +3310,11 @@ So if you want webm to be used before mp3, you need to put the audio format in t
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#scale">Rect#scale</a>
+    </li></ul></dd>
     
 
     
@@ -1302,15 +3342,6 @@ So if you want webm to be used before mp3, you need to put the audio format in t
 
 
     
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// initialize the "sound engine", giving "webm" as default desired audio format, and "mp3" as a fallback
-if (!me.audio.init("webm,mp3")) {
-    alert("Sorry but your browser does not support html 5 audio !");
-    return;
-}</code></pre>
-
-    
 
 </dd>
 
@@ -1319,9 +3350,9 @@ if (!me.audio.init("webm,mp3")) {
 
 <dt>
     
-        <h4 class="name" id=".mute">
+        <h4 class="name" id="scaleV">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>mute<span class="signature">(sound_name, id<span class="signature-attributes">opt</span>, mute<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                <span class="type-signature"></span>scaleV<span class="signature">(v)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
                 
             
         </h4>
@@ -1333,7 +3364,167 @@ if (!me.audio.init("webm,mp3")) {
 
     
     <div class="description">
-        <p>mute or unmute the specified sound, but does not pause the playback.</p>
+        <p>Scale this Polygon by the given vector</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#scaleV">Rect#scaleV</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setShape">
+            
+                <span class="type-signature"></span>setShape<span class="signature">(x, y, w, h<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set new value to the rectangle shape</p>
     </div>
     
 
@@ -1361,8 +3552,6 @@ if (!me.audio.init("webm,mp3")) {
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -1373,13 +3562,13 @@ if (!me.audio.init("webm,mp3")) {
 
         <tr>
             
-                <td class="name"><code>sound_name</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">number</span>
 
 
             
@@ -1396,19 +3585,80 @@ if (!me.audio.init("webm,mp3")) {
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
+            <td class="description last"><p>position of the Rectangle</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>position of the Rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>width of the rectangle, or an array of vector defining the rectangle</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>h</code></td>
             
 
             <td class="type">
@@ -1433,51 +3683,328 @@ if (!me.audio.init("webm,mp3")) {
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will mute.</p></td>
+            <td class="description last"><p>height of the rectangle, if a numeral width parameter is specified</p></td>
         </tr>
 
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Rect.html">Rect</a></span>
+
+
+
+
+
+- <p>this rectangle</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#setShape">Rect#setShape</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="setVertices">
+            
+                <span class="type-signature"></span>setVertices<span class="signature">(vertices)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>set the vertices defining this Polygon</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>mute</code></td>
+                <td class="name"><code>vertices</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">boolean</span>
+<span class="param-type">Array.&lt;<a href="Vector2d.html">Vector2d</a>></span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
+
+            
+
+            <td class="description last"><p>array of vector or vertice defining the Polygon</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
                 
 
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>this instance for objecf chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#setVertices">Rect#setVertices</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
                 
 
+<dt>
+    
+        <h4 class="name" id="shift">
+            
+                <span class="type-signature"></span>shift<span class="signature">(position)</span><span class="type-signature"></span>
                 
-                </td>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Shifts the Polygon to the given position vector.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector2d.html">Vector2d</a></span>
+
+
+            
+            </td>
+
             
 
             
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
 
-            <td class="description last"><p>True to mute and false to unmute</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -1511,95 +4038,10 @@ if (!me.audio.init("webm,mp3")) {
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// mute the background music
-me.audio.mute("awesome_music");</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".muteAll">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>muteAll<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>mute all audio</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#shift">Rect#shift</a>
+    </li></ul></dd>
     
 
     
@@ -1635,9 +4077,9 @@ me.audio.mute("awesome_music");</code></pre>
 
 <dt>
     
-        <h4 class="name" id=".muted">
+        <h4 class="name" id="to2d">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>muted<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+                <span class="type-signature"></span>to2d<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
                 
             
         </h4>
@@ -1649,7 +4091,7 @@ me.audio.mute("awesome_music");</code></pre>
 
     
     <div class="description">
-        <p>Returns true if audio is muted globally.</p>
+        <p>apply a 2d projection to this shape</p>
     </div>
     
 
@@ -1679,13 +4121,13 @@ me.audio.mute("awesome_music");</code></pre>
 
 
 
-<span class="param-type">boolean</span>
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
 
 
 
 
 
-- <p>true if audio is muted globally</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -1705,6 +4147,11 @@ me.audio.mute("awesome_music");</code></pre>
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#to2d">Rect#to2d</a>
+    </li></ul></dd>
     
 
     
@@ -1740,9 +4187,9 @@ me.audio.mute("awesome_music");</code></pre>
 
 <dt>
     
-        <h4 class="name" id=".pause">
+        <h4 class="name" id="toIso">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>pause<span class="signature">(sound_name, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+                <span class="type-signature"></span>toIso<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
                 
             
         </h4>
@@ -1754,8 +4201,227 @@ me.audio.mute("awesome_music");</code></pre>
 
     
     <div class="description">
-        <p>pause the specified sound on all channels<br>
-this function does not reset the currentTime property</p>
+        <p>apply an isometric projection to this shape</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>Reference to this object for method chaining</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#toIso">Rect#toIso</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="toPolygon">
+            
+                <span class="type-signature"></span>toPolygon<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns a polygon whose edges are the same as this box.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
+
+
+
+
+
+- <p>a new Polygon that represents this rectangle.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#toPolygon">Rect#toPolygon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="transform">
+            
+                <span class="type-signature"></span>transform<span class="signature">(m)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
+                
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>apply the given transformation matrix to this Polygon</p>
     </div>
     
 
@@ -1779,8 +4445,6 @@ this function does not reset the currentTime property</p>
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -1793,423 +4457,23 @@ this function does not reset the currentTime property</p>
 
         <tr>
             
-                <td class="name"><code>sound_name</code></td>
+                <td class="name"><code>m</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="Matrix2d.html">Matrix2d</a></span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will pause.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.pause("cling");</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".pauseTrack">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>pauseTrack<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>pause the current audio track</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.pauseTrack();</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".play">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>play<span class="signature">(sound_name, loop<span class="signature-attributes">opt</span>, onend<span class="signature-attributes">opt</span>, volume<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>play the specified sound</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>loop</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>loop audio</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>onend</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Function to call when sound instance ends playing.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>volume</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    default
-                
-                </td>
-            
-
-            <td class="description last"><p>Float specifying volume (0.0 - 1.0 values accepted).</p></td>
+            <td class="description last"><p>the transformation matrix</p></td>
         </tr>
 
     
@@ -2237,13 +4501,13 @@ this function does not reset the currentTime property</p>
 
 
 
-<span class="param-type">number</span>
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
 
 
 
 
 
-- <p>the sound instance ID.</p>
+- <p>Reference to this object for method chaining</p>
 
 
 
@@ -2263,6 +4527,11 @@ this function does not reset the currentTime property</p>
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#transform">Rect#transform</a>
+    </li></ul></dd>
     
 
     
@@ -2290,18 +4559,6 @@ this function does not reset the currentTime property</p>
 
 
     
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// play the "cling" audio clip
-me.audio.play("cling");
-// play &amp; repeat the "engine" audio clip
-me.audio.play("engine", true);
-// play the "gameover_sfx" audio clip and call myFunc when finished
-me.audio.play("gameover_sfx", false, myFunc);
-// play the "gameover_sfx" audio clip with a lower volume level
-me.audio.play("gameover_sfx", false, null, 0.5);</code></pre>
-
-    
 
 </dd>
 
@@ -2310,9 +4567,9 @@ me.audio.play("gameover_sfx", false, null, 0.5);</code></pre>
 
 <dt>
     
-        <h4 class="name" id=".playTrack">
+        <h4 class="name" id="translate">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>playTrack<span class="signature">(sound_name, volume<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
+                <span class="type-signature"></span>translate<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Polygon.html">Polygon</a>}</span>
                 
             
         </h4>
@@ -2324,9 +4581,7 @@ me.audio.play("gameover_sfx", false, null, 0.5);</code></pre>
 
     
     <div class="description">
-        <p>play the specified audio track<br>
-this function automatically set the loop property to true<br>
-and keep track of the current sound being played.</p>
+        <p>translate the Polygon by the specified offset</p>
     </div>
     
 
@@ -2350,11 +4605,7 @@ and keep track of the current sound being played.</p>
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -2366,42 +4617,7 @@ and keep track of the current sound being played.</p>
 
         <tr>
             
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>audio track name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>volume</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
@@ -2414,26 +4630,33 @@ and keep track of the current sound being played.</p>
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
-                
+            
 
+            <td class="description last"><p>x offset</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
                 
-                </td>
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
             
 
             
-                <td class="default">
-                
-                    default
-                
-                </td>
-            
 
-            <td class="description last"><p>Float specifying volume (0.0 - 1.0 values accepted).</p></td>
+            <td class="description last"><p>y offset</p></td>
         </tr>
 
     
@@ -2461,13 +4684,13 @@ and keep track of the current sound being played.</p>
 
 
 
-<span class="param-type">number</span>
+<span class="param-type"><a href="Polygon.html">Polygon</a></span>
 
 
 
 
 
-- <p>the sound instance ID.</p>
+- <p>this Polygon</p>
 
 
 
@@ -2487,6 +4710,11 @@ and keep track of the current sound being played.</p>
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#translate">Rect#translate</a>
+    </li></ul></dd>
     
 
     
@@ -2514,11 +4742,6 @@ and keep track of the current sound being played.</p>
 
 
     
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.playTrack("awesome_music");</code></pre>
-
-    
 
 </dd>
 
@@ -2527,9 +4750,9 @@ and keep track of the current sound being played.</p>
 
 <dt>
     
-        <h4 class="name" id=".rate">
+        <h4 class="name" id="union">
             
-                <span class="type-signature"><span class="icon green">static</span> </span>rate<span class="signature">(sound_name, rate<span class="signature-attributes">opt</span>, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
+                <span class="type-signature"></span>union<span class="signature">(rect)</span><span class="type-signature"> &rarr; {<a href="Rect.html">Rect</a>}</span>
                 
             
         </h4>
@@ -2541,7 +4764,7 @@ and keep track of the current sound being played.</p>
 
     
     <div class="description">
-        <p>get or set the rate of playback for a sound.</p>
+        <p>merge this rectangle with another one</p>
     </div>
     
 
@@ -2565,8 +4788,6 @@ and keep track of the current sound being played.</p>
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -2579,97 +4800,23 @@ and keep track of the current sound being played.</p>
 
         <tr>
             
-                <td class="name"><code>sound_name</code></td>
+                <td class="name"><code>rect</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="Rect.html">Rect</a></span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>rate</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>playback rate : 0.5 to 4.0, with 1.0 being normal speed.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will be changed.</p></td>
+            <td class="description last"><p>other rectangle to union with</p></td>
         </tr>
 
     
@@ -2697,13 +4844,13 @@ and keep track of the current sound being played.</p>
 
 
 
-<span class="param-type">number</span>
+<span class="param-type"><a href="Rect.html">Rect</a></span>
 
 
 
 
 
-- <p>return the current playback rate (if no extra parameters were given)</p>
+- <p>the union(ed) rectangle</p>
 
 
 
@@ -2724,1462 +4871,10 @@ and keep track of the current sound being played.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// get the playback rate of the background music
-var rate = me.audio.rate("dst-gameforest");
-// speed up the playback of the background music
-me.audio.rate("dst-gameforest", 2.0);</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".resume">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>resume<span class="signature">(sound_name, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>resume the specified sound on all channels<br></p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will resume.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// play a audio clip
-var id = me.audio.play("myClip");
-...
-// pause it
-me.audio.pause("myClip", id);
-...
-// resume
-me.audio.resume("myClip", id);</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".resumeTrack">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>resumeTrack<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>resume the previously paused audio track</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// play an awesome music
-me.audio.playTrack("awesome_music");
-// pause the audio track
-me.audio.pauseTrack();
-// resume the music
-me.audio.resumeTrack();</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".seek">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>seek<span class="signature">(sound_name, seek<span class="signature-attributes">opt</span>, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>get/set the position of playback for a sound.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>audio clip name - case sensitive</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>seek</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the position to move current playback to (in seconds).</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will changed.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">number</span>
-
-
-
-
-
-- <p>return the current seek position (if no extra parameters were given)</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// return the current position of the background music
-var current_pos = me.audio.seek("dst-gameforest");
-// set back the position of the background music to the beginning
-me.audio.seek("dst-gameforest", 0);</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".setVolume">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>setVolume<span class="signature">(volume)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>set the default global volume</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>volume</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Float specifying volume (0.0 - 1.0 values accepted).</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".stop">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>stop<span class="signature">(sound_name<span class="signature-attributes">opt</span>, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>stop the specified sound on all channels</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>audio clip name (case sensitive). If none is passed, all sounds are stopped.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will stop.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.stop("cling");</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".stopTrack">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>stopTrack<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>stop the current audio track</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li>audio#playTrack</li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>// play a awesome music
-me.audio.playTrack("awesome_music");
-// stop the current music
-me.audio.stopTrack();</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".unload">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>unload<span class="signature">(sound_name)</span><span class="type-signature"> &rarr; {boolean}</span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>unload specified audio track to free memory</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>audio track name - case sensitive</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-returns">
-        <h5>Returns:</h5>
-        
-                
-
-
-
-<span class="param-type">boolean</span>
-
-
-
-
-
-- <p>true if unloaded</p>
-
-
-
-
-            
-    </div>
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.unload("awesome_music");</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".unloadAll">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>unloadAll<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>unload all audio to free memory</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>me.audio.unloadAll();</code></pre>
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".unmute">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>unmute<span class="signature">(sound_name, id<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>unmute the specified sound</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="container-params">
-        <h5>Parameters:</h5>
-        
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>sound_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>audio clip name</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the sound instance ID. If none is passed, all sounds in group will unmute.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-                
-
-<dt>
-    
-        <h4 class="name" id=".unmuteAll">
-            
-                <span class="type-signature"><span class="icon green">static</span> </span>unmuteAll<span class="signature">()</span><span class="type-signature"></span>
-                
-            
-        </h4>
-
-        
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>unmute all audio</p>
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Rect.html#union">Rect#union</a>
+    </li></ul></dd>
     
 
     
@@ -4229,7 +4924,7 @@ me.audio.stopTrack();</code></pre>
             <div class="footer">
                 Copyright &copy; 2011 - 2021 Olivier Biot
                 <br>
-                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Mon May 16 2022 12:31:37 GMT+0800 (Singapore Standard Time)
+                Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Mon May 16 2022 12:31:38 GMT+0800 (Singapore Standard Time)
             </div>
         </center>
     </footer>
@@ -4240,7 +4935,7 @@ me.audio.stopTrack();</code></pre>
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'audio_sub'.replace(/"/g, '_');
+        var id = 'RoundRect_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 
