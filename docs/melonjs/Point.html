@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>melonJS: TMXTileset</title>
+    <title>melonJS: Point</title>
 
     
 
@@ -72,22 +72,22 @@
         &gt;
       
       
-      <span>TMXTileset</span>
+      <span>Point</span>
     </div>
     <section class="document__title ">
       <h1>
-        TMXTileset
+        Point
       </h1>
       
     </section>
 
     
-<pre class="signature__container"><code class="signature">class TMXTileset extends  implements</code></pre>
+<pre class="signature__container"><code class="signature">class Point extends  implements</code></pre>
 
 
     <div class="document__brief"></div>
     <div class="document__description">
-<p>a TMX Tile Set Object</p>
+<p>represents a point in a 2d space</p>
 </div>
 
     
@@ -96,69 +96,6 @@
 
     
       
-<div class="members">
-  <h2 class="members__category">Constructor</h2>
-  <hr />
-
-  
-    
-<div class="member" id="constructor" data-id="MethodDoc:constructor:object">
-  
-  
-<pre class="signature__container"><code class="signature">new TMXTileset(tileset: object) → {}</code></pre>
-
-  <section class="member__tags">
-    
-  </section>
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          tileset
-        </td>
-        <td class="member-parameter__type">
-          object
-        </td>
-        
-        
-        <td class="member-parameter__description">
-<p>tileset data in JSON format (<a href="http://docs.mapeditor.org/en/stable/reference/tmx-map-format/#tileset">http://docs.mapeditor.org/en/stable/reference/tmx-map-format/#tileset</a>)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-  
-</div>
-
-  
-</div>
-
     
 
     
@@ -177,7 +114,7 @@
         <img class="accordion__bg-inactive" src="/melonJS/docs/icons/chevron-down.svg"/>
         <img class="accordion__bg-active" src="/melonJS/docs/icons/chevron-up.svg"/>
       </button>
-      <h3 class="members__subcategory">Properties from TMXTileset</h3>
+      <h3 class="members__subcategory">Properties from Point</h3>
     </section>
     <div class="accordion__content table-wrapper">
       <table class="summary">
@@ -186,12 +123,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  boolean
+                  Number
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#class">class</a>
+                  <a href="/melonJS/docs/melonjs/Point.html#x">x = 0</a>
                 </section>
                 <section>
                   
@@ -202,28 +139,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  boolean
+                  Number
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#isAnimated">isAnimated = false</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#isCollection">isCollection = false</a>
+                  <a href="/melonJS/docs/melonjs/Point.html#y">y = 0</a>
                 </section>
                 <section>
                   
@@ -247,11 +168,27 @@
         <img class="accordion__bg-inactive" src="/melonJS/docs/icons/chevron-down.svg"/>
         <img class="accordion__bg-active" src="/melonJS/docs/icons/chevron-up.svg"/>
       </button>
-      <h3 class="members__subcategory">Methods from TMXTileset</h3>
+      <h3 class="members__subcategory">Methods from Point</h3>
     </section>
     <div class="accordion__content table-wrapper">
       <table class="summary">
         <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/melonJS/docs/melonjs/Point.html">Point</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/melonJS/docs/melonjs/Point.html#clone">clone()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
           
             <tr>
               <td class="summary__signature">
@@ -261,7 +198,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#contains">contains(gid: number)</a>
+                  <a href="/melonJS/docs/melonjs/Point.html#equals">equals(x: number, y: number)</a>
                 </section>
                 <section>
                   
@@ -272,12 +209,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  Image
+                  <a href="/melonJS/docs/melonjs/Point.html">Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#getTileImage">getTileImage(gid: number)</a>
+                  <a href="/melonJS/docs/melonjs/Point.html#set">set(x: number, y: number)</a>
                 </section>
                 <section>
                   
@@ -288,28 +225,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  object
+                  boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#getTileProperties">getTileProperties(tileId: number)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  number
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/melonJS/docs/melonjs/TMXTileset.html#getViewTileId">getViewTileId(gid: number)</a>
+                  <a href="/melonJS/docs/melonjs/Point.html#equals">equals(point: <a href="/melonJS/docs/melonjs/Point.html">Point</a>)</a>
                 </section>
                 <section>
                   
@@ -351,10 +272,10 @@
 
   
     
-<div class="member" id="class" data-id="PropertyDoc:class">
+<div class="member" id="x" data-id="PropertyDoc:x">
   
-    <section class="member__title " data-id="PropertyDoc:class">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#class">
+    <section class="member__title " data-id="PropertyDoc:x">
+      <a href="/melonJS/docs/melonjs/Point.html#x">
         <img
           src="/melonJS/docs/icons/link.svg"
           width="16px"
@@ -362,20 +283,20 @@
         />
       </a>
       <span class="member__title_content">
-        <span>class</span>
+        <span>x</span>
         
       </span>
       
         <span class="tag--source">
           
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L65>TMXTileset.js:65</a>
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L7>point.js:7</a>
           
         </span>
       
     </section>
   
   
-<pre class="signature__container"><code class="signature">class: boolean</code></pre>
+<pre class="signature__container"><code class="signature">x: Number = 0</code></pre>
 
   <section class="member__tags">
     
@@ -383,7 +304,7 @@
 
   <div class="member__brief"></div>
   <div class="member__description">
-<p>the tileset class</p>
+<p>the position of the point on the horizontal axis</p>
 </div>
 
   
@@ -398,10 +319,10 @@
 
   
     
-<div class="member" id="isAnimated" data-id="PropertyDoc:isAnimated">
+<div class="member" id="y" data-id="PropertyDoc:y">
   
-    <section class="member__title " data-id="PropertyDoc:isAnimated">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#isAnimated">
+    <section class="member__title " data-id="PropertyDoc:y">
+      <a href="/melonJS/docs/melonjs/Point.html#y">
         <img
           src="/melonJS/docs/icons/link.svg"
           width="16px"
@@ -409,20 +330,20 @@
         />
       </a>
       <span class="member__title_content">
-        <span>isAnimated</span>
+        <span>y</span>
         
       </span>
       
         <span class="tag--source">
           
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L49>TMXTileset.js:49</a>
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L15>point.js:15</a>
           
         </span>
       
     </section>
   
   
-<pre class="signature__container"><code class="signature">isAnimated: boolean = false</code></pre>
+<pre class="signature__container"><code class="signature">y: Number = 0</code></pre>
 
   <section class="member__tags">
     
@@ -430,54 +351,7 @@
 
   <div class="member__brief"></div>
   <div class="member__description">
-<p>Tileset contains animated tiles</p>
-</div>
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-
-  
-    
-<div class="member" id="isCollection" data-id="PropertyDoc:isCollection">
-  
-    <section class="member__title " data-id="PropertyDoc:isCollection">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#isCollection">
-        <img
-          src="/melonJS/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span class="member__title_content">
-        <span>isCollection</span>
-        
-      </span>
-      
-        <span class="tag--source">
-          
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L57>TMXTileset.js:57</a>
-          
-        </span>
-      
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">isCollection: boolean = false</code></pre>
-
-  <section class="member__tags">
-    
-  </section>
-
-  <div class="member__brief"></div>
-  <div class="member__description">
-<p>true if the tileset is a &quot;Collection of Image&quot; Tileset</p>
+<p>the position of the point on the vertical axis</p>
 </div>
 
   
@@ -501,10 +375,10 @@
 
   
     
-<div class="member" id="contains" data-id="MethodDoc:contains:number">
+<div class="member" id="clone" data-id="MethodDoc:clone:">
   
-    <section class="member__title " data-id="MethodDoc:contains:number">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#contains">
+    <section class="member__title " data-id="MethodDoc:clone:">
+      <a href="/melonJS/docs/melonjs/Point.html#clone">
         <img
           src="/melonJS/docs/icons/link.svg"
           width="16px"
@@ -512,20 +386,20 @@
         />
       </a>
       <span class="member__title_content">
-        <span>contains</span>
+        <span>clone</span>
         
       </span>
       
         <span class="tag--source">
           
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L194>TMXTileset.js:194</a>
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L71>point.js:71</a>
           
         </span>
       
     </section>
   
   
-<pre class="signature__container"><code class="signature">contains(gid: number) → {boolean}</code></pre>
+<pre class="signature__container"><code class="signature">clone() → {<a href="/melonJS/docs/melonjs/Point.html">Point</a>}</code></pre>
 
   <section class="member__tags">
     
@@ -533,7 +407,80 @@
 
   <div class="member__brief"></div>
   <div class="member__description">
-<p>return true if the gid belongs to the tileset</p>
+<p>clone this Point</p>
+</div>
+
+  
+
+  
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/melonJS/docs/melonjs/Point.html">Point</a>
+        </td>
+        <td class="member-return__description">
+          
+<p>new Point</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+  
+</div>
+
+  
+    
+<div class="member" id="equals" data-id="MethodDoc:equals:number-number">
+  
+    <section class="member__title " data-id="MethodDoc:equals:number-number">
+      <a href="/melonJS/docs/melonjs/Point.html#equals">
+        <img
+          src="/melonJS/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span class="member__title_content">
+        <span>equals</span>
+        
+      </span>
+      
+        <span class="tag--source">
+          
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L49>point.js:49</a>
+          
+        </span>
+      
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">equals(x: number, y: number) → {boolean}</code></pre>
+
+  <section class="member__tags">
+    
+  </section>
+
+  <div class="member__brief"></div>
+  <div class="member__description">
+<p>return true if this point is equal to the given values</p>
 </div>
 
   
@@ -557,7 +504,17 @@
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          gid
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
         </td>
         <td class="member-parameter__type">
           number
@@ -601,10 +558,10 @@
 
   
     
-<div class="member" id="getTileImage" data-id="MethodDoc:getTileImage:number">
+<div class="member" id="set" data-id="MethodDoc:set:number-number">
   
-    <section class="member__title " data-id="MethodDoc:getTileImage:number">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#getTileImage">
+    <section class="member__title " data-id="MethodDoc:set:number-number">
+      <a href="/melonJS/docs/melonjs/Point.html#set">
         <img
           src="/melonJS/docs/icons/link.svg"
           width="16px"
@@ -612,20 +569,20 @@
         />
       </a>
       <span class="member__title_content">
-        <span>getTileImage</span>
+        <span>set</span>
         
       </span>
       
         <span class="tag--source">
           
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L173>TMXTileset.js:173</a>
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L29>point.js:29</a>
           
         </span>
       
     </section>
   
   
-<pre class="signature__container"><code class="signature">getTileImage(gid: number) → {Image}</code></pre>
+<pre class="signature__container"><code class="signature">set(x: number, y: number) → {<a href="/melonJS/docs/melonjs/Point.html">Point</a>}</code></pre>
 
   <section class="member__tags">
     
@@ -633,7 +590,124 @@
 
   <div class="member__brief"></div>
   <div class="member__description">
-<p>return the tile image from a &quot;Collection of Image&quot; tileset</p>
+<p>set the Point x and y properties to the given values</p>
+</div>
+
+  
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/melonJS/docs/melonjs/Point.html">Point</a>
+        </td>
+        <td class="member-return__description">
+          
+<p>Reference to this object for method chaining</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+  
+</div>
+
+  
+    
+<div class="member" id="equals" data-id="MethodDoc:equals:Point">
+  
+    <section class="member__title " data-id="MethodDoc:equals:Point">
+      <a href="/melonJS/docs/melonjs/Point.html#equals_">
+        <img
+          src="/melonJS/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span class="member__title_content">
+        <span>equals</span>
+        
+      </span>
+      
+        <span class="tag--source">
+          
+            <a href=https://github.com/melonjs/melonJS/blob/master/src/geometries/point.js#L41>point.js:41</a>
+          
+        </span>
+      
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">equals(point: <a href="/melonJS/docs/melonjs/Point.html">Point</a>) → {boolean}</code></pre>
+
+  <section class="member__tags">
+    
+  </section>
+
+  <div class="member__brief"></div>
+  <div class="member__description">
+<p>return true if the two points are the same</p>
 </div>
 
   
@@ -657,10 +731,10 @@
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          gid
+          point
         </td>
         <td class="member-parameter__type">
-          number
+          <a href="/melonJS/docs/melonjs/Point.html">Point</a>
         </td>
         
         
@@ -686,217 +760,9 @@
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          Image
+          boolean
         </td>
         <td class="member-return__description">
-          
-<p>corresponding image or undefined</p>
-
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-  
-</div>
-
-  
-    
-<div class="member" id="getTileProperties" data-id="MethodDoc:getTileProperties:number">
-  
-    <section class="member__title " data-id="MethodDoc:getTileProperties:number">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#getTileProperties">
-        <img
-          src="/melonJS/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span class="member__title_content">
-        <span>getTileProperties</span>
-        
-      </span>
-      
-        <span class="tag--source">
-          
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L223>TMXTileset.js:223</a>
-          
-        </span>
-      
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">getTileProperties(tileId: number) → {object}</code></pre>
-
-  <section class="member__tags">
-    
-  </section>
-
-  <div class="member__brief"></div>
-  <div class="member__description">
-<p>return the properties of the specified tile</p>
-</div>
-
-  
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          tileId
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          object
-        </td>
-        <td class="member-return__description">
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-  
-</div>
-
-  
-    
-<div class="member" id="getViewTileId" data-id="MethodDoc:getViewTileId:number">
-  
-    <section class="member__title " data-id="MethodDoc:getViewTileId:number">
-      <a href="/melonJS/docs/melonjs/TMXTileset.html#getViewTileId">
-        <img
-          src="/melonJS/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span class="member__title_content">
-        <span>getViewTileId</span>
-        
-      </span>
-      
-        <span class="tag--source">
-          
-            <a href=https://github.com/melonjs/melonJS/blob/master/src/level/tiled/TMXTileset.js#L205>TMXTileset.js:205</a>
-          
-        </span>
-      
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">getViewTileId(gid: number) → {number}</code></pre>
-
-  <section class="member__tags">
-    
-  </section>
-
-  <div class="member__brief"></div>
-  <div class="member__description">
-<p>Get the view (local) tile ID from a GID, with animations applied</p>
-</div>
-
-  
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          gid
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description">
-<p>Global tile ID</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          number
-        </td>
-        <td class="member-return__description">
-          
-<p>View tile ID</p>
-
         </td>
       </tr>
     </tbody>
@@ -934,16 +800,12 @@
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item" data-id="PropertyDoc:class">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#class>class</a>
+      <li class="page-members-explorer__item" data-id="PropertyDoc:x">
+        <a href=/melonJS/docs/melonjs/Point.html#x>x</a>
       </li>
     
-      <li class="page-members-explorer__item" data-id="PropertyDoc:isAnimated">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#isAnimated>isAnimated</a>
-      </li>
-    
-      <li class="page-members-explorer__item" data-id="PropertyDoc:isCollection">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#isCollection>isCollection</a>
+      <li class="page-members-explorer__item" data-id="PropertyDoc:y">
+        <a href=/melonJS/docs/melonjs/Point.html#y>y</a>
       </li>
     
   </ul>
@@ -956,20 +818,20 @@
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item" data-id="MethodDoc:contains:number">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#contains>contains</a>
+      <li class="page-members-explorer__item" data-id="MethodDoc:clone:">
+        <a href=/melonJS/docs/melonjs/Point.html#clone>clone</a>
       </li>
     
-      <li class="page-members-explorer__item" data-id="MethodDoc:getTileImage:number">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#getTileImage>getTileImage</a>
+      <li class="page-members-explorer__item" data-id="MethodDoc:equals:number-number">
+        <a href=/melonJS/docs/melonjs/Point.html#equals>equals</a>
       </li>
     
-      <li class="page-members-explorer__item" data-id="MethodDoc:getTileProperties:number">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#getTileProperties>getTileProperties</a>
+      <li class="page-members-explorer__item" data-id="MethodDoc:set:number-number">
+        <a href=/melonJS/docs/melonjs/Point.html#set>set</a>
       </li>
     
-      <li class="page-members-explorer__item" data-id="MethodDoc:getViewTileId:number">
-        <a href=/melonJS/docs/melonjs/TMXTileset.html#getViewTileId>getViewTileId</a>
+      <li class="page-members-explorer__item" data-id="MethodDoc:equals:Point">
+        <a href=/melonJS/docs/melonjs/Point.html#equals>equals</a>
       </li>
     
   </ul>
